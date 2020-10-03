@@ -59,6 +59,16 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -179,16 +189,16 @@
             // 
             // grbusuarioregistrado
             // 
+            this.grbusuarioregistrado.Controls.Add(this.label11);
+            this.grbusuarioregistrado.Controls.Add(this.label9);
+            this.grbusuarioregistrado.Controls.Add(this.label7);
+            this.grbusuarioregistrado.Controls.Add(this.label5);
             this.grbusuarioregistrado.Controls.Add(this.lblcontraseñareg);
             this.grbusuarioregistrado.Controls.Add(this.label16);
             this.grbusuarioregistrado.Controls.Add(this.lbltipousuarioreg);
-            this.grbusuarioregistrado.Controls.Add(this.label14);
             this.grbusuarioregistrado.Controls.Add(this.lblduireg);
-            this.grbusuarioregistrado.Controls.Add(this.label12);
             this.grbusuarioregistrado.Controls.Add(this.lblfechanacreg);
-            this.grbusuarioregistrado.Controls.Add(this.label10);
             this.grbusuarioregistrado.Controls.Add(this.lblapellidoreg);
-            this.grbusuarioregistrado.Controls.Add(this.label8);
             this.grbusuarioregistrado.Controls.Add(this.lblnombrereg);
             this.grbusuarioregistrado.Controls.Add(this.label6);
             this.grbusuarioregistrado.Controls.Add(this.lblcodigoreg);
@@ -230,7 +240,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(69, 234);
+            this.label14.Location = new System.Drawing.Point(13, 217);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(119, 15);
             this.label14.TabIndex = 10;
@@ -248,7 +258,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(97, 190);
+            this.label12.Location = new System.Drawing.Point(41, 169);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 15);
             this.label12.TabIndex = 8;
@@ -266,7 +276,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 153);
+            this.label10.Location = new System.Drawing.Point(6, 124);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(182, 15);
             this.label10.TabIndex = 6;
@@ -284,7 +294,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(62, 113);
+            this.label8.Location = new System.Drawing.Point(6, 84);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 15);
             this.label8.TabIndex = 4;
@@ -328,11 +338,21 @@
             // 
             // grbregistrar
             // 
+            this.grbregistrar.Controls.Add(this.comboBox1);
+            this.grbregistrar.Controls.Add(this.textBox3);
+            this.grbregistrar.Controls.Add(this.dateTimePicker1);
+            this.grbregistrar.Controls.Add(this.textBox2);
+            this.grbregistrar.Controls.Add(this.label14);
+            this.grbregistrar.Controls.Add(this.label4);
+            this.grbregistrar.Controls.Add(this.textBox1);
             this.grbregistrar.Controls.Add(this.btnlimpiarusuario);
+            this.grbregistrar.Controls.Add(this.label12);
             this.grbregistrar.Controls.Add(this.btningresarusuario);
+            this.grbregistrar.Controls.Add(this.label8);
+            this.grbregistrar.Controls.Add(this.label10);
             this.grbregistrar.Location = new System.Drawing.Point(6, 6);
             this.grbregistrar.Name = "grbregistrar";
-            this.grbregistrar.Size = new System.Drawing.Size(363, 329);
+            this.grbregistrar.Size = new System.Drawing.Size(409, 329);
             this.grbregistrar.TabIndex = 0;
             this.grbregistrar.TabStop = false;
             this.grbregistrar.Text = "Registrar usuario";
@@ -401,6 +421,87 @@
             this.tabPage3.Text = "Agregar tipos de usuarios";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(138, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(256, 23);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Nombre usuario:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(138, 76);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(256, 23);
+            this.textBox2.TabIndex = 15;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(194, 118);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(138, 161);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(256, 23);
+            this.textBox3.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(138, 209);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(256, 23);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(62, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 15);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Apellido usuario:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(182, 15);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Fecha nacimiento usuario:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(97, 190);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 15);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "DUI usuario:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(69, 234);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(119, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Tipo de usuario:";
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +521,7 @@
             this.grbusuarioregistrado.ResumeLayout(false);
             this.grbusuarioregistrado.PerformLayout();
             this.grbregistrar.ResumeLayout(false);
+            this.grbregistrar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -457,5 +559,15 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
