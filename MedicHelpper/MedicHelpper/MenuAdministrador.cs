@@ -50,9 +50,16 @@ namespace MedicHelpper
 
         private void btncitas_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             Base citas = new Base();
             citas.Show();
+        }
+
+        private void btnusuarios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Usuarios usuarios = new Usuarios();
+            usuarios.Show();
         }
     }
 }

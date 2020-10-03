@@ -218,6 +218,7 @@
             this.btnusuarios.Text = "      Usuarios";
             this.btnusuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnusuarios.UseVisualStyleBackColor = false;
+            this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click);
             // 
             // MenuAdministrador
             // 
