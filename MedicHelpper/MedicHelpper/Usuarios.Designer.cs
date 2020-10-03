@@ -56,9 +56,7 @@
             this.btnlimpiarusuario = new System.Windows.Forms.Button();
             this.btningresarusuario = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -69,12 +67,39 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.grbmodificarusuarios = new System.Windows.Forms.GroupBox();
+            this.cmbbuscartipo = new System.Windows.Forms.ComboBox();
+            this.txbbuscardui = new System.Windows.Forms.TextBox();
+            this.dtpbuscarfecha = new System.Windows.Forms.DateTimePicker();
+            this.txbbuscarapellido = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txbbuscarnombre = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnlimpiarbusqueda = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
+            this.txbnombrebusqueda = new System.Windows.Forms.TextBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dtgvbusquedaresultados = new System.Windows.Forms.DataGridView();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.dtgvmostrarusuarios = new System.Windows.Forms.DataGridView();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnbuscarEnMostrar = new System.Windows.Forms.Button();
+            this.txbbuscarEnMostrar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.grbusuarioregistrado.SuspendLayout();
             this.grbregistrar.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.grbmodificarusuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvbusquedaresultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvmostrarusuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -164,9 +189,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 156);
@@ -383,6 +406,11 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dtgvbusquedaresultados);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.btnbuscar);
+            this.tabPage2.Controls.Add(this.txbnombrebusqueda);
+            this.tabPage2.Controls.Add(this.grbmodificarusuarios);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -391,18 +419,12 @@
             this.tabPage2.Text = "Modificar usuarios";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(792, 343);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Eliminar usuarios";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label21);
+            this.tabPage5.Controls.Add(this.btnbuscarEnMostrar);
+            this.tabPage5.Controls.Add(this.txbbuscarEnMostrar);
+            this.tabPage5.Controls.Add(this.dtgvmostrarusuarios);
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -410,16 +432,6 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Mostrar usuarios";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(792, 343);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Agregar tipos de usuarios";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -502,6 +514,217 @@
             this.label11.TabIndex = 19;
             this.label11.Text = "Tipo de usuario:";
             // 
+            // grbmodificarusuarios
+            // 
+            this.grbmodificarusuarios.Controls.Add(this.btneliminar);
+            this.grbmodificarusuarios.Controls.Add(this.btnlimpiarbusqueda);
+            this.grbmodificarusuarios.Controls.Add(this.btnmodificar);
+            this.grbmodificarusuarios.Controls.Add(this.cmbbuscartipo);
+            this.grbmodificarusuarios.Controls.Add(this.txbbuscardui);
+            this.grbmodificarusuarios.Controls.Add(this.dtpbuscarfecha);
+            this.grbmodificarusuarios.Controls.Add(this.txbbuscarapellido);
+            this.grbmodificarusuarios.Controls.Add(this.label13);
+            this.grbmodificarusuarios.Controls.Add(this.label15);
+            this.grbmodificarusuarios.Controls.Add(this.txbbuscarnombre);
+            this.grbmodificarusuarios.Controls.Add(this.label17);
+            this.grbmodificarusuarios.Controls.Add(this.label18);
+            this.grbmodificarusuarios.Controls.Add(this.label19);
+            this.grbmodificarusuarios.Location = new System.Drawing.Point(6, 6);
+            this.grbmodificarusuarios.Name = "grbmodificarusuarios";
+            this.grbmodificarusuarios.Size = new System.Drawing.Size(411, 329);
+            this.grbmodificarusuarios.TabIndex = 0;
+            this.grbmodificarusuarios.TabStop = false;
+            this.grbmodificarusuarios.Text = "Administrar usuarios";
+            // 
+            // cmbbuscartipo
+            // 
+            this.cmbbuscartipo.FormattingEnabled = true;
+            this.cmbbuscartipo.Location = new System.Drawing.Point(139, 219);
+            this.cmbbuscartipo.Name = "cmbbuscartipo";
+            this.cmbbuscartipo.Size = new System.Drawing.Size(256, 23);
+            this.cmbbuscartipo.TabIndex = 28;
+            // 
+            // txbbuscardui
+            // 
+            this.txbbuscardui.Location = new System.Drawing.Point(139, 171);
+            this.txbbuscardui.Name = "txbbuscardui";
+            this.txbbuscardui.Size = new System.Drawing.Size(256, 23);
+            this.txbbuscardui.TabIndex = 27;
+            // 
+            // dtpbuscarfecha
+            // 
+            this.dtpbuscarfecha.Location = new System.Drawing.Point(195, 128);
+            this.dtpbuscarfecha.Name = "dtpbuscarfecha";
+            this.dtpbuscarfecha.Size = new System.Drawing.Size(200, 23);
+            this.dtpbuscarfecha.TabIndex = 26;
+            // 
+            // txbbuscarapellido
+            // 
+            this.txbbuscarapellido.Location = new System.Drawing.Point(139, 86);
+            this.txbbuscarapellido.Name = "txbbuscarapellido";
+            this.txbbuscarapellido.Size = new System.Drawing.Size(256, 23);
+            this.txbbuscarapellido.TabIndex = 25;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(14, 227);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(119, 15);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Tipo de usuario:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(21, 49);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 15);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Nombre usuario:";
+            // 
+            // txbbuscarnombre
+            // 
+            this.txbbuscarnombre.Location = new System.Drawing.Point(139, 41);
+            this.txbbuscarnombre.Name = "txbbuscarnombre";
+            this.txbbuscarnombre.Size = new System.Drawing.Size(256, 23);
+            this.txbbuscarnombre.TabIndex = 19;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(42, 179);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(91, 15);
+            this.label17.TabIndex = 22;
+            this.label17.Text = "DUI usuario:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 94);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(126, 15);
+            this.label18.TabIndex = 20;
+            this.label18.Text = "Apellido usuario:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(7, 134);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(182, 15);
+            this.label19.TabIndex = 21;
+            this.label19.Text = "Fecha nacimiento usuario:";
+            // 
+            // btnlimpiarbusqueda
+            // 
+            this.btnlimpiarbusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.btnlimpiarbusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiarbusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btnlimpiarbusqueda.Location = new System.Drawing.Point(251, 282);
+            this.btnlimpiarbusqueda.Name = "btnlimpiarbusqueda";
+            this.btnlimpiarbusqueda.Size = new System.Drawing.Size(75, 29);
+            this.btnlimpiarbusqueda.TabIndex = 30;
+            this.btnlimpiarbusqueda.Text = "Limpiar";
+            this.btnlimpiarbusqueda.UseVisualStyleBackColor = false;
+            // 
+            // btnmodificar
+            // 
+            this.btnmodificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmodificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btnmodificar.Location = new System.Drawing.Point(91, 282);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(75, 29);
+            this.btnmodificar.TabIndex = 29;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = false;
+            // 
+            // txbnombrebusqueda
+            // 
+            this.txbnombrebusqueda.Location = new System.Drawing.Point(541, 29);
+            this.txbnombrebusqueda.Name = "txbnombrebusqueda";
+            this.txbnombrebusqueda.Size = new System.Drawing.Size(162, 23);
+            this.txbnombrebusqueda.TabIndex = 1;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btnbuscar.Location = new System.Drawing.Point(709, 25);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(75, 29);
+            this.btnbuscar.TabIndex = 31;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(423, 32);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(112, 15);
+            this.label20.TabIndex = 31;
+            this.label20.Text = "Nombre usuario:";
+            // 
+            // dtgvbusquedaresultados
+            // 
+            this.dtgvbusquedaresultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvbusquedaresultados.Location = new System.Drawing.Point(426, 76);
+            this.dtgvbusquedaresultados.Name = "dtgvbusquedaresultados";
+            this.dtgvbusquedaresultados.Size = new System.Drawing.Size(358, 259);
+            this.dtgvbusquedaresultados.TabIndex = 32;
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btneliminar.Location = new System.Drawing.Point(172, 282);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(75, 29);
+            this.btneliminar.TabIndex = 31;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            // 
+            // dtgvmostrarusuarios
+            // 
+            this.dtgvmostrarusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvmostrarusuarios.Location = new System.Drawing.Point(6, 50);
+            this.dtgvmostrarusuarios.Name = "dtgvmostrarusuarios";
+            this.dtgvmostrarusuarios.Size = new System.Drawing.Size(778, 285);
+            this.dtgvmostrarusuarios.TabIndex = 0;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(10, 24);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(112, 15);
+            this.label21.TabIndex = 34;
+            this.label21.Text = "Nombre usuario:";
+            // 
+            // btnbuscarEnMostrar
+            // 
+            this.btnbuscarEnMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.btnbuscarEnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscarEnMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btnbuscarEnMostrar.Location = new System.Drawing.Point(296, 17);
+            this.btnbuscarEnMostrar.Name = "btnbuscarEnMostrar";
+            this.btnbuscarEnMostrar.Size = new System.Drawing.Size(75, 29);
+            this.btnbuscarEnMostrar.TabIndex = 33;
+            this.btnbuscarEnMostrar.Text = "Buscar";
+            this.btnbuscarEnMostrar.UseVisualStyleBackColor = false;
+            // 
+            // txbbuscarEnMostrar
+            // 
+            this.txbbuscarEnMostrar.Location = new System.Drawing.Point(128, 21);
+            this.txbbuscarEnMostrar.Name = "txbbuscarEnMostrar";
+            this.txbbuscarEnMostrar.Size = new System.Drawing.Size(162, 23);
+            this.txbbuscarEnMostrar.TabIndex = 32;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,6 +745,14 @@
             this.grbusuarioregistrado.PerformLayout();
             this.grbregistrar.ResumeLayout(false);
             this.grbregistrar.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.grbmodificarusuarios.ResumeLayout(false);
+            this.grbmodificarusuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvbusquedaresultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvmostrarusuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -556,9 +787,7 @@
         private System.Windows.Forms.Button btnlimpiarusuario;
         private System.Windows.Forms.Button btningresarusuario;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
@@ -569,5 +798,27 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dtgvbusquedaresultados;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnbuscar;
+        private System.Windows.Forms.TextBox txbnombrebusqueda;
+        private System.Windows.Forms.GroupBox grbmodificarusuarios;
+        private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.Button btnlimpiarbusqueda;
+        private System.Windows.Forms.Button btnmodificar;
+        private System.Windows.Forms.ComboBox cmbbuscartipo;
+        private System.Windows.Forms.TextBox txbbuscardui;
+        private System.Windows.Forms.DateTimePicker dtpbuscarfecha;
+        private System.Windows.Forms.TextBox txbbuscarapellido;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txbbuscarnombre;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btnbuscarEnMostrar;
+        private System.Windows.Forms.TextBox txbbuscarEnMostrar;
+        private System.Windows.Forms.DataGridView dtgvmostrarusuarios;
     }
 }
