@@ -39,3 +39,6 @@ C:\Users\William\Source\Repos\POO3\MedicHelpper\MedicHelpper\obj\Debug\MedicHelp
 C:\Users\William\Source\Repos\POO3\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.MenuAdministrador.resources
 C:\Users\William\Source\Repos\POO3\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Properties.Resources.resources
 C:\Users\William\Source\Repos\POO3\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.GenerateResource.Cache
+C:\Users\William\Source\Repos\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe.config
+C:\Users\William\Source\Repos\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
+C:\Users\William\Source\Repos\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb
