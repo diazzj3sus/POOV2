@@ -16,5 +16,12 @@ namespace MedicHelpper
         {
             InitializeComponent();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuAdministrador menu = new MenuAdministrador();
+            menu.Show();
+        }
     }
 }
