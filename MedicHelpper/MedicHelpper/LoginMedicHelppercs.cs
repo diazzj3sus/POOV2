@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MedicHelpper.Properties;
 
 namespace MedicHelpper
 {
@@ -126,6 +127,26 @@ namespace MedicHelpper
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                btnRestaurar.Image = Resources.redimensionar;
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                btnRestaurar.Image = Resources.redimensionar;
+                this.WindowState = FormWindowState.Maximized;
+                btnRestaurar.Image = Resources.restaurar;
+            }
         }
     }
 }

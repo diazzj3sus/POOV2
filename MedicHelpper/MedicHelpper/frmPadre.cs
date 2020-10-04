@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace MedicHelpper
 {
-    public partial class citas : Form
+    public partial class frmPadre : Form
     {
-        public citas()
+        public frmPadre()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginMedicHelppercs login = new LoginMedicHelppercs();
+            login.Show();
         }
     }
 }

@@ -49,17 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base.cs">
+    <Compile Include="Bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Base.Designer.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="Bienvenida.Designer.cs">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
-    <Compile Include="citas.cs">
+    <Compile Include="frmDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="citas.Designer.cs">
-      <DependentUpon>citas.cs</DependentUpon>
+    <Compile Include="frmDoctor.Designer.cs">
+      <DependentUpon>frmDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnfer.Designer.cs">
+      <DependentUpon>frmEnfer.cs</DependentUpon>
     </Compile>
     <Compile Include="ConexionSqlServer.cs" />
     <Compile Include="Farmaceuticos.cs">
@@ -67,6 +73,12 @@
     </Compile>
     <Compile Include="Farmaceuticos.Designer.cs">
       <DependentUpon>Farmaceuticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPadre.Designer.cs">
+      <DependentUpon>frmPadre.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginMedicHelppercs.cs">
       <SubType>Form</SubType>
@@ -88,14 +100,20 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Base.resx">
-      <DependentUpon>Base.cs</DependentUpon>
+    <EmbeddedResource Include="Bienvenida.resx">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="citas.resx">
-      <DependentUpon>citas.cs</DependentUpon>
+    <EmbeddedResource Include="frmDoctor.resx">
+      <DependentUpon>frmDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnfer.resx">
+      <DependentUpon>frmEnfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Farmaceuticos.resx">
       <DependentUpon>Farmaceuticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPadre.resx">
+      <DependentUpon>frmPadre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginMedicHelppercs.resx">
       <DependentUpon>LoginMedicHelppercs.cs</DependentUpon>
@@ -173,6 +191,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mostrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendariza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redimensionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

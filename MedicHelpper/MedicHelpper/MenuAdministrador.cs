@@ -51,7 +51,7 @@ namespace MedicHelpper
         private void btncitas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Base citas = new Base();
+            frmEnfer citas = new frmEnfer();
             citas.Show();
         }
 
@@ -60,6 +60,20 @@ namespace MedicHelpper
             this.Hide();
             Usuarios usuarios = new Usuarios();
             usuarios.Show();
+        }
+
+        private void btnconsultas_Click(object sender, EventArgs e)
+        {
+            frmDoctor frm = new frmDoctor();
+            this.Hide();
+            frm.Visible = true;
+        }
+
+        private void btnfarmacia_Click(object sender, EventArgs e)
+        {
+            Farmaceuticos frm = new Farmaceuticos();
+            this.Hide();
+            frm.Visible = true;
         }
     }
 }

@@ -52,7 +52,7 @@
             this.lblusuario.Location = new System.Drawing.Point(6, 107);
             this.lblusuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(90, 22);
+            this.lblusuario.Size = new System.Drawing.Size(116, 28);
             this.lblusuario.TabIndex = 0;
             this.lblusuario.Text = "Usuario:";
             // 
@@ -79,7 +79,7 @@
             this.lbluser.Location = new System.Drawing.Point(108, 107);
             this.lbluser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbluser.Name = "lbluser";
-            this.lbluser.Size = new System.Drawing.Size(140, 22);
+            this.lbluser.Size = new System.Drawing.Size(181, 28);
             this.lbluser.TabIndex = 7;
             this.lbluser.Text = "-------------";
             this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
@@ -92,7 +92,7 @@
             this.label1.Location = new System.Drawing.Point(218, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 24);
+            this.label1.Size = new System.Drawing.Size(285, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Menú administrador";
             // 
@@ -118,7 +118,7 @@
             this.label2.Location = new System.Drawing.Point(244, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 28);
+            this.label2.Size = new System.Drawing.Size(207, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "MedicHelpper";
             // 
@@ -128,7 +128,7 @@
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(256, 595);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 19);
+            this.label3.Size = new System.Drawing.Size(164, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "® MedicHelpper";
             // 
@@ -165,6 +165,7 @@
             this.btnfarmacia.Text = "      Farmacia";
             this.btnfarmacia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnfarmacia.UseVisualStyleBackColor = false;
+            this.btnfarmacia.Click += new System.EventHandler(this.btnfarmacia_Click);
             // 
             // btnconsultas
             // 
@@ -182,6 +183,7 @@
             this.btnconsultas.Text = "      Consulta";
             this.btnconsultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnconsultas.UseVisualStyleBackColor = false;
+            this.btnconsultas.Click += new System.EventHandler(this.btnconsultas_Click);
             // 
             // btncitas
             // 
@@ -222,7 +224,7 @@
             // 
             // MenuAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(643, 623);

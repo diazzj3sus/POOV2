@@ -10,18 +10,26 @@ using System.Windows.Forms;
 
 namespace MedicHelpper
 {
-    public partial class Usuarios : Form
+    public partial class Bienvenida : Form
     {
-        public Usuarios()
+        public Bienvenida()
         {
             InitializeComponent();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MenuAdministrador menu = new MenuAdministrador("Juan");
-            menu.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

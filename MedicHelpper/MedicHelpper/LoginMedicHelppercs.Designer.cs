@@ -29,17 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.txbUsuario = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.txbContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnaceptar = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,28 +51,17 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 450);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.MedicHelpperLogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 81);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 303);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(751, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(755, 1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(37, 30);
             this.btnCerrar.TabIndex = 1;
@@ -101,6 +94,15 @@
             this.shapeContainer1.Size = new System.Drawing.Size(800, 450);
             this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderWidth = 3;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 419;
+            this.lineShape1.X2 = 764;
+            this.lineShape1.Y1 = 153;
+            this.lineShape1.Y2 = 153;
             // 
             // lineShape2
             // 
@@ -163,14 +165,39 @@
             this.btnlimpiar.UseVisualStyleBackColor = true;
             this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
-            // lineShape1
+            // btnMinimizar
             // 
-            this.lineShape1.BorderWidth = 3;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 419;
-            this.lineShape1.X2 = 764;
-            this.lineShape1.Y1 = 153;
-            this.lineShape1.Y2 = 153;
+            this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
+            this.btnMinimizar.Location = new System.Drawing.Point(678, 2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(40, 28);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 10;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
+            this.btnRestaurar.Location = new System.Drawing.Point(713, 1);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(37, 28);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 9;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.MedicHelpperLogo1;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(313, 303);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginMedicHelppercs
             // 
@@ -178,6 +205,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMinimizar);
+            this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.btnaceptar);
             this.Controls.Add(this.label1);
@@ -193,6 +222,8 @@
             this.Text = "LoginMedicHelppercs";
             this.Load += new System.EventHandler(this.LoginMedicHelppercs_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,5 +243,7 @@
         private System.Windows.Forms.Button btnaceptar;
         private System.Windows.Forms.Button btnlimpiar;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox btnRestaurar;
     }
 }
