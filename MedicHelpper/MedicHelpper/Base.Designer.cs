@@ -31,24 +31,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.AddPaciente = new System.Windows.Forms.TabPage();
-            this.AddCita = new System.Windows.Forms.TabPage();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtnom = new System.Windows.Forms.TextBox();
-            this.txtdatebirth = new System.Windows.Forms.TextBox();
-            this.txtape = new System.Windows.Forms.TextBox();
+            this.btnAddPatient = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtnum = new System.Windows.Forms.TextBox();
+            this.txtape = new System.Windows.Forms.TextBox();
+            this.txtdatebirth = new System.Windows.Forms.TextBox();
+            this.txtnom = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.AddCita = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnEstado = new System.Windows.Forms.Button();
+            this.btnAddCita = new System.Windows.Forms.Button();
             this.FindPaciente = new System.Windows.Forms.TabPage();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.NTarjeta = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtFechaBirth = new System.Windows.Forms.TextBox();
@@ -58,23 +64,18 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.ShowPaciente = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAddPatient = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEstado = new System.Windows.Forms.Button();
-            this.btnAddCita = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.AddPaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AddCita.SuspendLayout();
             this.FindPaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.ShowPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,6 +107,7 @@
             // 
             this.AddPaciente.BackColor = System.Drawing.Color.Silver;
             this.AddPaciente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AddPaciente.Controls.Add(this.comboBox1);
             this.AddPaciente.Controls.Add(this.btnAddPatient);
             this.AddPaciente.Controls.Add(this.pictureBox1);
             this.AddPaciente.Controls.Add(this.txtnum);
@@ -122,6 +124,89 @@
             this.AddPaciente.Size = new System.Drawing.Size(470, 265);
             this.AddPaciente.TabIndex = 0;
             this.AddPaciente.Text = "Agregar Paciente";
+            // 
+            // btnAddPatient
+            // 
+            this.btnAddPatient.BackColor = System.Drawing.Color.LightGreen;
+            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddPatient.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPatient.Image = global::MedicHelpper.Properties.Resources.agregar_usuario;
+            this.btnAddPatient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddPatient.Location = new System.Drawing.Point(334, 181);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(95, 27);
+            this.btnAddPatient.TabIndex = 9;
+            this.btnAddPatient.Text = "Agregar";
+            this.btnAddPatient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddPatient.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.usuarioDEF;
+            this.pictureBox1.Location = new System.Drawing.Point(322, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtnum
+            // 
+            this.txtnum.Location = new System.Drawing.Point(196, 210);
+            this.txtnum.Name = "txtnum";
+            this.txtnum.Size = new System.Drawing.Size(100, 20);
+            this.txtnum.TabIndex = 7;
+            // 
+            // txtape
+            // 
+            this.txtape.Location = new System.Drawing.Point(196, 81);
+            this.txtape.Name = "txtape";
+            this.txtape.Size = new System.Drawing.Size(100, 20);
+            this.txtape.TabIndex = 6;
+            // 
+            // txtdatebirth
+            // 
+            this.txtdatebirth.Location = new System.Drawing.Point(196, 142);
+            this.txtdatebirth.Name = "txtdatebirth";
+            this.txtdatebirth.Size = new System.Drawing.Size(100, 20);
+            this.txtdatebirth.TabIndex = 5;
+            // 
+            // txtnom
+            // 
+            this.txtnom.Location = new System.Drawing.Point(196, 26);
+            this.txtnom.Name = "txtnom";
+            this.txtnom.Size = new System.Drawing.Size(100, 20);
+            this.txtnom.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(34, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Nº de tarjeta:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Fecha de nacimiento:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(34, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Apellido:";
             // 
             // AddCita
             // 
@@ -144,77 +229,23 @@
             this.AddCita.TabIndex = 1;
             this.AddCita.Text = "Citas";
             // 
-            // btnCerrar
+            // dateTimePicker1
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(456, 5);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(37, 31);
-            this.btnCerrar.TabIndex = 4;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.dateTimePicker1.Location = new System.Drawing.Point(157, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(245, 20);
+            this.dateTimePicker1.TabIndex = 19;
             // 
-            // label2
+            // lblEstado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Apellido:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha de nacimiento:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Nº de tarjeta:";
-            // 
-            // txtnom
-            // 
-            this.txtnom.Location = new System.Drawing.Point(196, 26);
-            this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(100, 20);
-            this.txtnom.TabIndex = 4;
-            // 
-            // txtdatebirth
-            // 
-            this.txtdatebirth.Location = new System.Drawing.Point(196, 142);
-            this.txtdatebirth.Name = "txtdatebirth";
-            this.txtdatebirth.Size = new System.Drawing.Size(100, 20);
-            this.txtdatebirth.TabIndex = 5;
-            // 
-            // txtape
-            // 
-            this.txtape.Location = new System.Drawing.Point(196, 81);
-            this.txtape.Name = "txtape";
-            this.txtape.Size = new System.Drawing.Size(100, 20);
-            this.txtape.TabIndex = 6;
-            // 
-            // txtnum
-            // 
-            this.txtnum.Location = new System.Drawing.Point(196, 210);
-            this.txtnum.Name = "txtnum";
-            this.txtnum.Size = new System.Drawing.Size(100, 20);
-            this.txtnum.TabIndex = 7;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(397, 153);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(14, 15);
+            this.lblEstado.TabIndex = 16;
+            this.lblEstado.Text = ".";
+            this.lblEstado.Visible = false;
             // 
             // textBox1
             // 
@@ -271,23 +302,34 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Codigo de cita:";
             // 
-            // lblEstado
+            // btnEstado
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(397, 153);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(14, 15);
-            this.lblEstado.TabIndex = 16;
-            this.lblEstado.Text = ".";
-            this.lblEstado.Visible = false;
+            this.btnEstado.BackColor = System.Drawing.Color.LightGreen;
+            this.btnEstado.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstado.Image = global::MedicHelpper.Properties.Resources.comprobar;
+            this.btnEstado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstado.Location = new System.Drawing.Point(333, 203);
+            this.btnEstado.Name = "btnEstado";
+            this.btnEstado.Size = new System.Drawing.Size(89, 35);
+            this.btnEstado.TabIndex = 18;
+            this.btnEstado.Text = "Estado";
+            this.btnEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEstado.UseVisualStyleBackColor = false;
+            this.btnEstado.Visible = false;
             // 
-            // dateTimePicker1
+            // btnAddCita
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.btnAddCita.BackColor = System.Drawing.Color.Wheat;
+            this.btnAddCita.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCita.Image = global::MedicHelpper.Properties.Resources.calendario;
+            this.btnAddCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddCita.Location = new System.Drawing.Point(174, 203);
+            this.btnAddCita.Name = "btnAddCita";
+            this.btnAddCita.Size = new System.Drawing.Size(128, 35);
+            this.btnAddCita.TabIndex = 17;
+            this.btnAddCita.Text = "Agendar Cita";
+            this.btnAddCita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddCita.UseVisualStyleBackColor = false;
             // 
             // FindPaciente
             // 
@@ -308,6 +350,49 @@
             this.FindPaciente.Size = new System.Drawing.Size(470, 265);
             this.FindPaciente.TabIndex = 2;
             this.FindPaciente.Text = "Buscar Pacientes";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Image = global::MedicHelpper.Properties.Resources.reanudar;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(333, 65);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(95, 27);
+            this.btnEdit.TabIndex = 21;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Visible = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = global::MedicHelpper.Properties.Resources.headhunter;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(333, 22);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(95, 27);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MedicHelpper.Properties.Resources.usuarioDEF;
+            this.pictureBox2.Location = new System.Drawing.Point(319, 115);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             // 
             // NTarjeta
             // 
@@ -394,111 +479,6 @@
             this.ShowPaciente.TabIndex = 3;
             this.ShowPaciente.Text = "Listado Pacientes";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(445, 188);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnAddPatient
-            // 
-            this.btnAddPatient.BackColor = System.Drawing.Color.LightGreen;
-            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddPatient.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.Image = global::MedicHelpper.Properties.Resources.agregar_usuario;
-            this.btnAddPatient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddPatient.Location = new System.Drawing.Point(334, 181);
-            this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(95, 27);
-            this.btnAddPatient.TabIndex = 9;
-            this.btnAddPatient.Text = "Agregar";
-            this.btnAddPatient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddPatient.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.usuarioDEF;
-            this.pictureBox1.Location = new System.Drawing.Point(322, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnEstado
-            // 
-            this.btnEstado.BackColor = System.Drawing.Color.LightGreen;
-            this.btnEstado.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Image = global::MedicHelpper.Properties.Resources.comprobar;
-            this.btnEstado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstado.Location = new System.Drawing.Point(333, 203);
-            this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(89, 35);
-            this.btnEstado.TabIndex = 18;
-            this.btnEstado.Text = "Estado";
-            this.btnEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEstado.UseVisualStyleBackColor = false;
-            this.btnEstado.Visible = false;
-            // 
-            // btnAddCita
-            // 
-            this.btnAddCita.BackColor = System.Drawing.Color.Wheat;
-            this.btnAddCita.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCita.Image = global::MedicHelpper.Properties.Resources.calendario;
-            this.btnAddCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCita.Location = new System.Drawing.Point(174, 203);
-            this.btnAddCita.Name = "btnAddCita";
-            this.btnAddCita.Size = new System.Drawing.Size(128, 35);
-            this.btnAddCita.TabIndex = 17;
-            this.btnAddCita.Text = "Agendar Cita";
-            this.btnAddCita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddCita.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.LightSalmon;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Image = global::MedicHelpper.Properties.Resources.reanudar;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(333, 65);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(95, 27);
-            this.btnEdit.TabIndex = 21;
-            this.btnEdit.Text = "Editar";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Visible = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.LightGreen;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = global::MedicHelpper.Properties.Resources.headhunter;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(333, 22);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(95, 27);
-            this.btnBuscar.TabIndex = 20;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MedicHelpper.Properties.Resources.usuarioDEF;
-            this.pictureBox2.Location = new System.Drawing.Point(319, 115);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -514,6 +494,36 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(445, 188);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(456, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(37, 31);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(22, 50);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 10;
+            // 
             // Base
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,14 +538,14 @@
             this.tabControl1.ResumeLayout(false);
             this.AddPaciente.ResumeLayout(false);
             this.AddPaciente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AddCita.ResumeLayout(false);
             this.AddCita.PerformLayout();
             this.FindPaciente.ResumeLayout(false);
             this.FindPaciente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ShowPaciente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -581,5 +591,6 @@
         private System.Windows.Forms.TabPage ShowPaciente;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

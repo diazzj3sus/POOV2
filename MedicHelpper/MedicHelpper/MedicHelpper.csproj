@@ -62,6 +62,12 @@
       <DependentUpon>citas.cs</DependentUpon>
     </Compile>
     <Compile Include="ConexionSqlServer.cs" />
+    <Compile Include="Farmaceuticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Farmaceuticos.Designer.cs">
+      <DependentUpon>Farmaceuticos.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginMedicHelppercs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="citas.resx">
       <DependentUpon>citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Farmaceuticos.resx">
+      <DependentUpon>Farmaceuticos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginMedicHelppercs.resx">
       <DependentUpon>LoginMedicHelppercs.cs</DependentUpon>
