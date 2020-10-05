@@ -15,21 +15,15 @@ namespace MedicHelpper
         public Bienvenida()
         {
             InitializeComponent();
+            timer1.Enabled = true;
+            timer1.Interval = 4000;
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            timer1.Stop();
+            this.DialogResult = DialogResult.OK;
             this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

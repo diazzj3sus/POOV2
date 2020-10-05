@@ -19,9 +19,7 @@ namespace MedicHelpper
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginMedicHelppercs login = new LoginMedicHelppercs();
-            login.Show();
+            
         }
     }
 }

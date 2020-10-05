@@ -19,18 +19,18 @@ namespace MedicHelpper
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            LoginMedicHelppercs frm = new LoginMedicHelppercs();
+            MenuAdministrador frm = new MenuAdministrador("");
             frm.Visible = true;
             
         }
         private void btnMinimizar_Click(object sender, EventArgs e)
-        {
+        {   
             this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
+                if (this.WindowState == FormWindowState.Maximized)
             {
                 btnRestaurar.Image = Resources.redimensionar;
                 this.WindowState = FormWindowState.Normal;
@@ -42,5 +42,6 @@ namespace MedicHelpper
                 btnRestaurar.Image = Resources.restaurar;
             }
         }
+
     }
 }

@@ -16,7 +16,11 @@ namespace MedicHelpper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginMedicHelppercs());
+            Bienvenida Primera = new Bienvenida();
+            if (Primera.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new LoginMedicHelppercs());
+            }
         }
     }
 }
