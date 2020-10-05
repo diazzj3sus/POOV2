@@ -41,11 +41,7 @@
             this.btnconsultas = new System.Windows.Forms.Button();
             this.btncitas = new System.Windows.Forms.Button();
             this.btnusuarios = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblusuario
@@ -56,15 +52,13 @@
             this.lblusuario.Location = new System.Drawing.Point(6, 107);
             this.lblusuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(90, 22);
+            this.lblusuario.Size = new System.Drawing.Size(116, 28);
             this.lblusuario.TabIndex = 0;
             this.lblusuario.Text = "Usuario:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.btnMinimizar);
-            this.panel1.Controls.Add(this.btnRestaurar);
             this.panel1.Controls.Add(this.lbluser);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnCerrar);
@@ -85,9 +79,10 @@
             this.lbluser.Location = new System.Drawing.Point(108, 107);
             this.lbluser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbluser.Name = "lbluser";
-            this.lbluser.Size = new System.Drawing.Size(140, 22);
+            this.lbluser.Size = new System.Drawing.Size(181, 28);
             this.lbluser.TabIndex = 7;
             this.lbluser.Text = "-------------";
+            this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
             // 
             // label1
             // 
@@ -97,7 +92,7 @@
             this.label1.Location = new System.Drawing.Point(218, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 24);
+            this.label1.Size = new System.Drawing.Size(285, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Menú administrador";
             // 
@@ -123,7 +118,7 @@
             this.label2.Location = new System.Drawing.Point(244, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 28);
+            this.label2.Size = new System.Drawing.Size(207, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "MedicHelpper";
             // 
@@ -133,7 +128,7 @@
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(256, 595);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 19);
+            this.label3.Size = new System.Drawing.Size(164, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "® MedicHelpper";
             // 
@@ -227,33 +222,9 @@
             this.btnusuarios.UseVisualStyleBackColor = false;
             this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click);
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
-            this.btnMinimizar.Location = new System.Drawing.Point(509, 15);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(40, 28);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 16;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
-            this.btnRestaurar.Location = new System.Drawing.Point(553, 15);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(37, 28);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 15;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
             // MenuAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(643, 623);
@@ -275,8 +246,6 @@
             this.Load += new System.EventHandler(this.MenuAdministrador_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +265,5 @@
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Label label3;
         protected System.Windows.Forms.Label lbluser;
-        private System.Windows.Forms.PictureBox btnMinimizar;
-        private System.Windows.Forms.PictureBox btnRestaurar;
     }
 }

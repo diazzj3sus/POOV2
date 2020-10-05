@@ -1,5 +1,4 @@
-﻿using MedicHelpper.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,12 +31,21 @@ namespace MedicHelpper
             login.Show();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Hide();
             LoginMedicHelppercs login = new LoginMedicHelppercs();
             login.Show();
+        }
+
+        private void lbluser_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btncitas_Click(object sender, EventArgs e)
@@ -66,26 +74,6 @@ namespace MedicHelpper
             Farmaceuticos frm = new Farmaceuticos();
             this.Hide();
             frm.Visible = true;
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                btnRestaurar.Image = Resources.redimensionar;
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                btnRestaurar.Image = Resources.redimensionar;
-                this.WindowState = FormWindowState.Maximized;
-                btnRestaurar.Image = Resources.restaurar;
-            }
         }
     }
 }

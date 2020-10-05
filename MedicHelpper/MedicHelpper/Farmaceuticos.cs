@@ -1,5 +1,4 @@
-﻿using MedicHelpper.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,26 +20,8 @@ namespace MedicHelpper
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuAdministrador login = new MenuAdministrador("");
+            LoginMedicHelppercs login = new LoginMedicHelppercs();
             login.Show();
-        }
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-        private void btnRestaurar_Click_1(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                btnRestaurar.Image = Resources.redimensionar;
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                btnRestaurar.Image = Resources.redimensionar;
-                this.WindowState = FormWindowState.Maximized;
-                btnRestaurar.Image = Resources.restaurar;
-            }
         }
     }
 }
