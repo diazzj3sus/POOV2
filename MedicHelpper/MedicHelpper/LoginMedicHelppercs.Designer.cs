@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.txbUsuario = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
@@ -40,11 +41,11 @@
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_creditos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,6 +56,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.MedicHelpperLogo1;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(313, 303);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnCerrar
             // 
@@ -189,15 +200,19 @@
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // pictureBox1
+            // btn_creditos
             // 
-            this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.MedicHelpperLogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 81);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 303);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btn_creditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_creditos.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_creditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btn_creditos.Location = new System.Drawing.Point(664, 416);
+            this.btn_creditos.Name = "btn_creditos";
+            this.btn_creditos.Size = new System.Drawing.Size(124, 22);
+            this.btn_creditos.TabIndex = 12;
+            this.btn_creditos.Text = "Acerca de....";
+            this.btn_creditos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_creditos.UseVisualStyleBackColor = true;
+            this.btn_creditos.Click += new System.EventHandler(this.btn_creditos_Click);
             // 
             // LoginMedicHelppercs
             // 
@@ -205,6 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_creditos);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.btnlimpiar);
@@ -222,9 +238,9 @@
             this.Text = "LoginMedicHelppercs";
             this.Load += new System.EventHandler(this.LoginMedicHelppercs_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +261,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.Button btn_creditos;
     }
 }

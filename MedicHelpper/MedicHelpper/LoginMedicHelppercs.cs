@@ -126,6 +126,7 @@ namespace MedicHelpper
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+           
             Application.Exit();
         }
 
@@ -147,6 +148,20 @@ namespace MedicHelpper
                 this.WindowState = FormWindowState.Maximized;
                 btnRestaurar.Image = Resources.restaurar;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_creditos_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Creditos cre = new Creditos();
+            cre.Show();
+            
+
         }
     }
 }
