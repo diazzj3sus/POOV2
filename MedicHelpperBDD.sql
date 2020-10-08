@@ -9,6 +9,9 @@ DescipcionTipoUsuario VARCHAR(255)
 )
 GO
 insert into TipoUsuario VALUES('Administrador','Posee todos los permisos dentro del software')
+insert into TipoUsuario VALUES('Enfermeria','Encargado de la administración de citas')
+insert into TipoUsuario VALUES('Dotores','Encargado de atender a los pacientes en sus consultas')
+insert into TipoUsuario VALUES('Farmaceutico','Encargado de la administración de la farmacia')
 CREATE TABLE Usuarios(
 IdUsuario CHAR(6) PRIMARY KEY,
 Contraseña VARCHAR(75) NOT NULL,

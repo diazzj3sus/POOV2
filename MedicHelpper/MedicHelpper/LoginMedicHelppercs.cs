@@ -90,6 +90,22 @@ namespace MedicHelpper
                         string nombre = (dt.Rows[0][2] + " " + dt.Rows[0][3]);
                         MenuAdministrador menu = new MenuAdministrador(nombre);
                         menu.Show();
+                    }else if (dt.Rows[0][6].ToString() == "1")
+                    {
+                        this.Hide();
+                        frmEnfer frmEnfer = new frmEnfer();
+                        frmEnfer.Show();
+                    }else if (dt.Rows[0][6].ToString() == "2")
+                    {
+                        this.Hide();
+                        frmDoctor frmDoctor = new frmDoctor();
+                        frmDoctor.Show();
+                    }
+                    else if (dt.Rows[0][6].ToString() == "3")
+                    {
+                        this.Hide();
+                        Farmaceuticos farma = new Farmaceuticos();
+                        farma.Show();
                     }
                 }
                 else
@@ -105,19 +121,27 @@ namespace MedicHelpper
         }
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txbUsuario.Text) && !string.IsNullOrEmpty(txbContraseña.Text))
+            try
             {
-                try
+                if (!string.IsNullOrEmpty(txbUsuario.Text) && !string.IsNullOrEmpty(txbContraseña.Text))
                 {
-                    iniciarSesion(txbUsuario.Text,txbContraseña.Text);
+                    try
+                    {
+                        iniciarSesion(txbUsuario.Text, txbContraseña.Text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("ERROR: Revise los datos ingresados.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Limpiar();
+                    }
                 }
-                catch
+                else
                 {
                     MessageBox.Show("ERROR: Revise los datos ingresados.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Limpiar();
                 }
             }
-            else
+            catch
             {
                 MessageBox.Show("ERROR: Revise los datos ingresados.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Limpiar();

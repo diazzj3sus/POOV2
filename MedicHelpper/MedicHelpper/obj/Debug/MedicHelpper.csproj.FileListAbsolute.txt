@@ -98,3 +98,24 @@ C:\Users\William\Source\Repos\POOV22\MedicHelpper\MedicHelpper\obj\Debug\MedicHe
 C:\Users\William\Source\Repos\POOV22\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Usuarios.resources
 C:\Users\William\Source\Repos\POOV22\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.GenerateResource.Cache
 C:\Users\William\Source\Repos\POOV22\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Creditos.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe.config
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.pdb
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csprojAssemblyReference.cache
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Bienvenida.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Creditos.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmDoctor.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmEnfer.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Farmaceuticos.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmPadre.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.LoginMedicHelppercs.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.MenuAdministrador.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Properties.Resources.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Usuarios.resources
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.GenerateResource.cache
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.CoreCompileInputs.cache
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.CopyComplete
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
+C:\Users\GRX\Desktop\CICLO II\POO\ProyectoPOO\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb

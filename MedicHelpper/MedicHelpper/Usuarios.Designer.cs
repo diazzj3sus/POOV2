@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbluser = new System.Windows.Forms.Label();
@@ -53,13 +55,11 @@
             this.lblcodigoreg = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grbregistrar = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cmbtipousuarioreg = new System.Windows.Forms.ComboBox();
+            this.txbduiusuarioreg = new System.Windows.Forms.TextBox();
+            this.dtpfechanacreg = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnlimpiarusuario = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.btningresarusuario = new System.Windows.Forms.Button();
@@ -77,21 +77,23 @@
             this.cmbbuscartipo = new System.Windows.Forms.ComboBox();
             this.txbbuscardui = new System.Windows.Forms.TextBox();
             this.dtpbuscarfecha = new System.Windows.Forms.DateTimePicker();
-            this.txbbuscarapellido = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txbbuscarnombre = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.btnbuscarEnMostrar = new System.Windows.Forms.Button();
-            this.txbbuscarEnMostrar = new System.Windows.Forms.TextBox();
             this.dtgvmostrarusuarios = new System.Windows.Forms.DataGridView();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.txbnombreusuarioreg = new System.Windows.Forms.TextBox();
+            this.txbapellidousurioreg = new System.Windows.Forms.TextBox();
+            this.txbbuscarnombre = new System.Windows.Forms.TextBox();
+            this.txbbuscarapellido = new System.Windows.Forms.TextBox();
+            this.txbbusquedamuestranombre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,8 +104,6 @@
             this.grbmodificarusuarios.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvmostrarusuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,6 +124,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 156);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
+            this.btnMinimizar.Location = new System.Drawing.Point(665, 12);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(40, 28);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 18;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
+            this.btnRestaurar.Location = new System.Drawing.Point(709, 12);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(37, 28);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 17;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // label2
             // 
@@ -211,7 +235,7 @@
             this.tabPage1.Controls.Add(this.grbregistrar);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(792, 343);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registrar usuarios";
@@ -368,13 +392,13 @@
             // 
             // grbregistrar
             // 
-            this.grbregistrar.Controls.Add(this.comboBox1);
-            this.grbregistrar.Controls.Add(this.textBox3);
-            this.grbregistrar.Controls.Add(this.dateTimePicker1);
-            this.grbregistrar.Controls.Add(this.textBox2);
+            this.grbregistrar.Controls.Add(this.txbapellidousurioreg);
+            this.grbregistrar.Controls.Add(this.txbnombreusuarioreg);
+            this.grbregistrar.Controls.Add(this.cmbtipousuarioreg);
+            this.grbregistrar.Controls.Add(this.txbduiusuarioreg);
+            this.grbregistrar.Controls.Add(this.dtpfechanacreg);
             this.grbregistrar.Controls.Add(this.label14);
             this.grbregistrar.Controls.Add(this.label4);
-            this.grbregistrar.Controls.Add(this.textBox1);
             this.grbregistrar.Controls.Add(this.btnlimpiarusuario);
             this.grbregistrar.Controls.Add(this.label12);
             this.grbregistrar.Controls.Add(this.btningresarusuario);
@@ -387,34 +411,28 @@
             this.grbregistrar.TabStop = false;
             this.grbregistrar.Text = "Registrar usuario";
             // 
-            // comboBox1
+            // cmbtipousuarioreg
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 209);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(256, 23);
-            this.comboBox1.TabIndex = 18;
+            this.cmbtipousuarioreg.FormattingEnabled = true;
+            this.cmbtipousuarioreg.Location = new System.Drawing.Point(138, 209);
+            this.cmbtipousuarioreg.Name = "cmbtipousuarioreg";
+            this.cmbtipousuarioreg.Size = new System.Drawing.Size(256, 23);
+            this.cmbtipousuarioreg.TabIndex = 18;
             // 
-            // textBox3
+            // txbduiusuarioreg
             // 
-            this.textBox3.Location = new System.Drawing.Point(138, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 23);
-            this.textBox3.TabIndex = 17;
+            this.txbduiusuarioreg.Location = new System.Drawing.Point(138, 161);
+            this.txbduiusuarioreg.Name = "txbduiusuarioreg";
+            this.txbduiusuarioreg.Size = new System.Drawing.Size(256, 23);
+            this.txbduiusuarioreg.TabIndex = 17;
+            this.txbduiusuarioreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbduiusuarioreg_KeyPress);
             // 
-            // dateTimePicker1
+            // dtpfechanacreg
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(194, 118);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(138, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 23);
-            this.textBox2.TabIndex = 15;
+            this.dtpfechanacreg.Location = new System.Drawing.Point(194, 118);
+            this.dtpfechanacreg.Name = "dtpfechanacreg";
+            this.dtpfechanacreg.Size = new System.Drawing.Size(200, 23);
+            this.dtpfechanacreg.TabIndex = 16;
             // 
             // label14
             // 
@@ -434,13 +452,6 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Nombre usuario:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(138, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 23);
-            this.textBox1.TabIndex = 2;
-            // 
             // btnlimpiarusuario
             // 
             this.btnlimpiarusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
@@ -452,6 +463,7 @@
             this.btnlimpiarusuario.TabIndex = 1;
             this.btnlimpiarusuario.Text = "Limpiar";
             this.btnlimpiarusuario.UseVisualStyleBackColor = false;
+            this.btnlimpiarusuario.Click += new System.EventHandler(this.btnlimpiarusuario_Click);
             // 
             // label12
             // 
@@ -473,6 +485,7 @@
             this.btningresarusuario.TabIndex = 0;
             this.btningresarusuario.Text = "Ingresar";
             this.btningresarusuario.UseVisualStyleBackColor = false;
+            this.btningresarusuario.Click += new System.EventHandler(this.btningresarusuario_Click);
             // 
             // label8
             // 
@@ -501,7 +514,7 @@
             this.tabPage2.Controls.Add(this.grbmodificarusuarios);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(792, 343);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar usuarios";
@@ -536,6 +549,7 @@
             this.btnbuscar.TabIndex = 31;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txbnombrebusqueda
             // 
@@ -543,19 +557,20 @@
             this.txbnombrebusqueda.Name = "txbnombrebusqueda";
             this.txbnombrebusqueda.Size = new System.Drawing.Size(162, 23);
             this.txbnombrebusqueda.TabIndex = 1;
+            this.txbnombrebusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbnombrebusqueda_KeyPress);
             // 
             // grbmodificarusuarios
             // 
+            this.grbmodificarusuarios.Controls.Add(this.txbbuscarapellido);
+            this.grbmodificarusuarios.Controls.Add(this.txbbuscarnombre);
             this.grbmodificarusuarios.Controls.Add(this.btneliminar);
             this.grbmodificarusuarios.Controls.Add(this.btnlimpiarbusqueda);
             this.grbmodificarusuarios.Controls.Add(this.btnmodificar);
             this.grbmodificarusuarios.Controls.Add(this.cmbbuscartipo);
             this.grbmodificarusuarios.Controls.Add(this.txbbuscardui);
             this.grbmodificarusuarios.Controls.Add(this.dtpbuscarfecha);
-            this.grbmodificarusuarios.Controls.Add(this.txbbuscarapellido);
             this.grbmodificarusuarios.Controls.Add(this.label13);
             this.grbmodificarusuarios.Controls.Add(this.label15);
-            this.grbmodificarusuarios.Controls.Add(this.txbbuscarnombre);
             this.grbmodificarusuarios.Controls.Add(this.label17);
             this.grbmodificarusuarios.Controls.Add(this.label18);
             this.grbmodificarusuarios.Controls.Add(this.label19);
@@ -589,6 +604,7 @@
             this.btnlimpiarbusqueda.TabIndex = 30;
             this.btnlimpiarbusqueda.Text = "Limpiar";
             this.btnlimpiarbusqueda.UseVisualStyleBackColor = false;
+            this.btnlimpiarbusqueda.Click += new System.EventHandler(this.btnlimpiarbusqueda_Click);
             // 
             // btnmodificar
             // 
@@ -601,6 +617,7 @@
             this.btnmodificar.TabIndex = 29;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // cmbbuscartipo
             // 
@@ -612,10 +629,11 @@
             // 
             // txbbuscardui
             // 
-            this.txbbuscardui.Location = new System.Drawing.Point(139, 171);
+            this.txbbuscardui.Location = new System.Drawing.Point(139, 176);
             this.txbbuscardui.Name = "txbbuscardui";
             this.txbbuscardui.Size = new System.Drawing.Size(256, 23);
             this.txbbuscardui.TabIndex = 27;
+            this.txbbuscardui.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbbuscardui_KeyPress);
             // 
             // dtpbuscarfecha
             // 
@@ -623,13 +641,6 @@
             this.dtpbuscarfecha.Name = "dtpbuscarfecha";
             this.dtpbuscarfecha.Size = new System.Drawing.Size(200, 23);
             this.dtpbuscarfecha.TabIndex = 26;
-            // 
-            // txbbuscarapellido
-            // 
-            this.txbbuscarapellido.Location = new System.Drawing.Point(139, 86);
-            this.txbbuscarapellido.Name = "txbbuscarapellido";
-            this.txbbuscarapellido.Size = new System.Drawing.Size(256, 23);
-            this.txbbuscarapellido.TabIndex = 25;
             // 
             // label13
             // 
@@ -648,13 +659,6 @@
             this.label15.Size = new System.Drawing.Size(112, 15);
             this.label15.TabIndex = 24;
             this.label15.Text = "Nombre usuario:";
-            // 
-            // txbbuscarnombre
-            // 
-            this.txbbuscarnombre.Location = new System.Drawing.Point(139, 41);
-            this.txbbuscarnombre.Name = "txbbuscarnombre";
-            this.txbbuscarnombre.Size = new System.Drawing.Size(256, 23);
-            this.txbbuscarnombre.TabIndex = 19;
             // 
             // label17
             // 
@@ -685,13 +689,13 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.txbbusquedamuestranombre);
             this.tabPage5.Controls.Add(this.label21);
             this.tabPage5.Controls.Add(this.btnbuscarEnMostrar);
-            this.tabPage5.Controls.Add(this.txbbuscarEnMostrar);
             this.tabPage5.Controls.Add(this.dtgvmostrarusuarios);
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(792, 343);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Mostrar usuarios";
@@ -717,13 +721,7 @@
             this.btnbuscarEnMostrar.TabIndex = 33;
             this.btnbuscarEnMostrar.Text = "Buscar";
             this.btnbuscarEnMostrar.UseVisualStyleBackColor = false;
-            // 
-            // txbbuscarEnMostrar
-            // 
-            this.txbbuscarEnMostrar.Location = new System.Drawing.Point(128, 21);
-            this.txbbuscarEnMostrar.Name = "txbbuscarEnMostrar";
-            this.txbbuscarEnMostrar.Size = new System.Drawing.Size(162, 23);
-            this.txbbuscarEnMostrar.TabIndex = 32;
+            this.btnbuscarEnMostrar.Click += new System.EventHandler(this.btnbuscarEnMostrar_Click);
             // 
             // dtgvmostrarusuarios
             // 
@@ -734,29 +732,45 @@
             this.dtgvmostrarusuarios.Size = new System.Drawing.Size(778, 285);
             this.dtgvmostrarusuarios.TabIndex = 0;
             // 
-            // btnMinimizar
+            // txbnombreusuarioreg
             // 
-            this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
-            this.btnMinimizar.Location = new System.Drawing.Point(665, 12);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(40, 28);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 18;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.txbnombreusuarioreg.Location = new System.Drawing.Point(138, 36);
+            this.txbnombreusuarioreg.Name = "txbnombreusuarioreg";
+            this.txbnombreusuarioreg.Size = new System.Drawing.Size(256, 23);
+            this.txbnombreusuarioreg.TabIndex = 19;
+            this.txbnombreusuarioreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbnombreusuarioreg_KeyPress);
             // 
-            // btnRestaurar
+            // txbapellidousurioreg
             // 
-            this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
-            this.btnRestaurar.Location = new System.Drawing.Point(709, 12);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(37, 28);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 17;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            this.txbapellidousurioreg.Location = new System.Drawing.Point(138, 81);
+            this.txbapellidousurioreg.Name = "txbapellidousurioreg";
+            this.txbapellidousurioreg.Size = new System.Drawing.Size(256, 23);
+            this.txbapellidousurioreg.TabIndex = 20;
+            this.txbapellidousurioreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbapellidousurioreg_KeyPress);
+            // 
+            // txbbuscarnombre
+            // 
+            this.txbbuscarnombre.Location = new System.Drawing.Point(139, 46);
+            this.txbbuscarnombre.Name = "txbbuscarnombre";
+            this.txbbuscarnombre.Size = new System.Drawing.Size(256, 23);
+            this.txbbuscarnombre.TabIndex = 32;
+            this.txbbuscarnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbbuscarnombre_KeyPress);
+            // 
+            // txbbuscarapellido
+            // 
+            this.txbbuscarapellido.Location = new System.Drawing.Point(139, 91);
+            this.txbbuscarapellido.Name = "txbbuscarapellido";
+            this.txbbuscarapellido.Size = new System.Drawing.Size(256, 23);
+            this.txbbuscarapellido.TabIndex = 35;
+            this.txbbuscarapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbbuscarapellido_KeyPress);
+            // 
+            // txbbusquedamuestranombre
+            // 
+            this.txbbusquedamuestranombre.Location = new System.Drawing.Point(128, 21);
+            this.txbbusquedamuestranombre.Name = "txbbusquedamuestranombre";
+            this.txbbusquedamuestranombre.Size = new System.Drawing.Size(162, 23);
+            this.txbbusquedamuestranombre.TabIndex = 35;
+            this.txbbusquedamuestranombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbbusquedamuestranombre_KeyPress);
             // 
             // Usuarios
             // 
@@ -772,6 +786,8 @@
             this.Text = "Usuarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -787,8 +803,6 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvmostrarusuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -828,12 +842,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cmbtipousuarioreg;
+        private System.Windows.Forms.TextBox txbduiusuarioreg;
+        private System.Windows.Forms.DateTimePicker dtpfechanacreg;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dtgvbusquedaresultados;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnbuscar;
@@ -845,18 +857,20 @@
         private System.Windows.Forms.ComboBox cmbbuscartipo;
         private System.Windows.Forms.TextBox txbbuscardui;
         private System.Windows.Forms.DateTimePicker dtpbuscarfecha;
-        private System.Windows.Forms.TextBox txbbuscarapellido;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txbbuscarnombre;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnbuscarEnMostrar;
-        private System.Windows.Forms.TextBox txbbuscarEnMostrar;
         private System.Windows.Forms.DataGridView dtgvmostrarusuarios;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.TextBox txbnombreusuarioreg;
+        private System.Windows.Forms.TextBox txbapellidousurioreg;
+        private System.Windows.Forms.TextBox txbbuscarnombre;
+        private System.Windows.Forms.TextBox txbbuscarapellido;
+        private System.Windows.Forms.TextBox txbbusquedamuestranombre;
     }
 }
