@@ -184,8 +184,6 @@ namespace MedicHelpper
             this.Visible = false;
             Creditos cre = new Creditos();
             cre.Show();
-            
-
         }
     }
 }

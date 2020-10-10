@@ -15,16 +15,11 @@ namespace MedicHelpper
         public Creditos()
         {
             InitializeComponent();
-            Timer_creditos.Enabled = true;
-            Timer_creditos.Interval = 7000;
+            //Timer_creditos.Enabled = true;
+            //Timer_creditos.Interval = 7000;
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Timer_creditos_Tick(object sender, EventArgs e)
+        /*private void Timer_creditos_Tick(object sender, EventArgs e)
         {
             Timer_creditos.Stop();
             this.Close();
@@ -35,7 +30,7 @@ namespace MedicHelpper
         
            
         }
-
+        */
         private void btn_volver_Click(object sender, EventArgs e)
         {
             Timer_creditos.Stop();

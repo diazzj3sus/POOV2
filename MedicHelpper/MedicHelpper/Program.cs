@@ -19,7 +19,7 @@ namespace MedicHelpper
             Bienvenida Primera = new Bienvenida();
             if (Primera.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new LoginMedicHelppercs());
+                Application.Run(new frmEnfer());
             }
         }
     }

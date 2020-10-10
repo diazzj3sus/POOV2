@@ -153,7 +153,6 @@
             this.label5.Size = new System.Drawing.Size(98, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "Asignaturas:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -190,7 +189,7 @@
             // 
             // Timer_creditos
             // 
-            this.Timer_creditos.Tick += new System.EventHandler(this.Timer_creditos_Tick);
+            //this.Timer_creditos.Tick += new System.EventHandler(this.Timer_creditos_Tick);
             // 
             // btn_volver
             // 
@@ -215,7 +214,7 @@
             this.Name = "Creditos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creditos";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Creditos_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Creditos_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
