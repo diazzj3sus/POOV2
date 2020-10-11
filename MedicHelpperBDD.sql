@@ -22,7 +22,10 @@ DUI CHAR(9) NOT NULL,
 IdTipoUsuarioUsusarios INT FOREIGN KEY REFERENCES TipoUsuario(IdTipoUsuario) ON DELETE CASCADE ON UPDATE CASCADE
 )
 GO
-INSERT INTO Usuarios VALUES('AA0001','password','Admin','Admin','1-10-2020','123456789','0')
+INSERT INTO Usuarios VALUES ('AA0001','password','Admin','Admin','1-10-2020','123456789','0'),
+							('EE0001','password','Enfermeria','Enfermeria','1-10-2020','234567890','1'),
+							('DD0001','password','Dotores','Dotores','1-10-2020','345678901','2'),
+							('FF0001','password','Farmaceutico','Farmaceutico','1-10-2020','456789012','3');
 CREATE TABLE Pacientes(
 IdPaciente CHAR(6) PRIMARY KEY,
 Nombre VARCHAR(75) NOT NULL,
