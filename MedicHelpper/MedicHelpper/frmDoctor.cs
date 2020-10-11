@@ -18,10 +18,7 @@ namespace MedicHelpper
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            MenuAdministrador frm = new MenuAdministrador("");
-            frm.Visible = true;
-            
+            Application.Exit();
         }
         private void btnMinimizar_Click(object sender, EventArgs e)
         {   
@@ -43,5 +40,11 @@ namespace MedicHelpper
             }
         }
 
+        private void pctAtras_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            MenuAdministrador frm = new MenuAdministrador("");
+            frm.Visible = true;
+        }
     }
 }

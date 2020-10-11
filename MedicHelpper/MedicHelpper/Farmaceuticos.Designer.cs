@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.tabFarmaceutico = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -51,40 +53,66 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.addMedicamentos = new System.Windows.Forms.TabPage();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.pctAtras = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             this.tabFarmaceutico.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.pctAtras);
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnRestaurar);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.tabFarmaceutico);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(663, 449);
+            this.panel1.Size = new System.Drawing.Size(884, 553);
             this.panel1.TabIndex = 3;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
+            this.btnMinimizar.Location = new System.Drawing.Point(721, 15);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(53, 34);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 12;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
+            this.btnRestaurar.Location = new System.Drawing.Point(768, 14);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(49, 34);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 11;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
             // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(617, 11);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(823, 14);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(37, 31);
+            this.btnCerrar.Size = new System.Drawing.Size(49, 38);
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -96,10 +124,11 @@
             this.tabFarmaceutico.Controls.Add(this.tabPage2);
             this.tabFarmaceutico.Controls.Add(this.addMedicamentos);
             this.tabFarmaceutico.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabFarmaceutico.Location = new System.Drawing.Point(3, 34);
+            this.tabFarmaceutico.Location = new System.Drawing.Point(4, 42);
+            this.tabFarmaceutico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabFarmaceutico.Name = "tabFarmaceutico";
             this.tabFarmaceutico.SelectedIndex = 0;
-            this.tabFarmaceutico.Size = new System.Drawing.Size(657, 412);
+            this.tabFarmaceutico.Size = new System.Drawing.Size(876, 507);
             this.tabFarmaceutico.TabIndex = 2;
             // 
             // tabPage1
@@ -109,10 +138,11 @@
             this.tabPage1.Controls.Add(this.txtIdReceta);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(649, 384);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(868, 475);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Busqueda Receta";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -126,12 +156,13 @@
             this.Column8,
             this.Column9});
             this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 87);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(627, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(836, 271);
             this.dataGridView1.TabIndex = 3;
             // 
             // Column7
@@ -154,27 +185,30 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(364, 28);
+            this.btnIngresar.Location = new System.Drawing.Point(485, 34);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 31);
+            this.btnIngresar.Size = new System.Drawing.Size(100, 38);
             this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Verificar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             // 
             // txtIdReceta
             // 
-            this.txtIdReceta.Location = new System.Drawing.Point(168, 33);
+            this.txtIdReceta.Location = new System.Drawing.Point(224, 41);
+            this.txtIdReceta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdReceta.Name = "txtIdReceta";
-            this.txtIdReceta.Size = new System.Drawing.Size(142, 23);
+            this.txtIdReceta.Size = new System.Drawing.Size(188, 27);
             this.txtIdReceta.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 33);
+            this.label2.Location = new System.Drawing.Point(44, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 17);
+            this.label2.Size = new System.Drawing.Size(126, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Codigo Receta";
             // 
@@ -184,10 +218,11 @@
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(649, 384);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(868, 475);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Busqueda Medicamento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -204,11 +239,12 @@
             this.Column5,
             this.Column6});
             this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 75);
+            this.dataGridView2.Location = new System.Drawing.Point(4, 92);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(644, 144);
+            this.dataGridView2.Size = new System.Drawing.Size(859, 177);
             this.dataGridView2.TabIndex = 3;
             // 
             // Column1
@@ -250,77 +286,70 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(366, 27);
+            this.button1.Location = new System.Drawing.Point(488, 33);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 27);
+            this.textBox1.Location = new System.Drawing.Point(277, 33);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.Size = new System.Drawing.Size(132, 27);
             this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 36);
+            this.label1.Location = new System.Drawing.Point(45, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 16);
+            this.label1.Size = new System.Drawing.Size(184, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo Medicamento";
             // 
             // addMedicamentos
             // 
-            this.addMedicamentos.Location = new System.Drawing.Point(4, 24);
-            this.addMedicamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addMedicamentos.Location = new System.Drawing.Point(4, 28);
+            this.addMedicamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addMedicamentos.Name = "addMedicamentos";
-            this.addMedicamentos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.addMedicamentos.Size = new System.Drawing.Size(649, 384);
+            this.addMedicamentos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addMedicamentos.Size = new System.Drawing.Size(868, 475);
             this.addMedicamentos.TabIndex = 2;
             this.addMedicamentos.Text = "Añadir medicamentos";
             this.addMedicamentos.UseVisualStyleBackColor = true;
             // 
-            // btnMinimizar
+            // pctAtras
             // 
-            this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
-            this.btnMinimizar.Location = new System.Drawing.Point(541, 12);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(40, 28);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 12;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
-            this.btnRestaurar.Location = new System.Drawing.Point(576, 11);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(37, 28);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 11;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
+            this.pctAtras.Image = global::MedicHelpper.Properties.Resources.Atras;
+            this.pctAtras.Location = new System.Drawing.Point(23, 3);
+            this.pctAtras.Name = "pctAtras";
+            this.pctAtras.Size = new System.Drawing.Size(51, 38);
+            this.pctAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctAtras.TabIndex = 16;
+            this.pctAtras.TabStop = false;
+            this.pctAtras.Click += new System.EventHandler(this.pctAtras_Click_1);
             // 
             // Farmaceuticos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(663, 450);
+            this.ClientSize = new System.Drawing.Size(884, 554);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Farmaceuticos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Farmaceuticos";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             this.tabFarmaceutico.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -328,8 +357,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +389,6 @@
         private System.Windows.Forms.TabPage addMedicamentos;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.PictureBox pctAtras;
     }
 }

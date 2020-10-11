@@ -87,5 +87,10 @@ namespace MedicHelpper
                 btnRestaurar.Image = Resources.restaurar;
             }
         }
+
+        private void btnsalir_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -40,9 +40,7 @@ namespace MedicHelpper
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            MenuAdministrador frm = new MenuAdministrador("");
-            frm.Visible = true;
+            Application.Exit();
             
         }
         //Metodo para validar que ningun campo quede vacío
@@ -162,6 +160,13 @@ namespace MedicHelpper
         {
             errorNombreAgg.SetError(txtnom, "");
             NombreAdd = ValidarCampoLetras(txtnom,e,errorNombreAgg);
+        }
+
+        private void pctAtras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuAdministrador frmMenu = new MenuAdministrador("");
+            frmMenu.Visible = true;
         }
 
         private void txtape_KeyPress(object sender, KeyPressEventArgs e)

@@ -53,7 +53,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(475, 554);
             this.panel1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.MedicHelpperLogo1;
             this.pictureBox1.Location = new System.Drawing.Point(29, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(417, 373);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,7 +75,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Location = new System.Drawing.Point(1007, 1);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(49, 37);
             this.btnCerrar.TabIndex = 1;
@@ -90,7 +90,7 @@
             this.txbUsuario.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.txbUsuario.Location = new System.Drawing.Point(563, 142);
-            this.txbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(459, 31);
             this.txbUsuario.TabIndex = 2;
@@ -135,7 +135,7 @@
             this.txbContraseña.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.txbContraseña.Location = new System.Drawing.Point(563, 332);
-            this.txbContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txbContraseña.Name = "txbContraseña";
             this.txbContraseña.Size = new System.Drawing.Size(459, 31);
             this.txbContraseña.TabIndex = 5;
@@ -162,7 +162,7 @@
             this.btnaceptar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.btnaceptar.Location = new System.Drawing.Point(589, 402);
-            this.btnaceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnaceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnaceptar.Name = "btnaceptar";
             this.btnaceptar.Size = new System.Drawing.Size(168, 52);
             this.btnaceptar.TabIndex = 7;
@@ -176,7 +176,7 @@
             this.btnlimpiar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.btnlimpiar.Location = new System.Drawing.Point(789, 402);
-            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(168, 52);
             this.btnlimpiar.TabIndex = 8;
@@ -213,10 +213,10 @@
             this.btn_creditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_creditos.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_creditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btn_creditos.Location = new System.Drawing.Point(923, 512);
-            this.btn_creditos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_creditos.Location = new System.Drawing.Point(856, 503);
+            this.btn_creditos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_creditos.Name = "btn_creditos";
-            this.btn_creditos.Size = new System.Drawing.Size(127, 27);
+            this.btn_creditos.Size = new System.Drawing.Size(194, 38);
             this.btn_creditos.TabIndex = 12;
             this.btn_creditos.Text = "Acerca de....";
             this.btn_creditos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -241,7 +241,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginMedicHelppercs";
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

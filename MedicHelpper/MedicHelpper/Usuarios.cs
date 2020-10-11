@@ -29,9 +29,7 @@ namespace MedicHelpper
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MenuAdministrador menu = new MenuAdministrador("");
-            menu.Show();
+            Application.Exit();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -247,6 +245,14 @@ namespace MedicHelpper
             {
                 MessageBox.Show("ALERTA: Verifique los datos ingresados.", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void pctAtras_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            MenuAdministrador menu = new MenuAdministrador("");
+            menu.Show();
         }
     }
         //------------------------------------------------------------

@@ -65,6 +65,7 @@
             this.errorNTarjetaAdd = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorFecha = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorApellidoAgg = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pctAtras = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.AddCita.SuspendLayout();
             this.addPaciente.SuspendLayout();
@@ -83,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorNTarjetaAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorFecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApellidoAgg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -508,18 +510,31 @@
             // 
             this.errorApellidoAgg.ContainerControl = this;
             // 
+            // pctAtras
+            // 
+            this.pctAtras.Image = global::MedicHelpper.Properties.Resources.Atras;
+            this.pctAtras.Location = new System.Drawing.Point(27, 9);
+            this.pctAtras.Name = "pctAtras";
+            this.pctAtras.Size = new System.Drawing.Size(51, 38);
+            this.pctAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctAtras.TabIndex = 15;
+            this.pctAtras.TabStop = false;
+            this.pctAtras.Click += new System.EventHandler(this.pctAtras_Click);
+            // 
             // frmEnfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(707, 441);
+            this.Controls.Add(this.pctAtras);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnRestaurar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEnfer";
-            this.Controls.SetChildIndex(this.btnCerrar, 0);
-            this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.btnRestaurar, 0);
             this.Controls.SetChildIndex(this.btnMinimizar, 0);
+            this.Controls.SetChildIndex(this.pctAtras, 0);
+            this.Controls.SetChildIndex(this.btnCerrar, 0);
+            this.Controls.SetChildIndex(this.tabControl1, 0);
             this.tabControl1.ResumeLayout(false);
             this.AddCita.ResumeLayout(false);
             this.AddCita.PerformLayout();
@@ -541,6 +556,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorNTarjetaAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorFecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorApellidoAgg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,5 +599,6 @@
         private System.Windows.Forms.ErrorProvider errorNTarjetaAdd;
         private System.Windows.Forms.ErrorProvider errorFecha;
         private System.Windows.Forms.ErrorProvider errorApellidoAgg;
+        private System.Windows.Forms.PictureBox pctAtras;
     }
 }
