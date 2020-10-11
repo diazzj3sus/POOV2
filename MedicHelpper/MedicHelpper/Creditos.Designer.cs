@@ -70,7 +70,7 @@
             // pctAtras
             // 
             this.pctAtras.Image = global::MedicHelpper.Properties.Resources.Atras;
-            this.pctAtras.Location = new System.Drawing.Point(1009, 352);
+            this.pctAtras.Location = new System.Drawing.Point(1015, 337);
             this.pctAtras.Name = "pctAtras";
             this.pctAtras.Size = new System.Drawing.Size(67, 53);
             this.pctAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
