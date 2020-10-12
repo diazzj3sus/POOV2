@@ -169,6 +169,11 @@ namespace MedicHelpper
             frmMenu.Visible = true;
         }
 
+        private void btnRestaurarMaxi_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtape_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorApellidoAgg.SetError(txtape, "");

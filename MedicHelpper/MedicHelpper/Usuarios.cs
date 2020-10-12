@@ -254,6 +254,7 @@ namespace MedicHelpper
             MenuAdministrador menu = new MenuAdministrador("");
             menu.Show();
         }
+
     }
         //------------------------------------------------------------
 }

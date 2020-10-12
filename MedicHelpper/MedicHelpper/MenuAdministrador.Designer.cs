@@ -56,7 +56,7 @@
             this.lblusuario.Location = new System.Drawing.Point(6, 107);
             this.lblusuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(116, 28);
+            this.lblusuario.Size = new System.Drawing.Size(90, 22);
             this.lblusuario.TabIndex = 0;
             this.lblusuario.Text = "Usuario:";
             // 
@@ -79,6 +79,7 @@
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
             this.btnMinimizar.Location = new System.Drawing.Point(509, 15);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
@@ -91,6 +92,7 @@
             // 
             // btnRestaurar
             // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
             this.btnRestaurar.Location = new System.Drawing.Point(553, 15);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
@@ -109,24 +111,26 @@
             this.lbluser.Location = new System.Drawing.Point(108, 107);
             this.lbluser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbluser.Name = "lbluser";
-            this.lbluser.Size = new System.Drawing.Size(181, 28);
+            this.lbluser.Size = new System.Drawing.Size(140, 22);
             this.lbluser.TabIndex = 7;
             this.lbluser.Text = "-------------";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.label1.Location = new System.Drawing.Point(218, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 32);
+            this.label1.Size = new System.Drawing.Size(226, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Menú administrador";
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,30 +145,32 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.label2.Location = new System.Drawing.Point(244, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 36);
+            this.label2.Size = new System.Drawing.Size(168, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "MedicHelpper";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(256, 595);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 23);
+            this.label3.Size = new System.Drawing.Size(135, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "® MedicHelpper";
             // 
             // btnsalir
             // 
+            this.btnsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnsalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(28)))), ((int)(((byte)(32)))));
-            this.btnsalir.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
@@ -181,8 +187,8 @@
             // 
             // btnfarmacia
             // 
+            this.btnfarmacia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnfarmacia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(28)))), ((int)(((byte)(32)))));
-            this.btnfarmacia.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnfarmacia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnfarmacia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.btnfarmacia.Image = global::MedicHelpper.Properties.Resources.recetas;
@@ -199,8 +205,8 @@
             // 
             // btnconsultas
             // 
+            this.btnconsultas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnconsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(28)))), ((int)(((byte)(32)))));
-            this.btnconsultas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnconsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnconsultas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.btnconsultas.Image = global::MedicHelpper.Properties.Resources.consulta;
@@ -217,8 +223,8 @@
             // 
             // btncitas
             // 
+            this.btncitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btncitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(28)))), ((int)(((byte)(32)))));
-            this.btncitas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btncitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.btncitas.Image = ((System.Drawing.Image)(resources.GetObject("btncitas.Image")));
@@ -235,8 +241,8 @@
             // 
             // btnusuarios
             // 
+            this.btnusuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnusuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(28)))), ((int)(((byte)(32)))));
-            this.btnusuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnusuarios.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnusuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
@@ -254,7 +260,7 @@
             // 
             // MenuAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(643, 623);

@@ -8,7 +8,7 @@ namespace MedicHelpper
 {
     class ConexionSqlServer
     {
-        public SqlConnection conexion = new SqlConnection("server=DESKTOP-KOFNQKO \\SANTOS;database=MedicHelpperBDD;integrated security=True;");
+        public SqlConnection conexion = new SqlConnection("server=localhost;database=MedicHelpperBDD;integrated security=True;");
         public void abrir()
         {
             try

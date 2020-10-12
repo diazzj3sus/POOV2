@@ -50,34 +50,39 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 554);
+            this.panel1.Size = new System.Drawing.Size(356, 452);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.MedicHelpperLogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 81);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(417, 373);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(313, 303);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(1007, 1);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Location = new System.Drawing.Point(755, 1);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(49, 37);
+            this.btnCerrar.Size = new System.Drawing.Size(37, 30);
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -85,14 +90,14 @@
             // 
             // txbUsuario
             // 
+            this.txbUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.txbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbUsuario.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.txbUsuario.Location = new System.Drawing.Point(563, 142);
-            this.txbUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txbUsuario.Location = new System.Drawing.Point(422, 115);
             this.txbUsuario.Name = "txbUsuario";
-            this.txbUsuario.Size = new System.Drawing.Size(459, 31);
+            this.txbUsuario.Size = new System.Drawing.Size(344, 25);
             this.txbUsuario.TabIndex = 2;
             this.txbUsuario.Text = "Usuario:";
             this.txbUsuario.Enter += new System.EventHandler(this.txbUsuario_Enter);
@@ -106,12 +111,13 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1,
             this.lineShape2});
-            this.shapeContainer1.Size = new System.Drawing.Size(1067, 554);
+            this.shapeContainer1.Size = new System.Drawing.Size(800, 450);
             this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
             // 
             // lineShape1
             // 
+            this.lineShape1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lineShape1.BorderWidth = 3;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 419;
@@ -121,23 +127,24 @@
             // 
             // lineShape2
             // 
+            this.lineShape2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lineShape2.BorderWidth = 3;
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 421;
             this.lineShape2.X2 = 766;
-            this.lineShape2.Y1 = 304;
-            this.lineShape2.Y2 = 304;
+            this.lineShape2.Y1 = 293;
+            this.lineShape2.Y2 = 293;
             // 
             // txbContraseña
             // 
+            this.txbContraseña.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txbContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.txbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbContraseña.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.txbContraseña.Location = new System.Drawing.Point(563, 332);
-            this.txbContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txbContraseña.Location = new System.Drawing.Point(419, 252);
             this.txbContraseña.Name = "txbContraseña";
-            this.txbContraseña.Size = new System.Drawing.Size(459, 31);
+            this.txbContraseña.Size = new System.Drawing.Size(344, 25);
             this.txbContraseña.TabIndex = 5;
             this.txbContraseña.Text = "Contraseña:";
             this.txbContraseña.TextChanged += new System.EventHandler(this.txbContraseña_TextChanged);
@@ -146,25 +153,25 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.label1.Location = new System.Drawing.Point(625, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(469, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 43);
+            this.label1.Size = new System.Drawing.Size(239, 34);
             this.label1.TabIndex = 6;
             this.label1.Text = "Iniciar Sesión";
             // 
             // btnaceptar
             // 
+            this.btnaceptar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnaceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaceptar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btnaceptar.Location = new System.Drawing.Point(589, 402);
-            this.btnaceptar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnaceptar.Location = new System.Drawing.Point(442, 327);
             this.btnaceptar.Name = "btnaceptar";
-            this.btnaceptar.Size = new System.Drawing.Size(168, 52);
+            this.btnaceptar.Size = new System.Drawing.Size(126, 42);
             this.btnaceptar.TabIndex = 7;
             this.btnaceptar.Text = "Aceptar";
             this.btnaceptar.UseVisualStyleBackColor = true;
@@ -172,13 +179,13 @@
             // 
             // btnlimpiar
             // 
+            this.btnlimpiar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btnlimpiar.Location = new System.Drawing.Point(789, 402);
-            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnlimpiar.Location = new System.Drawing.Point(592, 327);
             this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(168, 52);
+            this.btnlimpiar.Size = new System.Drawing.Size(126, 42);
             this.btnlimpiar.TabIndex = 8;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
@@ -186,11 +193,12 @@
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = global::MedicHelpper.Properties.Resources.minimizar2;
-            this.btnMinimizar.Location = new System.Drawing.Point(904, 2);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimizar.Location = new System.Drawing.Point(678, 2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(53, 34);
+            this.btnMinimizar.Size = new System.Drawing.Size(40, 28);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.TabStop = false;
@@ -198,11 +206,12 @@
             // 
             // btnRestaurar
             // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Image = global::MedicHelpper.Properties.Resources.redimensionar;
-            this.btnRestaurar.Location = new System.Drawing.Point(951, 1);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRestaurar.Location = new System.Drawing.Point(713, 1);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(49, 34);
+            this.btnRestaurar.Size = new System.Drawing.Size(37, 28);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRestaurar.TabIndex = 9;
             this.btnRestaurar.TabStop = false;
@@ -210,13 +219,13 @@
             // 
             // btn_creditos
             // 
+            this.btn_creditos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_creditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_creditos.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_creditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btn_creditos.Location = new System.Drawing.Point(856, 503);
-            this.btn_creditos.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_creditos.Location = new System.Drawing.Point(642, 409);
             this.btn_creditos.Name = "btn_creditos";
-            this.btn_creditos.Size = new System.Drawing.Size(194, 38);
+            this.btn_creditos.Size = new System.Drawing.Size(146, 31);
             this.btn_creditos.TabIndex = 12;
             this.btn_creditos.Text = "Acerca de....";
             this.btn_creditos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -225,10 +234,10 @@
             // 
             // LoginMedicHelppercs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_creditos);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnRestaurar);
@@ -241,7 +250,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginMedicHelppercs";
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

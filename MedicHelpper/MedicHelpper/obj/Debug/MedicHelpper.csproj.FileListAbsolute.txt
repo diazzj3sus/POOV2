@@ -177,3 +177,4 @@ C:\Users\USER\source\repos\POO2\PArcialio\POOV2\MedicHelpper\MedicHelpper\obj\De
 C:\Users\USER\source\repos\POO2\PArcialio\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.CopyComplete
 C:\Users\USER\source\repos\POO2\PArcialio\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
 C:\Users\USER\source\repos\POO2\PArcialio\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb
+C:\Users\tinta print\Desktop\PROGRAS\MDB\MedicHelpperPOOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Creditos.resources
