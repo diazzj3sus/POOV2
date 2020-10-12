@@ -139,3 +139,21 @@ D:\Tareas II ciclo\POO teoria\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHel
 D:\Tareas II ciclo\POO teoria\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.CopyComplete
 D:\Tareas II ciclo\POO teoria\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
 D:\Tareas II ciclo\POO teoria\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe.config
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.pdb
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csprojResolveAssemblyReference.cache
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Bienvenida.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Creditos.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmDoctor.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmEnfer.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Farmaceuticos.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmPadre.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.LoginMedicHelppercs.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.MenuAdministrador.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Properties.Resources.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Usuarios.resources
+C:\Users\William\Source\Repos\POOV23\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.GenerateResource.Cache

@@ -106,6 +106,7 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="validaciones.cs" />
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
