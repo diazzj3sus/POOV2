@@ -13,7 +13,7 @@ insert into TipoUsuario VALUES('Enfermeria','Encargado de la administración de c
 insert into TipoUsuario VALUES('Dotores','Encargado de atender a los pacientes en sus consultas')
 insert into TipoUsuario VALUES('Farmaceutico','Encargado de la administración de la farmacia')
 CREATE TABLE Usuarios(
-IdUsuario CHAR(6) PRIMARY KEY,
+IdUsuario CHAR(8) PRIMARY KEY,
 Contraseña VARCHAR(75) NOT NULL,
 Nombre VARCHAR(75) NOT NULL,
 Apellido VARCHAR(75) NOT NULL UNIQUE,
@@ -64,3 +64,4 @@ DescripcionReceta VARCHAR(255) NOT NULL,
 Estado int NOT NULL
 )
 GO
+select count(*) from TipoUsuario

@@ -40,21 +40,6 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.grbusuarioregistrado = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblcontraseñareg = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lbltipousuarioreg = new System.Windows.Forms.Label();
-            this.lblduireg = new System.Windows.Forms.Label();
-            this.lblfechanacreg = new System.Windows.Forms.Label();
-            this.lblapellidoreg = new System.Windows.Forms.Label();
-            this.lblnombrereg = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblcodigoreg = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.grbregistrar = new System.Windows.Forms.GroupBox();
             this.txbapellidousurioreg = new System.Windows.Forms.TextBox();
             this.txbnombreusuarioreg = new System.Windows.Forms.TextBox();
@@ -86,12 +71,16 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.txbbusquedamuestranombre = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btnbuscarEnMostrar = new System.Windows.Forms.Button();
             this.dtgvmostrarusuarios = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txbcontraseñareg = new System.Windows.Forms.TextBox();
+            this.txbcontraseñabuscar = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -99,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.grbusuarioregistrado.SuspendLayout();
             this.grbregistrar.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvbusquedaresultados)).BeginInit();
@@ -251,7 +239,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.grbusuarioregistrado);
             this.tabPage1.Controls.Add(this.grbregistrar);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -261,173 +248,11 @@
             this.tabPage1.Text = "Registrar usuarios";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // grbusuarioregistrado
-            // 
-            this.grbusuarioregistrado.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.grbusuarioregistrado.Controls.Add(this.label11);
-            this.grbusuarioregistrado.Controls.Add(this.label9);
-            this.grbusuarioregistrado.Controls.Add(this.label7);
-            this.grbusuarioregistrado.Controls.Add(this.label5);
-            this.grbusuarioregistrado.Controls.Add(this.lblcontraseñareg);
-            this.grbusuarioregistrado.Controls.Add(this.label16);
-            this.grbusuarioregistrado.Controls.Add(this.lbltipousuarioreg);
-            this.grbusuarioregistrado.Controls.Add(this.lblduireg);
-            this.grbusuarioregistrado.Controls.Add(this.lblfechanacreg);
-            this.grbusuarioregistrado.Controls.Add(this.lblapellidoreg);
-            this.grbusuarioregistrado.Controls.Add(this.lblnombrereg);
-            this.grbusuarioregistrado.Controls.Add(this.label6);
-            this.grbusuarioregistrado.Controls.Add(this.lblcodigoreg);
-            this.grbusuarioregistrado.Controls.Add(this.label3);
-            this.grbusuarioregistrado.Location = new System.Drawing.Point(421, 6);
-            this.grbusuarioregistrado.Name = "grbusuarioregistrado";
-            this.grbusuarioregistrado.Size = new System.Drawing.Size(363, 329);
-            this.grbusuarioregistrado.TabIndex = 2;
-            this.grbusuarioregistrado.TabStop = false;
-            this.grbusuarioregistrado.Text = "Usuario";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(69, 234);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 15);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Tipo de usuario:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(97, 190);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 15);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "DUI usuario:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 153);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 15);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Fecha nacimiento usuario:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 15);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Apellido usuario:";
-            // 
-            // lblcontraseñareg
-            // 
-            this.lblcontraseñareg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblcontraseñareg.AutoSize = true;
-            this.lblcontraseñareg.Location = new System.Drawing.Point(194, 272);
-            this.lblcontraseñareg.Name = "lblcontraseñareg";
-            this.lblcontraseñareg.Size = new System.Drawing.Size(49, 15);
-            this.lblcontraseñareg.TabIndex = 13;
-            this.lblcontraseñareg.Text = "------";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(48, 272);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(140, 15);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Contraseña usuario:";
-            // 
-            // lbltipousuarioreg
-            // 
-            this.lbltipousuarioreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbltipousuarioreg.AutoSize = true;
-            this.lbltipousuarioreg.Location = new System.Drawing.Point(194, 234);
-            this.lbltipousuarioreg.Name = "lbltipousuarioreg";
-            this.lbltipousuarioreg.Size = new System.Drawing.Size(49, 15);
-            this.lbltipousuarioreg.TabIndex = 11;
-            this.lbltipousuarioreg.Text = "------";
-            // 
-            // lblduireg
-            // 
-            this.lblduireg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblduireg.AutoSize = true;
-            this.lblduireg.Location = new System.Drawing.Point(194, 190);
-            this.lblduireg.Name = "lblduireg";
-            this.lblduireg.Size = new System.Drawing.Size(49, 15);
-            this.lblduireg.TabIndex = 9;
-            this.lblduireg.Text = "------";
-            // 
-            // lblfechanacreg
-            // 
-            this.lblfechanacreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblfechanacreg.AutoSize = true;
-            this.lblfechanacreg.Location = new System.Drawing.Point(194, 153);
-            this.lblfechanacreg.Name = "lblfechanacreg";
-            this.lblfechanacreg.Size = new System.Drawing.Size(49, 15);
-            this.lblfechanacreg.TabIndex = 7;
-            this.lblfechanacreg.Text = "------";
-            // 
-            // lblapellidoreg
-            // 
-            this.lblapellidoreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblapellidoreg.AutoSize = true;
-            this.lblapellidoreg.Location = new System.Drawing.Point(194, 113);
-            this.lblapellidoreg.Name = "lblapellidoreg";
-            this.lblapellidoreg.Size = new System.Drawing.Size(49, 15);
-            this.lblapellidoreg.TabIndex = 5;
-            this.lblapellidoreg.Text = "------";
-            // 
-            // lblnombrereg
-            // 
-            this.lblnombrereg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblnombrereg.AutoSize = true;
-            this.lblnombrereg.Location = new System.Drawing.Point(194, 73);
-            this.lblnombrereg.Name = "lblnombrereg";
-            this.lblnombrereg.Size = new System.Drawing.Size(49, 15);
-            this.lblnombrereg.TabIndex = 3;
-            this.lblnombrereg.Text = "------";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(76, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 15);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Nombre usuario:";
-            // 
-            // lblcodigoreg
-            // 
-            this.lblcodigoreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblcodigoreg.AutoSize = true;
-            this.lblcodigoreg.Location = new System.Drawing.Point(194, 36);
-            this.lblcodigoreg.Name = "lblcodigoreg";
-            this.lblcodigoreg.Size = new System.Drawing.Size(49, 15);
-            this.lblcodigoreg.TabIndex = 1;
-            this.lblcodigoreg.Text = "------";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Codigo usuario:";
-            // 
             // grbregistrar
             // 
             this.grbregistrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.grbregistrar.Controls.Add(this.txbcontraseñareg);
+            this.grbregistrar.Controls.Add(this.label3);
             this.grbregistrar.Controls.Add(this.txbapellidousurioreg);
             this.grbregistrar.Controls.Add(this.txbnombreusuarioreg);
             this.grbregistrar.Controls.Add(this.cmbtipousuarioreg);
@@ -440,9 +265,9 @@
             this.grbregistrar.Controls.Add(this.btningresarusuario);
             this.grbregistrar.Controls.Add(this.label8);
             this.grbregistrar.Controls.Add(this.label10);
-            this.grbregistrar.Location = new System.Drawing.Point(6, 6);
+            this.grbregistrar.Location = new System.Drawing.Point(127, 8);
             this.grbregistrar.Name = "grbregistrar";
-            this.grbregistrar.Size = new System.Drawing.Size(409, 329);
+            this.grbregistrar.Size = new System.Drawing.Size(546, 329);
             this.grbregistrar.TabIndex = 0;
             this.grbregistrar.TabStop = false;
             this.grbregistrar.Text = "Registrar usuario";
@@ -450,18 +275,18 @@
             // txbapellidousurioreg
             // 
             this.txbapellidousurioreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbapellidousurioreg.Location = new System.Drawing.Point(138, 81);
+            this.txbapellidousurioreg.Location = new System.Drawing.Point(200, 87);
             this.txbapellidousurioreg.Name = "txbapellidousurioreg";
-            this.txbapellidousurioreg.Size = new System.Drawing.Size(256, 23);
+            this.txbapellidousurioreg.Size = new System.Drawing.Size(266, 23);
             this.txbapellidousurioreg.TabIndex = 20;
             this.txbapellidousurioreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbapellidousurioreg_KeyPress);
             // 
             // txbnombreusuarioreg
             // 
             this.txbnombreusuarioreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbnombreusuarioreg.Location = new System.Drawing.Point(138, 36);
+            this.txbnombreusuarioreg.Location = new System.Drawing.Point(200, 58);
             this.txbnombreusuarioreg.Name = "txbnombreusuarioreg";
-            this.txbnombreusuarioreg.Size = new System.Drawing.Size(256, 23);
+            this.txbnombreusuarioreg.Size = new System.Drawing.Size(266, 23);
             this.txbnombreusuarioreg.TabIndex = 19;
             this.txbnombreusuarioreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbnombreusuarioreg_KeyPress);
             // 
@@ -469,33 +294,34 @@
             // 
             this.cmbtipousuarioreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbtipousuarioreg.FormattingEnabled = true;
-            this.cmbtipousuarioreg.Location = new System.Drawing.Point(138, 209);
+            this.cmbtipousuarioreg.Location = new System.Drawing.Point(200, 174);
             this.cmbtipousuarioreg.Name = "cmbtipousuarioreg";
-            this.cmbtipousuarioreg.Size = new System.Drawing.Size(256, 23);
+            this.cmbtipousuarioreg.Size = new System.Drawing.Size(266, 23);
             this.cmbtipousuarioreg.TabIndex = 18;
+            this.cmbtipousuarioreg.SelectedIndexChanged += new System.EventHandler(this.cmbtipousuarioreg_SelectedIndexChanged);
             // 
             // txbduiusuarioreg
             // 
             this.txbduiusuarioreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbduiusuarioreg.Location = new System.Drawing.Point(138, 161);
+            this.txbduiusuarioreg.Location = new System.Drawing.Point(200, 145);
             this.txbduiusuarioreg.Name = "txbduiusuarioreg";
-            this.txbduiusuarioreg.Size = new System.Drawing.Size(256, 23);
+            this.txbduiusuarioreg.Size = new System.Drawing.Size(266, 23);
             this.txbduiusuarioreg.TabIndex = 17;
             this.txbduiusuarioreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbduiusuarioreg_KeyPress);
             // 
             // dtpfechanacreg
             // 
             this.dtpfechanacreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpfechanacreg.Location = new System.Drawing.Point(194, 118);
+            this.dtpfechanacreg.Location = new System.Drawing.Point(200, 116);
             this.dtpfechanacreg.Name = "dtpfechanacreg";
-            this.dtpfechanacreg.Size = new System.Drawing.Size(200, 23);
+            this.dtpfechanacreg.Size = new System.Drawing.Size(266, 23);
             this.dtpfechanacreg.TabIndex = 16;
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 217);
+            this.label14.Location = new System.Drawing.Point(75, 177);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(119, 15);
             this.label14.TabIndex = 10;
@@ -505,7 +331,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 39);
+            this.label4.Location = new System.Drawing.Point(82, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 15);
             this.label4.TabIndex = 14;
@@ -517,7 +343,7 @@
             this.btnlimpiarusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.btnlimpiarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiarusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btnlimpiarusuario.Location = new System.Drawing.Point(169, 281);
+            this.btnlimpiarusuario.Location = new System.Drawing.Point(299, 282);
             this.btnlimpiarusuario.Name = "btnlimpiarusuario";
             this.btnlimpiarusuario.Size = new System.Drawing.Size(75, 29);
             this.btnlimpiarusuario.TabIndex = 1;
@@ -529,7 +355,7 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(41, 169);
+            this.label12.Location = new System.Drawing.Point(103, 148);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 15);
             this.label12.TabIndex = 8;
@@ -541,7 +367,7 @@
             this.btningresarusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.btningresarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btningresarusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btningresarusuario.Location = new System.Drawing.Point(88, 281);
+            this.btningresarusuario.Location = new System.Drawing.Point(218, 282);
             this.btningresarusuario.Name = "btningresarusuario";
             this.btningresarusuario.Size = new System.Drawing.Size(75, 29);
             this.btningresarusuario.TabIndex = 0;
@@ -553,7 +379,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 84);
+            this.label8.Location = new System.Drawing.Point(68, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 15);
             this.label8.TabIndex = 4;
@@ -563,7 +389,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 124);
+            this.label10.Location = new System.Drawing.Point(12, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(182, 15);
             this.label10.TabIndex = 6;
@@ -630,6 +456,9 @@
             // grbmodificarusuarios
             // 
             this.grbmodificarusuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.grbmodificarusuarios.Controls.Add(this.label6);
+            this.grbmodificarusuarios.Controls.Add(this.txbcontraseñabuscar);
+            this.grbmodificarusuarios.Controls.Add(this.label5);
             this.grbmodificarusuarios.Controls.Add(this.txbbuscarapellido);
             this.grbmodificarusuarios.Controls.Add(this.txbbuscarnombre);
             this.grbmodificarusuarios.Controls.Add(this.btneliminar);
@@ -642,7 +471,6 @@
             this.grbmodificarusuarios.Controls.Add(this.label15);
             this.grbmodificarusuarios.Controls.Add(this.label17);
             this.grbmodificarusuarios.Controls.Add(this.label18);
-            this.grbmodificarusuarios.Controls.Add(this.label19);
             this.grbmodificarusuarios.Location = new System.Drawing.Point(6, 6);
             this.grbmodificarusuarios.Name = "grbmodificarusuarios";
             this.grbmodificarusuarios.Size = new System.Drawing.Size(411, 329);
@@ -653,7 +481,7 @@
             // txbbuscarapellido
             // 
             this.txbbuscarapellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbbuscarapellido.Location = new System.Drawing.Point(139, 91);
+            this.txbbuscarapellido.Location = new System.Drawing.Point(139, 75);
             this.txbbuscarapellido.Name = "txbbuscarapellido";
             this.txbbuscarapellido.Size = new System.Drawing.Size(256, 23);
             this.txbbuscarapellido.TabIndex = 35;
@@ -713,7 +541,7 @@
             // 
             this.cmbbuscartipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbbuscartipo.FormattingEnabled = true;
-            this.cmbbuscartipo.Location = new System.Drawing.Point(139, 219);
+            this.cmbbuscartipo.Location = new System.Drawing.Point(139, 162);
             this.cmbbuscartipo.Name = "cmbbuscartipo";
             this.cmbbuscartipo.Size = new System.Drawing.Size(256, 23);
             this.cmbbuscartipo.TabIndex = 28;
@@ -721,7 +549,7 @@
             // txbbuscardui
             // 
             this.txbbuscardui.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbbuscardui.Location = new System.Drawing.Point(139, 176);
+            this.txbbuscardui.Location = new System.Drawing.Point(139, 133);
             this.txbbuscardui.Name = "txbbuscardui";
             this.txbbuscardui.Size = new System.Drawing.Size(256, 23);
             this.txbbuscardui.TabIndex = 27;
@@ -730,7 +558,7 @@
             // dtpbuscarfecha
             // 
             this.dtpbuscarfecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpbuscarfecha.Location = new System.Drawing.Point(195, 128);
+            this.dtpbuscarfecha.Location = new System.Drawing.Point(195, 104);
             this.dtpbuscarfecha.Name = "dtpbuscarfecha";
             this.dtpbuscarfecha.Size = new System.Drawing.Size(200, 23);
             this.dtpbuscarfecha.TabIndex = 26;
@@ -739,7 +567,7 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 227);
+            this.label13.Location = new System.Drawing.Point(14, 165);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(119, 15);
             this.label13.TabIndex = 23;
@@ -759,7 +587,7 @@
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(42, 179);
+            this.label17.Location = new System.Drawing.Point(42, 136);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(91, 15);
             this.label17.TabIndex = 22;
@@ -769,21 +597,11 @@
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 94);
+            this.label18.Location = new System.Drawing.Point(7, 78);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(126, 15);
             this.label18.TabIndex = 20;
             this.label18.Text = "Apellido usuario:";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(7, 134);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(182, 15);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "Fecha nacimiento usuario:";
             // 
             // tabPage5
             // 
@@ -842,6 +660,52 @@
             this.dtgvmostrarusuarios.Size = new System.Drawing.Size(778, 285);
             this.dtgvmostrarusuarios.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(110, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Contraseña:";
+            // 
+            // txbcontraseñareg
+            // 
+            this.txbcontraseñareg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbcontraseñareg.Location = new System.Drawing.Point(200, 203);
+            this.txbcontraseñareg.Name = "txbcontraseñareg";
+            this.txbcontraseñareg.Size = new System.Drawing.Size(266, 23);
+            this.txbcontraseñareg.TabIndex = 22;
+            // 
+            // txbcontraseñabuscar
+            // 
+            this.txbcontraseñabuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbcontraseñabuscar.Location = new System.Drawing.Point(139, 191);
+            this.txbcontraseñabuscar.Name = "txbcontraseñabuscar";
+            this.txbcontraseñabuscar.Size = new System.Drawing.Size(256, 23);
+            this.txbcontraseñabuscar.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 194);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Contraseña:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 15);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Fecha nacimiento usuario:";
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -862,8 +726,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.grbusuarioregistrado.ResumeLayout(false);
-            this.grbusuarioregistrado.PerformLayout();
             this.grbregistrar.ResumeLayout(false);
             this.grbregistrar.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -889,30 +751,15 @@
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox grbusuarioregistrado;
-        private System.Windows.Forms.Label lblcontraseñareg;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label lbltipousuarioreg;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblduireg;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblfechanacreg;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblapellidoreg;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblnombrereg;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblcodigoreg;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox grbregistrar;
         private System.Windows.Forms.Button btnlimpiarusuario;
         private System.Windows.Forms.Button btningresarusuario;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbtipousuarioreg;
         private System.Windows.Forms.TextBox txbduiusuarioreg;
         private System.Windows.Forms.DateTimePicker dtpfechanacreg;
@@ -932,7 +779,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnbuscarEnMostrar;
         private System.Windows.Forms.DataGridView dtgvmostrarusuarios;
@@ -944,5 +790,10 @@
         private System.Windows.Forms.TextBox txbbuscarapellido;
         private System.Windows.Forms.TextBox txbbusquedamuestranombre;
         private System.Windows.Forms.PictureBox pctAtras;
+        private System.Windows.Forms.TextBox txbcontraseñareg;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txbcontraseñabuscar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
