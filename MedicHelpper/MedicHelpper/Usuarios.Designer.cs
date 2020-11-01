@@ -41,6 +41,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grbregistrar = new System.Windows.Forms.GroupBox();
+            this.txbcontraseñareg = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txbapellidousurioreg = new System.Windows.Forms.TextBox();
             this.txbnombreusuarioreg = new System.Windows.Forms.TextBox();
             this.cmbtipousuarioreg = new System.Windows.Forms.ComboBox();
@@ -59,6 +61,9 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.txbnombrebusqueda = new System.Windows.Forms.TextBox();
             this.grbmodificarusuarios = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txbcontraseñabuscar = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txbbuscarapellido = new System.Windows.Forms.TextBox();
             this.txbbuscarnombre = new System.Windows.Forms.TextBox();
             this.btneliminar = new System.Windows.Forms.Button();
@@ -76,11 +81,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.btnbuscarEnMostrar = new System.Windows.Forms.Button();
             this.dtgvmostrarusuarios = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbcontraseñareg = new System.Windows.Forms.TextBox();
-            this.txbcontraseñabuscar = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -272,6 +272,24 @@
             this.grbregistrar.TabStop = false;
             this.grbregistrar.Text = "Registrar usuario";
             // 
+            // txbcontraseñareg
+            // 
+            this.txbcontraseñareg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbcontraseñareg.Location = new System.Drawing.Point(200, 203);
+            this.txbcontraseñareg.Name = "txbcontraseñareg";
+            this.txbcontraseñareg.Size = new System.Drawing.Size(266, 23);
+            this.txbcontraseñareg.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(110, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Contraseña:";
+            // 
             // txbapellidousurioreg
             // 
             this.txbapellidousurioreg.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -417,8 +435,10 @@
             this.dtgvbusquedaresultados.Location = new System.Drawing.Point(426, 76);
             this.dtgvbusquedaresultados.Name = "dtgvbusquedaresultados";
             this.dtgvbusquedaresultados.RowHeadersWidth = 51;
+            this.dtgvbusquedaresultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvbusquedaresultados.Size = new System.Drawing.Size(358, 259);
             this.dtgvbusquedaresultados.TabIndex = 32;
+            this.dtgvbusquedaresultados.DoubleClick += new System.EventHandler(this.dtgvbusquedaresultados_DoubleClick);
             // 
             // label20
             // 
@@ -477,6 +497,34 @@
             this.grbmodificarusuarios.TabIndex = 0;
             this.grbmodificarusuarios.TabStop = false;
             this.grbmodificarusuarios.Text = "Administrar usuarios";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 15);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Fecha nacimiento usuario:";
+            // 
+            // txbcontraseñabuscar
+            // 
+            this.txbcontraseñabuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbcontraseñabuscar.Location = new System.Drawing.Point(139, 191);
+            this.txbcontraseñabuscar.Name = "txbcontraseñabuscar";
+            this.txbcontraseñabuscar.Size = new System.Drawing.Size(256, 23);
+            this.txbcontraseñabuscar.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 194);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Contraseña:";
             // 
             // txbbuscarapellido
             // 
@@ -657,54 +705,9 @@
             this.dtgvmostrarusuarios.Location = new System.Drawing.Point(6, 50);
             this.dtgvmostrarusuarios.Name = "dtgvmostrarusuarios";
             this.dtgvmostrarusuarios.RowHeadersWidth = 51;
+            this.dtgvmostrarusuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvmostrarusuarios.Size = new System.Drawing.Size(778, 285);
             this.dtgvmostrarusuarios.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 206);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Contraseña:";
-            // 
-            // txbcontraseñareg
-            // 
-            this.txbcontraseñareg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbcontraseñareg.Location = new System.Drawing.Point(200, 203);
-            this.txbcontraseñareg.Name = "txbcontraseñareg";
-            this.txbcontraseñareg.Size = new System.Drawing.Size(266, 23);
-            this.txbcontraseñareg.TabIndex = 22;
-            // 
-            // txbcontraseñabuscar
-            // 
-            this.txbcontraseñabuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbcontraseñabuscar.Location = new System.Drawing.Point(139, 191);
-            this.txbcontraseñabuscar.Name = "txbcontraseñabuscar";
-            this.txbcontraseñabuscar.Size = new System.Drawing.Size(256, 23);
-            this.txbcontraseñabuscar.TabIndex = 37;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 15);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Contraseña:";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 15);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Fecha nacimiento usuario:";
             // 
             // Usuarios
             // 

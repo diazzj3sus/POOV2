@@ -15,15 +15,14 @@ namespace MedicHelpper
     public partial class Usuarios : Form
     {
         ConexionSqlServer conectar = new ConexionSqlServer();
+        List<ClassUsuarios> TodosLosUsuarios = new List<ClassUsuarios>();
+        List<ClassUsuarios> ResultadosBusquedaUsuarios = new List<ClassUsuarios>();
         public Usuarios()
         {
             InitializeComponent();
             //cuenta la cantiad de registros
-            conectar.conexion.Open();
-            string consulta = "SELECT COUNT(*) FROM TipoUsuario ";
-            SqlCommand contador = new SqlCommand(consulta, conectar.conexion);
-            int conta = Convert.ToInt32(contador.ExecuteScalar());
-            conectar.conexion.Close();
+            string tabla = "TipoUsuario";
+            int conta = contarRegistros(tabla);
             for (int x = 0; x < conta; x++)
             {
                 conectar.conexion.Open();
@@ -36,6 +35,7 @@ namespace MedicHelpper
                 }
                 conectar.conexion.Close();
             }
+            IniciarGrid();
         }
         private void Limpiar()
         {
@@ -247,7 +247,7 @@ namespace MedicHelpper
                 string nombre = txbnombrebusqueda.Text;
                 if (nombre.Length > 4)
                 {
-                    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    
                 }
                 else
                 {
@@ -259,6 +259,10 @@ namespace MedicHelpper
                 MessageBox.Show("ALERTA: Verifique los datos ingresados.", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        private void dtgvbusquedaresultados_DoubleClick(object sender, EventArgs e)
+        {
+            //al dar doble click
+        }
         private void btnmodificar_Click(object sender, EventArgs e)
         {
             try
@@ -268,6 +272,7 @@ namespace MedicHelpper
                 string nombre = txbbuscarnombre.Text, apellido = txbbuscarapellido.Text;
                 if (DUI.Length == 9)
                 {
+
                     if (nombre.Length >= 5 && apellido.Length >= 5)
                     {
                         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -343,7 +348,59 @@ namespace MedicHelpper
             MenuAdministrador menu = new MenuAdministrador("");
             menu.Show();
         }
+        
+        private int contarRegistros(string tabla)
+        {
+            int conteo=0;
+            conectar.conexion.Open();
+            string consulta = "SELECT COUNT(*) FROM "+tabla;
+            SqlCommand contador = new SqlCommand(consulta, conectar.conexion);
+            conteo = Convert.ToInt32(contador.ExecuteScalar());
+            conectar.conexion.Close();
+            return conteo;
+        }
+        private void IniciarGrid()
+        {
+            dtgvbusquedaresultados.DataSource = null;
+            dtgvmostrarusuarios.DataSource = null;
+            string tabla = "Usuarios";
+            int contar = contarRegistros(tabla);
+            string consulta = "SELECT * FROM Usuarios";
+            conectar.conexion.Open();
+            SqlCommand consultar = new SqlCommand(consulta, conectar.conexion);
+            SqlDataAdapter sda = new SqlDataAdapter(consultar);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            conectar.conexion.Close();
+            for(int x = 0; x < contar; x++)
+            {
+                ClassUsuarios personas = new ClassUsuarios();
+                personas.Password =  dt.Rows[x][1].ToString();
+                personas.Nombre = dt.Rows[x][2].ToString();
+                personas.Apellido = dt.Rows[x][3].ToString();
+                personas.FechaNacimiento = dt.Rows[x][4].ToString();
+                personas.DUI = dt.Rows[x][5].ToString();
+                personas.TipoDeUsuario = dt.Rows[x][6].ToString();
+                TodosLosUsuarios.Add(personas);
+            }
+            dtgvbusquedaresultados.DataSource = TodosLosUsuarios;
+            dtgvmostrarusuarios.DataSource = TodosLosUsuarios;
+        }
+        private void BuscarEnGrid(int opcGrid, string nombreBusqueda)
+        {
 
+            if (opcGrid == 0)
+            {
+                dtgvbusquedaresultados.DataSource = null;
+
+            }
+            else if (opcGrid == 1)
+            {
+                dtgvmostrarusuarios.DataSource = null;
+            }
+        }
+
+        
     }
         //------------------------------------------------------------
 }

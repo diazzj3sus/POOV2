@@ -9,20 +9,22 @@ namespace MedicHelpper
     class ClassUsuarios
     {
 
-        protected string Nombre;
-        protected string Apellido;
-        protected string TipoDeUsuario;
-        protected string Password;
-        protected string DUI;
+        protected string nombre;
+        protected string apellido;
+        protected string fechaNacimiento;
+        protected string tipoDeUsuario;
+        protected string password;
+        protected string dui;
 
         public ClassUsuarios()
         {
         }
 
-        public string Nombre1 { get => Nombre; set => Nombre = value; }
-        public string Apellido1 { get => Apellido; set => Apellido = value; }
-        public string TipoDeUsuario1 { get => TipoDeUsuario; set => TipoDeUsuario = value; }
-        public string Password1 { get => Password; set => Password = value; }
-        public string DUI1 { get => DUI; set => DUI = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellido { get => apellido; set => apellido = value; }
+        public string FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
+        public string TipoDeUsuario { get => tipoDeUsuario; set => tipoDeUsuario = value; }
+        public string Password { get => password; set => password = value; }
+        public string DUI { get => dui; set => dui = value; }
     }
 }
