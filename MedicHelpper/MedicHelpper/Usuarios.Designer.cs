@@ -61,9 +61,11 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.txbnombrebusqueda = new System.Windows.Forms.TextBox();
             this.grbmodificarusuarios = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txbcontraseñabuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txbbuscarid = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txbbuscarapellido = new System.Windows.Forms.TextBox();
             this.txbbuscarnombre = new System.Windows.Forms.TextBox();
             this.btneliminar = new System.Windows.Forms.Button();
@@ -77,6 +79,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnlimpiarelmostrarusuarios = new System.Windows.Forms.Button();
             this.txbbusquedamuestranombre = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btnbuscarEnMostrar = new System.Windows.Forms.Button();
@@ -432,11 +435,11 @@
             // 
             this.dtgvbusquedaresultados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvbusquedaresultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvbusquedaresultados.Location = new System.Drawing.Point(426, 76);
+            this.dtgvbusquedaresultados.Location = new System.Drawing.Point(426, 60);
             this.dtgvbusquedaresultados.Name = "dtgvbusquedaresultados";
             this.dtgvbusquedaresultados.RowHeadersWidth = 51;
             this.dtgvbusquedaresultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvbusquedaresultados.Size = new System.Drawing.Size(358, 259);
+            this.dtgvbusquedaresultados.Size = new System.Drawing.Size(358, 275);
             this.dtgvbusquedaresultados.TabIndex = 32;
             this.dtgvbusquedaresultados.DoubleClick += new System.EventHandler(this.dtgvbusquedaresultados_DoubleClick);
             // 
@@ -471,14 +474,17 @@
             this.txbnombrebusqueda.Name = "txbnombrebusqueda";
             this.txbnombrebusqueda.Size = new System.Drawing.Size(162, 23);
             this.txbnombrebusqueda.TabIndex = 1;
+            this.txbnombrebusqueda.TextChanged += new System.EventHandler(this.txbnombrebusqueda_TextChanged);
             this.txbnombrebusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbnombrebusqueda_KeyPress);
             // 
             // grbmodificarusuarios
             // 
             this.grbmodificarusuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.grbmodificarusuarios.Controls.Add(this.label6);
             this.grbmodificarusuarios.Controls.Add(this.txbcontraseñabuscar);
             this.grbmodificarusuarios.Controls.Add(this.label5);
+            this.grbmodificarusuarios.Controls.Add(this.txbbuscarid);
+            this.grbmodificarusuarios.Controls.Add(this.label7);
+            this.grbmodificarusuarios.Controls.Add(this.label6);
             this.grbmodificarusuarios.Controls.Add(this.txbbuscarapellido);
             this.grbmodificarusuarios.Controls.Add(this.txbbuscarnombre);
             this.grbmodificarusuarios.Controls.Add(this.btneliminar);
@@ -498,38 +504,56 @@
             this.grbmodificarusuarios.TabStop = false;
             this.grbmodificarusuarios.Text = "Administrar usuarios";
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 15);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Fecha nacimiento usuario:";
-            // 
             // txbcontraseñabuscar
             // 
             this.txbcontraseñabuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbcontraseñabuscar.Location = new System.Drawing.Point(139, 191);
+            this.txbcontraseñabuscar.Location = new System.Drawing.Point(138, 66);
             this.txbcontraseñabuscar.Name = "txbcontraseñabuscar";
             this.txbcontraseñabuscar.Size = new System.Drawing.Size(256, 23);
-            this.txbcontraseñabuscar.TabIndex = 37;
+            this.txbcontraseñabuscar.TabIndex = 42;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 194);
+            this.label5.Location = new System.Drawing.Point(48, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 15);
-            this.label5.TabIndex = 36;
+            this.label5.TabIndex = 41;
             this.label5.Text = "Contraseña:";
+            // 
+            // txbbuscarid
+            // 
+            this.txbbuscarid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbbuscarid.Location = new System.Drawing.Point(138, 37);
+            this.txbbuscarid.Name = "txbbuscarid";
+            this.txbbuscarid.Size = new System.Drawing.Size(256, 23);
+            this.txbbuscarid.TabIndex = 40;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(104, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(28, 15);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "ID:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 15);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Fecha nacimiento usuario:";
             // 
             // txbbuscarapellido
             // 
             this.txbbuscarapellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbbuscarapellido.Location = new System.Drawing.Point(139, 75);
+            this.txbbuscarapellido.Location = new System.Drawing.Point(138, 124);
             this.txbbuscarapellido.Name = "txbbuscarapellido";
             this.txbbuscarapellido.Size = new System.Drawing.Size(256, 23);
             this.txbbuscarapellido.TabIndex = 35;
@@ -538,7 +562,7 @@
             // txbbuscarnombre
             // 
             this.txbbuscarnombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbbuscarnombre.Location = new System.Drawing.Point(139, 46);
+            this.txbbuscarnombre.Location = new System.Drawing.Point(138, 95);
             this.txbbuscarnombre.Name = "txbbuscarnombre";
             this.txbbuscarnombre.Size = new System.Drawing.Size(256, 23);
             this.txbbuscarnombre.TabIndex = 32;
@@ -556,6 +580,7 @@
             this.btneliminar.TabIndex = 31;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnlimpiarbusqueda
             // 
@@ -589,7 +614,7 @@
             // 
             this.cmbbuscartipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbbuscartipo.FormattingEnabled = true;
-            this.cmbbuscartipo.Location = new System.Drawing.Point(139, 162);
+            this.cmbbuscartipo.Location = new System.Drawing.Point(138, 211);
             this.cmbbuscartipo.Name = "cmbbuscartipo";
             this.cmbbuscartipo.Size = new System.Drawing.Size(256, 23);
             this.cmbbuscartipo.TabIndex = 28;
@@ -597,7 +622,7 @@
             // txbbuscardui
             // 
             this.txbbuscardui.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbbuscardui.Location = new System.Drawing.Point(139, 133);
+            this.txbbuscardui.Location = new System.Drawing.Point(138, 182);
             this.txbbuscardui.Name = "txbbuscardui";
             this.txbbuscardui.Size = new System.Drawing.Size(256, 23);
             this.txbbuscardui.TabIndex = 27;
@@ -606,7 +631,7 @@
             // dtpbuscarfecha
             // 
             this.dtpbuscarfecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpbuscarfecha.Location = new System.Drawing.Point(195, 104);
+            this.dtpbuscarfecha.Location = new System.Drawing.Point(194, 153);
             this.dtpbuscarfecha.Name = "dtpbuscarfecha";
             this.dtpbuscarfecha.Size = new System.Drawing.Size(200, 23);
             this.dtpbuscarfecha.TabIndex = 26;
@@ -615,7 +640,7 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 165);
+            this.label13.Location = new System.Drawing.Point(13, 214);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(119, 15);
             this.label13.TabIndex = 23;
@@ -625,7 +650,7 @@
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 49);
+            this.label15.Location = new System.Drawing.Point(20, 98);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(112, 15);
             this.label15.TabIndex = 24;
@@ -635,7 +660,7 @@
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(42, 136);
+            this.label17.Location = new System.Drawing.Point(41, 185);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(91, 15);
             this.label17.TabIndex = 22;
@@ -645,7 +670,7 @@
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 78);
+            this.label18.Location = new System.Drawing.Point(6, 127);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(126, 15);
             this.label18.TabIndex = 20;
@@ -653,6 +678,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.btnlimpiarelmostrarusuarios);
             this.tabPage5.Controls.Add(this.txbbusquedamuestranombre);
             this.tabPage5.Controls.Add(this.label21);
             this.tabPage5.Controls.Add(this.btnbuscarEnMostrar);
@@ -664,6 +690,20 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Mostrar usuarios";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // btnlimpiarelmostrarusuarios
+            // 
+            this.btnlimpiarelmostrarusuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnlimpiarelmostrarusuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.btnlimpiarelmostrarusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiarelmostrarusuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btnlimpiarelmostrarusuarios.Location = new System.Drawing.Point(377, 17);
+            this.btnlimpiarelmostrarusuarios.Name = "btnlimpiarelmostrarusuarios";
+            this.btnlimpiarelmostrarusuarios.Size = new System.Drawing.Size(75, 29);
+            this.btnlimpiarelmostrarusuarios.TabIndex = 36;
+            this.btnlimpiarelmostrarusuarios.Text = "Limpiar";
+            this.btnlimpiarelmostrarusuarios.UseVisualStyleBackColor = false;
+            this.btnlimpiarelmostrarusuarios.Click += new System.EventHandler(this.btnlimpiarelmostrarusuarios_Click);
             // 
             // txbbusquedamuestranombre
             // 
@@ -795,8 +835,11 @@
         private System.Windows.Forms.PictureBox pctAtras;
         private System.Windows.Forms.TextBox txbcontraseñareg;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnlimpiarelmostrarusuarios;
+        private System.Windows.Forms.TextBox txbbuscarid;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbcontraseñabuscar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }
