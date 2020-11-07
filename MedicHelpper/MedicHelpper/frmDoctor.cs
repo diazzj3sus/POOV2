@@ -11,8 +11,8 @@ namespace MedicHelpper
 {
     public partial class frmDoctor : MedicHelpper.frmPadre
     {
-
-        bool CampoCodCita, CampoTarjCita, NombreAdd, ApellidoAdd,CodUsuario, CodUsuarioDoc, FechaCita, Descripcion;
+        Validaciones validar = new Validaciones();
+        bool CampoCodCita, CampoTarjCita, NombreAdd, ApellidoAdd,CodUsuario, CodUsuarioDoc, FechaCita= true, Descripcion;
 
         public frmDoctor()
         {
@@ -123,9 +123,9 @@ namespace MedicHelpper
             return ok;
         }
 
-        private bool ValidarFechaCita(DateTimePicker dtp)
+        private bool ValidarFechaCita(DateTimePicker dt)
         {
-            DateTime fechaSeleccionada = dateTimePicker1.Value;
+            DateTime fechaSeleccionada = dt.Value;
             DateTime fechaActual = System.DateTime.Now;
             bool ok = true;
             if (fechaSeleccionada < fechaActual)
@@ -138,7 +138,7 @@ namespace MedicHelpper
 
         private void BorrarValidar()
         {
-            errorCodigoCita.SetError(textBox4, "");
+            //errorCodigoCita.SetError(textBox4, "");
             errorCodigoTarjeta.SetError(textBox1, "");
             errorCodigoCita.SetError(txt_CODCITa, "");
             ErrorPaciente.SetError(txt_codPaci, "");
@@ -170,7 +170,7 @@ namespace MedicHelpper
             NombreAdd = ValidarCampoLetras(txt_codigocita, e, errorCodigoCita);
         }
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {    
             errorCodigoCita.SetError(textBox4, "");
             CampoCodCita = ValidarCamposNumericos(textBox4, e, errorCodigoCita);
         }
@@ -178,8 +178,7 @@ namespace MedicHelpper
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorCodigoTarjeta.SetError(textBox1, "");
-            CampoTarjCita = ValidarCamposNumericos(textBox1, e, errorCodigoTarjeta);
-
+            CampoTarjCita = validar.ValidarCamposVacios(textBox1, errorCodigoTarjeta);
         }
 
         private void txt_fecha_doc_KeyPress(object sender, KeyPressEventArgs e)
@@ -231,8 +230,8 @@ namespace MedicHelpper
         private void btnAddCita_Click(object sender, EventArgs e)
         {
             BorrarValidar();
-            if (ValidarCamposVacios(textBox1, errorCodigoTarjeta) && ValidarCamposVacios(textBox1, errorCodigoCita)
-                && CampoCodCita && CampoTarjCita && FechaCita)
+            if (validar.ValidarCamposVacios(textBox1, errorCodigoTarjeta) && validar.ValidarCamposVacios(textBox4, errorCodigoCita)
+                  && CampoCodCita && CampoTarjCita && FechaCita)
             {
                 //Falta codigo para  la fase 3 funcionamiento debido
                 MessageBox.Show("Campos completados correctamente");
@@ -245,11 +244,11 @@ namespace MedicHelpper
                 }
                 else if (!CampoCodCita)
                 {
-                    errorCodigoCita.SetError(textBox4, "Ultimos intentos de ingreso fueron caracteres letras\n Vuelva a intar ingresar");
+                    errorCodigoCita.SetError(textBox4, "Campo con datos no validos,s\n Vuelva a intentar ingresar");
                 }
                 else if (!CampoTarjCita)
                 {
-                    errorCodigoTarjeta.SetError(textBox1, "Ultimos intentos de ingreso fueron caracteres letras\n Vuelva a intar ingresar");
+                    errorCodigoTarjeta.SetError(textBox1, "Campo con datos no validos,\n Vuelva a intentar ingresar");
                 }
                 else
                 {
@@ -257,7 +256,6 @@ namespace MedicHelpper
                     errorCodigoTarjeta.SetError(textBox1, "Campos con datos vacios");
                 }
             }
-
         }
 
 

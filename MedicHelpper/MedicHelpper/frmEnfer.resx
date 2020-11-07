@@ -132,13 +132,22 @@
   <metadata name="errorNTarjetaFind.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>933, 18</value>
   </metadata>
-  <metadata name="errorNTarjetaAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1110, 18</value>
-  </metadata>
   <metadata name="errorFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>140, 33</value>
   </metadata>
   <metadata name="errorApellidoAgg.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>269, 33</value>
+  </metadata>
+  <metadata name="tipVerificar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>415, 33</value>
+  </metadata>
+  <metadata name="errorFechaNacimiento.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>526, 33</value>
+  </metadata>
+  <metadata name="errorNTarjeta.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>698, 33</value>
+  </metadata>
+  <metadata name="errorNtarjetaPaciente.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>822, 33</value>
   </metadata>
 </root>

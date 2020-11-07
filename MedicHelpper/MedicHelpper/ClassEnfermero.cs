@@ -8,10 +8,17 @@ namespace MedicHelpper
 {
     class ClassEnfermero : ClassUsuarios
     {
-        public void BuscarCitas() { }
-        public void AgregarPaciente() { }
-        public void BuscarPaciente() { }
-        public void MostrarPaciente() { }
+        public void BuscarCitas() {
+
+        }
+        public void AgregarPaciente() { 
+
+
+        }
+        public void BuscarPaciente() {
+        }
+        public void MostrarPaciente() { 
+        }
 
     }
 }

@@ -9,12 +9,12 @@ DescipcionTipoUsuario VARCHAR(255)
 )
 GO
 insert into TipoUsuario VALUES('Administrador','Posee todos los permisos dentro del software')
-insert into TipoUsuario VALUES('Enfermeria','Encargado de la administración de citas')
+insert into TipoUsuario VALUES('Enfermeria','Encargado de la administracion de citas')
 insert into TipoUsuario VALUES('Dotores','Encargado de atender a los pacientes en sus consultas')
-insert into TipoUsuario VALUES('Farmaceutico','Encargado de la administración de la farmacia')
+insert into TipoUsuario VALUES('Farmaceutico','Encargado de la administracion de la farmacia')
 CREATE TABLE Usuarios(
 IdUsuario CHAR(8) PRIMARY KEY,
-Contraseña VARCHAR(75) NOT NULL,
+ContraseÃ±a VARCHAR(75) NOT NULL,
 Nombre VARCHAR(75) NOT NULL,
 Apellido VARCHAR(75) NOT NULL UNIQUE,
 FechaDeNacimiento DATETIME NOT NULL,
@@ -36,7 +36,7 @@ GO
 CREATE TABLE Cita(
 idCita INT IDENTITY PRIMARY KEY,
 IdPacienteCita CHAR(6) FOREIGN KEY REFERENCES Pacientes(IdPaciente) ON DELETE CASCADE ON UPDATE CASCADE,
-FechaCita DATETIME
+FechaCita DATETIME,
 Estado int NOT NULL
 )
 GO
@@ -51,7 +51,7 @@ Cantidad INT
 GO
 CREATE TABLE Consulta(
 IdConsulta INT IDENTITY(0,1) PRIMARY KEY,
-IdUsuarioConsulta CHAR(6) FOREIGN KEY REFERENCES Usuarios(IdUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
+IdUsuarioConsulta CHAR(8) FOREIGN KEY REFERENCES Usuarios(IdUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
 idCita INT FOREIGN KEY REFERENCES Cita(idCita) ON DELETE CASCADE ON UPDATE CASCADE,
 Descripcion VARCHAR(255) NOT NULL,
 Fecha DATETIME NOT NULL
@@ -65,3 +65,18 @@ Estado int NOT NULL
 )
 GO
 select count(*) from TipoUsuario
+
+ALTER TABLE Cita ADD CONSTRAINT CK_Estado CHECK (Estado = 1 OR Estado =0 )
+GO
+
+
+-- Create the stored procedure in the specified schema
+CREATE PROCEDURE dbo.AddCitas
+	@idCita int = 0, 
+	@param2 int = 0 
+AS
+	
+	SELECT @param1, @param2
+GO
+EXECUTE dbo.AddCitas 1, 2 
+GO

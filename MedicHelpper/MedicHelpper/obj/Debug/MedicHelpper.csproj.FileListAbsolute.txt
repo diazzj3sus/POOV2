@@ -178,3 +178,23 @@ C:\Users\USER\source\repos\POO2\PArcialio\POOV2\MedicHelpper\MedicHelpper\obj\De
 C:\Users\USER\source\repos\POO2\PArcialio\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
 C:\Users\USER\source\repos\POO2\PArcialio\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb
 C:\Users\tinta print\Desktop\PROGRAS\MDB\MedicHelpperPOOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Creditos.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe.config
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.pdb
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csprojAssemblyReference.cache
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Bienvenida.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Creditos.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmDoctor.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmEnfer.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Farmaceuticos.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmPadre.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.LoginMedicHelppercs.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.MenuAdministrador.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Properties.Resources.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Usuarios.resources
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.GenerateResource.cache
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.CoreCompileInputs.cache
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.CopyComplete
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb
