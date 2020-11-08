@@ -162,7 +162,7 @@ namespace MedicHelpper
         {
             //
             errorCodUSuario.SetError(txt_codusuario, "");
-            CodUsuarioDoc = ValidarCamposNumericos(txt_codusuario, e, errorCodUSuario);
+            CodUsuarioDoc = ValidarCamposVacios(txt_codusuario, errorCodUSuario);
         }
         private void txt_codigocita_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -187,11 +187,18 @@ namespace MedicHelpper
             FechaCita = ValidarCamposVacios(txt_fecha_doc, errorFech);
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void txt_DescripcionDoc_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorDescripcion.SetError(txt_DescripcionDoc, "");
             Descripcion = ValidarCamposVacios(txt_DescripcionDoc, errorDescripcion);
         }
+
+       
 
         private void txt_codPaci_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -199,11 +206,20 @@ namespace MedicHelpper
             ApellidoAdd = ValidarCampoLetras(txt_codPaci, e, ErrorPaciente);
         }
 
+        private void txt_codusuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
         private void txt_fecha_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorFech.SetError(txt_fecha, "");
             ApellidoAdd = ValidarCampoLetras(txt_fecha, e, errorFech);
         }
+
+       
 
         private void txt_cita_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -226,9 +242,38 @@ namespace MedicHelpper
             FechaCita = ValidarFechaCita(dateTimePicker1);
 
         }
+        private void btn_guardar_diagnostico_Click(object sender, EventArgs e)
+        {
+            string sql = "Insert into Consulta (IdUsuarioConsulta,idCita,Descripcion,Fecha) values ('" +txt_codusuario.Text+ "','" +txt_codigocita.Text+ "','" +txt_DescripcionDoc.Text+ "','" +txt_fecha_doc.Text+ "')";
+            
+            if (ObDatos.AgregarCita(sql)) { MessageBox.Show("Datos insertados correctamente"); }
+            else { MessageBox.Show("Hubo un problema con la insersion de datos"); }
+        }
+
+        ClassDoctor ObDatos = new ClassDoctor();
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+
+        private void btn_MostrarData_Click(object sender, EventArgs e)
+        {
+            ObDatos.BuscarCita("Select * from Consulta", "Consulta");
+            this.dataGridView1.DataSource = ObDatos.ds.Tables["Consulta"];
+            
+        }
+
+
 
         private void btnAddCita_Click(object sender, EventArgs e)
         {
+          
             BorrarValidar();
             if (validar.ValidarCamposVacios(textBox1, errorCodigoTarjeta) && validar.ValidarCamposVacios(textBox4, errorCodigoCita)
                   && CampoCodCita && CampoTarjCita && FechaCita)

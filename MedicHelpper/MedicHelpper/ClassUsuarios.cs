@@ -19,12 +19,12 @@ namespace MedicHelpper
         public ClassUsuarios()
         {
         }
-        public string Usuario { get => usuario; set => usuario = value; }
-        public string Password { get => password; set => password = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apellido { get => apellido; set => apellido = value; }
-        public string FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
-        public string DUI { get => dui; set => dui = value; }
-        public string TipoDeUsuario { get => tipoDeUsuario; set => tipoDeUsuario = value; }
+        public string Usuario {  get { return usuario; } set { usuario = value; } }
+        public string Password { get { return password; } set { password = value; } }
+        public string Nombre { get { return nombre; } set { nombre = value; } }
+        public string Apellido { get { return apellido; } set { apellido = value; } }
+        public string FechaNacimiento { get { return fechaNacimiento; } set { fechaNacimiento = value; } }
+        public string DUI { get { return dui; } set { dui = value; } }
+        public string TipoDeUsuario { get { return tipoDeUsuario; } set { tipoDeUsuario = value; } }
     }
 }

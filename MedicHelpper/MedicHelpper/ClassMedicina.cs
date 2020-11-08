@@ -18,11 +18,12 @@ namespace MedicHelpper
         public ClassMedicinas()
         {
         }
-
-        public string NombreMedicamento1 { get => NombreMedicamento; set => NombreMedicamento = value; }
-        public string ViaDeAdministracion1 { get => ViaDeAdministracion; set => ViaDeAdministracion = value; }
-        public string Familia1 { get => Familia; set => Familia = value; }
-        public string Cod_Medicamento1 { get => Cod_Medicamento; set => Cod_Medicamento = value; }
-        public int Existencia1 { get => Existencia; set => Existencia = value; }
+        
+        public string NombreMedicamento1 { get { return NombreMedicamento; } set { NombreMedicamento = value; } }
+        public string ViaDeAdministracion1 { get { return ViaDeAdministracion; } set { ViaDeAdministracion = value; } }
+        public string Familia1 { get { return Familia; } set { Familia = value; } }
+        public string Cod_Medicamento1 { get { return Cod_Medicamento; } set { Cod_Medicamento = value; } }
+        public int Existencia1 { get { return Existencia; } set { Existencia = value; } }
+        
     }
 }
