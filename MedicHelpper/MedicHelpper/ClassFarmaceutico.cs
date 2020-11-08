@@ -11,7 +11,7 @@ namespace MedicHelpper
 {
     class ClassFarmaceutico : ClassUsuarios
     {
-        private string cadena = "server=DESKTOP-KOFNQKO\\SANTOS;database=MedicHelpperBDD;integrated security = True";
+        private string cadena = "server=localhost;database=MedicHelpperBDD;integrated security = True";
         public SqlConnection far;
         private SqlCommandBuilder cmb;
         public DataSet ds= new DataSet();

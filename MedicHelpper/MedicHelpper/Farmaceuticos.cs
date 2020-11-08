@@ -47,11 +47,6 @@ namespace MedicHelpper
             MenuAdministrador login = new MenuAdministrador("");
             login.Show();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
         private bool ValidarCamposVacios(TextBox txt, ErrorProvider error)
         {
             bool ok = true;
@@ -192,7 +187,7 @@ private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
             cant = ValidarCamposNumericos(txtCantidadMed, e, errorCantidad);
         }
         bool cant;
-        Farmaceuticos obDatoss = new Farmaceuticos();
+        //Farmaceuticos obDatos = new Farmaceuticos();
         private void btningresarusuario_Click(object sender, EventArgs e)
         {
            
@@ -205,5 +200,5 @@ private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
 
         }
     }
-    }
 }
+

@@ -11,7 +11,7 @@ namespace MedicHelpper
     class ClassDoctor : ClassUsuarios
     {
 
-        private string cadena = "server=DESKTOP-GAJK8NQ\\WILLIAM;database=MedicHelpperBDD;integrated security = True;";
+        private string cadena = "server=localhost;database=MedicHelpperBDD;integrated security = True;";
         public SqlConnection AgDoc;
         private SqlCommandBuilder cmb;
         public DataSet ds = new DataSet();

@@ -31,16 +31,16 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.AddCita = new System.Windows.Forms.TabPage();
+            this.txtCita = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpCita = new System.Windows.Forms.DateTimePicker();
+            this.txtTarjeta = new System.Windows.Forms.TextBox();
             this.btnEstado = new System.Windows.Forms.Button();
             this.btnAddCita = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.AddCita.SuspendLayout();
             this.SuspendLayout();
@@ -75,14 +75,14 @@
             // 
             this.AddCita.BackColor = System.Drawing.Color.Silver;
             this.AddCita.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.AddCita.Controls.Add(this.textBox4);
+            this.AddCita.Controls.Add(this.txtCita);
             this.AddCita.Controls.Add(this.label8);
             this.AddCita.Controls.Add(this.lblEstado);
             this.AddCita.Controls.Add(this.label6);
             this.AddCita.Controls.Add(this.label5);
             this.AddCita.Controls.Add(this.label7);
-            this.AddCita.Controls.Add(this.dateTimePicker1);
-            this.AddCita.Controls.Add(this.textBox1);
+            this.AddCita.Controls.Add(this.dtpCita);
+            this.AddCita.Controls.Add(this.txtTarjeta);
             this.AddCita.Controls.Add(this.btnEstado);
             this.AddCita.Controls.Add(this.btnAddCita);
             this.AddCita.Location = new System.Drawing.Point(4, 25);
@@ -91,6 +91,23 @@
             this.AddCita.Size = new System.Drawing.Size(470, 265);
             this.AddCita.TabIndex = 1;
             this.AddCita.Text = "Agregar Cita";
+            // 
+            // txtCita
+            // 
+            this.txtCita.Location = new System.Drawing.Point(185, 85);
+            this.txtCita.Name = "txtCita";
+            this.txtCita.Size = new System.Drawing.Size(100, 20);
+            this.txtCita.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(61, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 16);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "N° De Cita";
             // 
             // lblEstado
             // 
@@ -134,19 +151,19 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Fecha de cita:";
             // 
-            // dateTimePicker1
+            // dtpCita
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dtpCita.Location = new System.Drawing.Point(157, 35);
+            this.dtpCita.Name = "dtpCita";
+            this.dtpCita.Size = new System.Drawing.Size(245, 20);
+            this.dtpCita.TabIndex = 19;
             // 
-            // textBox1
+            // txtTarjeta
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtTarjeta.Location = new System.Drawing.Point(185, 139);
+            this.txtTarjeta.Name = "txtTarjeta";
+            this.txtTarjeta.Size = new System.Drawing.Size(100, 20);
+            this.txtTarjeta.TabIndex = 15;
             // 
             // btnEstado
             // 
@@ -177,23 +194,6 @@
             this.btnAddCita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddCita.UseVisualStyleBackColor = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(61, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 16);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "N° De Cita";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(185, 85);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 26;
-            // 
             // frmPadre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,8 +216,8 @@
 
         #endregion
         protected System.Windows.Forms.TabControl tabControl1;
-        protected System.Windows.Forms.DateTimePicker dateTimePicker1;
-        protected System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.DateTimePicker dtpCita;
+        protected System.Windows.Forms.TextBox txtTarjeta;
         protected System.Windows.Forms.Button btnEstado;
         protected System.Windows.Forms.Button btnAddCita;
         protected System.Windows.Forms.Label label5;
@@ -227,6 +227,6 @@
         protected System.Windows.Forms.TabPage AddCita;
         protected System.Windows.Forms.Button btnCerrar;
         protected System.Windows.Forms.Label label8;
-        protected System.Windows.Forms.TextBox textBox4;
+        protected System.Windows.Forms.TextBox txtCita;
     }
 }

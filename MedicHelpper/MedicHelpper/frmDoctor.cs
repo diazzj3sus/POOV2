@@ -130,7 +130,7 @@ namespace MedicHelpper
             bool ok = true;
             if (fechaSeleccionada < fechaActual)
             {
-                errorFecha.SetError(dateTimePicker1, "Error la fecha seleccionada es menor a la fecha actual");
+                errorFecha.SetError(dtpCita, "Error la fecha seleccionada es menor a la fecha actual");
                 ok = false;
             }
             return ok;
@@ -139,7 +139,7 @@ namespace MedicHelpper
         private void BorrarValidar()
         {
             //errorCodigoCita.SetError(textBox4, "");
-            errorCodigoTarjeta.SetError(textBox1, "");
+            errorCodigoTarjeta.SetError(txtTarjeta, "");
             errorCodigoCita.SetError(txt_CODCITa, "");
             ErrorPaciente.SetError(txt_codPaci, "");
             errorFech.SetError(txt_fecha, "");
@@ -171,14 +171,14 @@ namespace MedicHelpper
         }
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {    
-            errorCodigoCita.SetError(textBox4, "");
-            CampoCodCita = ValidarCamposNumericos(textBox4, e, errorCodigoCita);
+            errorCodigoCita.SetError(txtCita, "");
+            CampoCodCita = ValidarCamposNumericos(txtCita, e, errorCodigoCita);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorCodigoTarjeta.SetError(textBox1, "");
-            CampoTarjCita = validar.ValidarCamposVacios(textBox1, errorCodigoTarjeta);
+            errorCodigoTarjeta.SetError(txtTarjeta, "");
+            CampoTarjCita = validar.ValidarCamposVacios(txtTarjeta, errorCodigoTarjeta);
         }
 
         private void txt_fecha_doc_KeyPress(object sender, KeyPressEventArgs e)
@@ -234,12 +234,16 @@ namespace MedicHelpper
             CodUsuario = ValidarCamposNumericos(txt_codusuario, e, errorCodUSuario);
             
         }
-   
+
+        private void AddCita_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-            errorFecha.SetError(dateTimePicker1, "");
-            FechaCita = ValidarFechaCita(dateTimePicker1);
+            errorFecha.SetError(dtpCita, "");
+            FechaCita = ValidarFechaCita(dtpCita);
 
         }
         private void btn_guardar_diagnostico_Click(object sender, EventArgs e)
@@ -275,7 +279,7 @@ namespace MedicHelpper
         {
           
             BorrarValidar();
-            if (validar.ValidarCamposVacios(textBox1, errorCodigoTarjeta) && validar.ValidarCamposVacios(textBox4, errorCodigoCita)
+            if (validar.ValidarCamposVacios(txtTarjeta, errorCodigoTarjeta) && validar.ValidarCamposVacios(txtCita, errorCodigoCita)
                   && CampoCodCita && CampoTarjCita && FechaCita)
             {
                 //Falta codigo para  la fase 3 funcionamiento debido
@@ -285,20 +289,20 @@ namespace MedicHelpper
             {
                 if (!FechaCita)
                 {
-                    errorFecha.SetError(dateTimePicker1, "Campo con datos no validos, ingrese fechas proximas");
+                    errorFecha.SetError(dtpCita, "Campo con datos no validos, ingrese fechas proximas");
                 }
                 else if (!CampoCodCita)
                 {
-                    errorCodigoCita.SetError(textBox4, "Campo con datos no validos,s\n Vuelva a intentar ingresar");
+                    errorCodigoCita.SetError(txtCita, "Campo con datos no validos,s\n Vuelva a intentar ingresar");
                 }
                 else if (!CampoTarjCita)
                 {
-                    errorCodigoTarjeta.SetError(textBox1, "Campo con datos no validos,\n Vuelva a intentar ingresar");
+                    errorCodigoTarjeta.SetError(txtTarjeta, "Campo con datos no validos,\n Vuelva a intentar ingresar");
                 }
                 else
                 {
-                    errorCodigoCita.SetError(textBox4, "Campos con datos  vacios");
-                    errorCodigoTarjeta.SetError(textBox1, "Campos con datos vacios");
+                    errorCodigoCita.SetError(txtCita, "Campos con datos  vacios");
+                    errorCodigoTarjeta.SetError(txtTarjeta, "Campos con datos vacios");
                 }
             }
         }
