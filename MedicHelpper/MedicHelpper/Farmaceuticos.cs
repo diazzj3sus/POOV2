@@ -192,5 +192,18 @@ private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
             cant = ValidarCamposNumericos(txtCantidadMed, e, errorCantidad);
         }
         bool cant;
+        Farmaceuticos obDatoss = new Farmaceuticos();
+        private void btningresarusuario_Click(object sender, EventArgs e)
+        {
+           
+
+           
+        }
+
+        private void btnMostMedicamento_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 }
