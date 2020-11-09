@@ -70,6 +70,7 @@
             this.errorFechaNacimiento = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorNTarjeta = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorNtarjetaPaciente = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tipAgregar = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.AddCita.SuspendLayout();
             this.addPaciente.SuspendLayout();
@@ -199,7 +200,7 @@
             // 
             this.dtFechadeNacimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtFechadeNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechadeNacimiento.Location = new System.Drawing.Point(183, 149);
+            this.dtFechadeNacimiento.Location = new System.Drawing.Point(167, 149);
             this.dtFechadeNacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtFechadeNacimiento.Name = "dtFechadeNacimiento";
             this.dtFechadeNacimiento.Size = new System.Drawing.Size(100, 20);
@@ -214,7 +215,7 @@
             this.btnAddPatient.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPatient.Image = global::MedicHelpper.Properties.Resources.agregar_usuario;
             this.btnAddPatient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddPatient.Location = new System.Drawing.Point(350, 186);
+            this.btnAddPatient.Location = new System.Drawing.Point(334, 186);
             this.btnAddPatient.Name = "btnAddPatient";
             this.btnAddPatient.Size = new System.Drawing.Size(95, 27);
             this.btnAddPatient.TabIndex = 19;
@@ -227,7 +228,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.usuarioDEF;
-            this.pictureBox1.Location = new System.Drawing.Point(338, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(322, 49);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,7 +238,7 @@
             // txtnum
             // 
             this.txtnum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtnum.Location = new System.Drawing.Point(183, 212);
+            this.txtnum.Location = new System.Drawing.Point(167, 212);
             this.txtnum.Name = "txtnum";
             this.txtnum.Size = new System.Drawing.Size(100, 20);
             this.txtnum.TabIndex = 17;
@@ -245,7 +246,7 @@
             // txtape
             // 
             this.txtape.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtape.Location = new System.Drawing.Point(183, 84);
+            this.txtape.Location = new System.Drawing.Point(167, 84);
             this.txtape.Name = "txtape";
             this.txtape.Size = new System.Drawing.Size(100, 20);
             this.txtape.TabIndex = 16;
@@ -254,7 +255,7 @@
             // txtnom
             // 
             this.txtnom.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtnom.Location = new System.Drawing.Point(183, 29);
+            this.txtnom.Location = new System.Drawing.Point(167, 29);
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(100, 20);
             this.txtnom.TabIndex = 14;
@@ -265,7 +266,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 209);
+            this.label4.Location = new System.Drawing.Point(5, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 16);
             this.label4.TabIndex = 13;
@@ -276,7 +277,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 149);
+            this.label3.Location = new System.Drawing.Point(5, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 16);
             this.label3.TabIndex = 12;
@@ -287,7 +288,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 85);
+            this.label2.Location = new System.Drawing.Point(5, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 11;
@@ -298,7 +299,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 29);
+            this.label1.Location = new System.Drawing.Point(5, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 10;
@@ -334,7 +335,7 @@
             this.btnEdit.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = global::MedicHelpper.Properties.Resources.reanudar;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(257, 87);
+            this.btnEdit.Location = new System.Drawing.Point(355, 92);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(95, 27);
             this.btnEdit.TabIndex = 32;
@@ -351,7 +352,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::MedicHelpper.Properties.Resources.headhunter;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(257, 28);
+            this.btnBuscar.Location = new System.Drawing.Point(355, 37);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(95, 27);
             this.btnBuscar.TabIndex = 31;
@@ -363,7 +364,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::MedicHelpper.Properties.Resources.usuarioDEF;
-            this.pictureBox2.Location = new System.Drawing.Point(279, 130);
+            this.pictureBox2.Location = new System.Drawing.Point(334, 135);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(120, 120);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -374,7 +375,7 @@
             // NTarjeta
             // 
             this.NTarjeta.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.NTarjeta.Location = new System.Drawing.Point(146, 32);
+            this.NTarjeta.Location = new System.Drawing.Point(201, 37);
             this.NTarjeta.Name = "NTarjeta";
             this.NTarjeta.Size = new System.Drawing.Size(100, 20);
             this.NTarjeta.TabIndex = 29;
@@ -382,7 +383,7 @@
             // txtApellido
             // 
             this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtApellido.Location = new System.Drawing.Point(146, 150);
+            this.txtApellido.Location = new System.Drawing.Point(201, 155);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 28;
@@ -391,7 +392,7 @@
             // txtFechaBirth
             // 
             this.txtFechaBirth.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtFechaBirth.Location = new System.Drawing.Point(146, 210);
+            this.txtFechaBirth.Location = new System.Drawing.Point(201, 215);
             this.txtFechaBirth.Name = "txtFechaBirth";
             this.txtFechaBirth.Size = new System.Drawing.Size(100, 20);
             this.txtFechaBirth.TabIndex = 27;
@@ -400,7 +401,7 @@
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNombre.Location = new System.Drawing.Point(146, 94);
+            this.txtNombre.Location = new System.Drawing.Point(201, 99);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 26;
@@ -411,7 +412,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(-8, 28);
+            this.label9.Location = new System.Drawing.Point(47, 33);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 16);
             this.label9.TabIndex = 25;
@@ -422,7 +423,7 @@
             this.lblBirth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBirth.AutoSize = true;
             this.lblBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirth.Location = new System.Drawing.Point(-8, 210);
+            this.lblBirth.Location = new System.Drawing.Point(47, 215);
             this.lblBirth.Name = "lblBirth";
             this.lblBirth.Size = new System.Drawing.Size(156, 16);
             this.lblBirth.TabIndex = 24;
@@ -434,7 +435,7 @@
             this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(-8, 150);
+            this.lblLastName.Location = new System.Drawing.Point(47, 150);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(70, 16);
             this.lblLastName.TabIndex = 23;
@@ -446,7 +447,7 @@
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(-8, 96);
+            this.lblName.Location = new System.Drawing.Point(47, 96);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(67, 16);
             this.lblName.TabIndex = 22;
@@ -473,7 +474,7 @@
             this.btnMostrar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.Image = global::MedicHelpper.Properties.Resources.mostrar;
             this.btnMostrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMostrar.Location = new System.Drawing.Point(365, 225);
+            this.btnMostrar.Location = new System.Drawing.Point(333, 225);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(103, 24);
             this.btnMostrar.TabIndex = 3;
@@ -494,7 +495,7 @@
             this.dgvPacientes.ReadOnly = true;
             this.dgvPacientes.RowHeadersVisible = false;
             this.dgvPacientes.RowHeadersWidth = 51;
-            this.dgvPacientes.Size = new System.Drawing.Size(423, 197);
+            this.dgvPacientes.Size = new System.Drawing.Size(391, 197);
             this.dgvPacientes.TabIndex = 2;
             // 
             // btnMinimizar
@@ -676,5 +677,6 @@
         private System.Windows.Forms.ErrorProvider errorFechaNacimiento;
         private System.Windows.Forms.ErrorProvider errorNTarjeta;
         private System.Windows.Forms.ErrorProvider errorNtarjetaPaciente;
+        private System.Windows.Forms.ToolTip tipAgregar;
     }
 }

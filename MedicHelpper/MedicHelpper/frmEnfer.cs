@@ -19,6 +19,7 @@ namespace MedicHelpper
         {
             InitializeComponent();
             tipVerificar.SetToolTip(btnEstado, "Solo ingresar el codigo de la consulta");//tool tip para darle la indicacion al usuario
+            tipAgregar.SetToolTip(txtnum, "Ingrese el numero de tarjeta del paciente con el sigiente formato: P00001");
         }
         //Procedimiento para minimizar la pantalla
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -88,12 +89,6 @@ namespace MedicHelpper
             ApellidoAdd = validar.ValidarCampoLetras(txtape, e, errorApellidoAgg);
         }
 
-        //private void txtnum_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    errorNtarjetaPaciente.SetError(txtape, "");
-        //    AddTarjeta = validar.ValidarCamposVacios(txtnum, errorNtarjetaPaciente);
-        //}
-
         private void dtFechadeNacimiento_ValueChanged(object sender, EventArgs e)
         {
             errorFechaNacimiento.SetError(dtFechadeNacimiento, "");
@@ -152,7 +147,18 @@ namespace MedicHelpper
                 && validar.ValidarCamposVacios(txtnum, errorNtarjetaPaciente) && NombreAdd && ApellidoAdd
                 && FechaNacimiento)
             {
-                MessageBox.Show("Felicidades textos ingresados validos");
+                string nombre = txtnom.Text;
+                string apellido = txtape.Text;
+                string tarjeta = txtnum.Text;
+                string anio = dtFechadeNacimiento.Value.Year.ToString();
+                string mes = dtFechadeNacimiento.Value.Month.ToString();
+                string dia = dtFechadeNacimiento.Value.Day.ToString();
+                string fecha = dia + "-" + mes + "-" + anio;
+                enfermer.AgregarPaciente(tarjeta, nombre, apellido, fecha);
+                txtape.Clear();
+                txtnom.Clear();
+                txtnum.Clear();
+                dtFechadeNacimiento.Value = System.DateTime.Today;
             }
             else
             {
@@ -164,7 +170,8 @@ namespace MedicHelpper
                 {
                     errorApellidoAgg.SetError(txtape, "Datos no ingresados correctamente\n Vuelva a intentar ingresar");
                 }
-                else if (!FechaNacimiento) { 
+                else if (!FechaNacimiento)
+                {
 
                     errorFechaNacimiento.SetError(dtFechadeNacimiento, "Fecha de nacimiento no valida\n Vuelva a intentar ingresar");
                 }
