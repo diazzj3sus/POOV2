@@ -39,7 +39,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtpCita = new System.Windows.Forms.DateTimePicker();
             this.txtTarjeta = new System.Windows.Forms.TextBox();
-            this.btnEstado = new System.Windows.Forms.Button();
             this.btnAddCita = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.AddCita.SuspendLayout();
@@ -50,7 +49,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(478, 6);
+            this.btnCerrar.Location = new System.Drawing.Point(509, 12);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(37, 31);
@@ -64,11 +63,11 @@
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.AddCita);
             this.tabControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(20, 44);
+            this.tabControl1.Location = new System.Drawing.Point(12, 44);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(478, 294);
+            this.tabControl1.Size = new System.Drawing.Size(543, 321);
             this.tabControl1.TabIndex = 6;
             // 
             // AddCita
@@ -83,37 +82,38 @@
             this.AddCita.Controls.Add(this.label7);
             this.AddCita.Controls.Add(this.dtpCita);
             this.AddCita.Controls.Add(this.txtTarjeta);
-            this.AddCita.Controls.Add(this.btnEstado);
             this.AddCita.Controls.Add(this.btnAddCita);
             this.AddCita.Location = new System.Drawing.Point(4, 25);
             this.AddCita.Name = "AddCita";
             this.AddCita.Padding = new System.Windows.Forms.Padding(3);
-            this.AddCita.Size = new System.Drawing.Size(470, 265);
+            this.AddCita.Size = new System.Drawing.Size(535, 292);
             this.AddCita.TabIndex = 1;
             this.AddCita.Text = "Agregar Cita";
             // 
             // txtCita
             // 
-            this.txtCita.Location = new System.Drawing.Point(185, 85);
+            this.txtCita.Location = new System.Drawing.Point(185, 157);
             this.txtCita.Name = "txtCita";
             this.txtCita.Size = new System.Drawing.Size(100, 20);
             this.txtCita.TabIndex = 26;
+            this.txtCita.Visible = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(61, 85);
+            this.label8.Location = new System.Drawing.Point(61, 157);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 16);
             this.label8.TabIndex = 25;
             this.label8.Text = "N° De Cita";
+            this.label8.Visible = false;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(380, 143);
+            this.lblEstado.Location = new System.Drawing.Point(128, 222);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(14, 15);
             this.lblEstado.TabIndex = 24;
@@ -124,7 +124,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(313, 142);
+            this.label6.Location = new System.Drawing.Point(61, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 23;
@@ -135,7 +135,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 142);
+            this.label5.Location = new System.Drawing.Point(61, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 16);
             this.label5.TabIndex = 22;
@@ -153,32 +153,20 @@
             // 
             // dtpCita
             // 
-            this.dtpCita.Location = new System.Drawing.Point(157, 35);
+            this.dtpCita.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpCita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+
+            this.dtpCita.Location = new System.Drawing.Point(185, 38);
             this.dtpCita.Name = "dtpCita";
-            this.dtpCita.Size = new System.Drawing.Size(245, 20);
+            this.dtpCita.Size = new System.Drawing.Size(172, 20);
             this.dtpCita.TabIndex = 19;
             // 
             // txtTarjeta
             // 
-            this.txtTarjeta.Location = new System.Drawing.Point(185, 139);
+            this.txtTarjeta.Location = new System.Drawing.Point(185, 102);
             this.txtTarjeta.Name = "txtTarjeta";
             this.txtTarjeta.Size = new System.Drawing.Size(100, 20);
             this.txtTarjeta.TabIndex = 15;
-            // 
-            // btnEstado
-            // 
-            this.btnEstado.BackColor = System.Drawing.Color.LightGreen;
-            this.btnEstado.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Image = global::MedicHelpper.Properties.Resources.comprobar;
-            this.btnEstado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstado.Location = new System.Drawing.Point(333, 203);
-            this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(89, 35);
-            this.btnEstado.TabIndex = 18;
-            this.btnEstado.Text = "Estado";
-            this.btnEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEstado.UseVisualStyleBackColor = false;
-            this.btnEstado.Visible = false;
             // 
             // btnAddCita
             // 
@@ -186,7 +174,7 @@
             this.btnAddCita.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCita.Image = global::MedicHelpper.Properties.Resources.calendario;
             this.btnAddCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCita.Location = new System.Drawing.Point(174, 203);
+            this.btnAddCita.Location = new System.Drawing.Point(360, 157);
             this.btnAddCita.Name = "btnAddCita";
             this.btnAddCita.Size = new System.Drawing.Size(128, 35);
             this.btnAddCita.TabIndex = 17;
@@ -199,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(530, 358);
+            this.ClientSize = new System.Drawing.Size(567, 392);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -218,7 +206,6 @@
         protected System.Windows.Forms.TabControl tabControl1;
         protected System.Windows.Forms.DateTimePicker dtpCita;
         protected System.Windows.Forms.TextBox txtTarjeta;
-        protected System.Windows.Forms.Button btnEstado;
         protected System.Windows.Forms.Button btnAddCita;
         protected System.Windows.Forms.Label label5;
         protected System.Windows.Forms.Label label7;
