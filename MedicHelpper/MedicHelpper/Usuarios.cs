@@ -160,7 +160,6 @@ namespace MedicHelpper
                             int mes = dtpfechanacreg.Value.Month;
                             int dia = dtpfechanacreg.Value.Day;
                             string codigoGenerado = generarCodigoUsuario(txbnombreusuarioreg.Text, txbapellidousurioreg.Text, dia,año);
-                            MessageBox.Show("" + codigoGenerado);
                             int tipousuario=-1;
                             if (cmbtipousuarioreg.Text == "Administrador")
                             {
@@ -179,7 +178,7 @@ namespace MedicHelpper
                                 tipousuario = 2;
                             }
                             string nuevafecha = Convert.ToString(dia) + "-" + Convert.ToString(mes) +"-" +Convert.ToString(año);
-                            string cadenaInsertar = "INSERT INTO Usuarios VALUES ('" + codigoGenerado + "','" + txbcontraseñareg.Text +"','" + nombre + "','"+apellido +"','"+ dtpfechanacreg.Value+"','"+DUI+"','" + tipousuario + "');";
+                            string cadenaInsertar = "INSERT INTO Usuarios VALUES ('" + codigoGenerado + "','" + txbcontraseñareg.Text +"','" + nombre + "','"+apellido +"','"+ dia+"-"+mes+"-"+año+ "','" + DUI + "','" + tipousuario + "');";
                             conectar.conexion.Open();
                             SqlCommand inserto = new SqlCommand(cadenaInsertar, conectar.conexion);
                             inserto.ExecuteNonQuery();
