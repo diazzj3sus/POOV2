@@ -82,6 +82,11 @@ namespace MedicHelpper
             NombreAdd = validar.ValidarCampoLetras(txtnom, e, errorNombreAgg);
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtape_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorApellidoAgg.SetError(txtape, "");
@@ -115,7 +120,7 @@ namespace MedicHelpper
             if (validar.ValidarCamposVacios(txtTarjeta,errorCodigoTarjeta)
                    && FechaCita)
             {
-                enfermer.AgregarCita(dtpCita, txtTarjeta.Text,label8,txtCita);
+                enfermer.AgregarCita(dtpCita, txtTarjeta.Text,label8,txtCita);//
                 
                 errorFecha.SetError(dtpCita, "");
             }

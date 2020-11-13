@@ -1,4 +1,4 @@
-﻿  using MedicHelpper.Properties;
+﻿using MedicHelpper.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -255,8 +255,13 @@ namespace MedicHelpper
         }
 
         ClassDoctor ObDatos = new ClassDoctor();
+       
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
+          
+            ObDatos.BusquedaDeCita(txt_CODCITa, txt_codPaci, txt_fecha, txt_cita);
+
 
         }
 

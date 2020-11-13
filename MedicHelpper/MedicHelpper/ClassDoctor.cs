@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace MedicHelpper
 {
@@ -17,6 +18,7 @@ namespace MedicHelpper
         public DataSet ds = new DataSet();
         public SqlDataAdapter da;
         public SqlCommand comando;
+        
         private void Conexion()
         {
             AgDoc = new SqlConnection(cadena);
@@ -48,8 +50,42 @@ namespace MedicHelpper
 
 
         }
-        public void IngresarDiagnostico()
+        
+        public void BusquedaDeCita(TextBox txt_CODCITa, TextBox txt_codPaci, TextBox txt_fecha, TextBox txt_cita)
         {
+            try
+            {
+                string selec = "select * from Cita where IdCita='" + txt_CODCITa.Text + "'";
+                comando = new SqlCommand(selec, AgDoc);
+                AgDoc.Open();
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr.Read() == true)
+                {
+
+                    txt_codPaci.Text = dr["IdPacienteCita"].ToString();
+                    txt_fecha.Text = dr["FechaCita"].ToString();
+                    txt_cita.Text = dr["Estado"].ToString();
+
+
+                }
+                else
+                {
+                    DialogResult mensaje;
+                    mensaje = MessageBox.Show("No se encontro la cita en la base de datos, error en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                this.BusquedaDeCita(txt_CODCITa, txt_codPaci, txt_fecha, txt_cita);
+                AgDoc.Close();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                AgDoc.Close();
+
+            }
+          
 
         }
     }
