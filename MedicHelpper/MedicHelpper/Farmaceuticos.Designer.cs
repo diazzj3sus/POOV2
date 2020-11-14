@@ -42,7 +42,7 @@
             this.tabFarmaceutico = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgv_buscaRecta = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtgv_BusquedaMEd = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +68,7 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMostMedicamento = new System.Windows.Forms.Button();
             this.btningresarusuario = new System.Windows.Forms.Button();
             this.datmMedicamento = new System.Windows.Forms.DateTimePicker();
             this.txtUbicacionMed = new System.Windows.Forms.TextBox();
@@ -83,14 +84,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnMostMedicamento = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnActualizarMed = new System.Windows.Forms.Button();
+            this.txtCantMed = new System.Windows.Forms.TextBox();
+            this.txtCodMedicamento = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtgv_Despacho = new System.Windows.Forms.DataGridView();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -102,15 +104,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorUbicacion)).BeginInit();
             this.tabFarmaceutico.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_buscaRecta)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_BusquedaMEd)).BeginInit();
             this.addMedicamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVAnadirMedicamento)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Despacho)).BeginInit();
             this.SuspendLayout();
             // 
             // pctAtras
@@ -208,7 +210,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.btnBuscar);
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dtgv_buscaRecta);
             this.tabPage1.Controls.Add(this.txtIdReceta);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,24 +237,25 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridView1
+            // dtgv_buscaRecta
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgv_buscaRecta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgv_buscaRecta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgv_buscaRecta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_buscaRecta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 69);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(627, 220);
-            this.dataGridView1.TabIndex = 3;
+            this.dtgv_buscaRecta.GridColor = System.Drawing.Color.Silver;
+            this.dtgv_buscaRecta.Location = new System.Drawing.Point(11, 69);
+            this.dtgv_buscaRecta.MultiSelect = false;
+            this.dtgv_buscaRecta.Name = "dtgv_buscaRecta";
+            this.dtgv_buscaRecta.RowHeadersVisible = false;
+            this.dtgv_buscaRecta.RowHeadersWidth = 51;
+            this.dtgv_buscaRecta.Size = new System.Drawing.Size(627, 220);
+            this.dtgv_buscaRecta.TabIndex = 3;
             // 
             // Column7
             // 
@@ -275,7 +278,7 @@
             // txtIdReceta
             // 
             this.txtIdReceta.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtIdReceta.Location = new System.Drawing.Point(168, 33);
+            this.txtIdReceta.Location = new System.Drawing.Point(166, 29);
             this.txtIdReceta.Name = "txtIdReceta";
             this.txtIdReceta.Size = new System.Drawing.Size(142, 23);
             this.txtIdReceta.TabIndex = 1;
@@ -294,7 +297,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.dtgv_BusquedaMEd);
             this.tabPage2.Controls.Add(this.txtCOdBuscaMEdicamneto);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
@@ -320,26 +323,27 @@
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView2
+            // dtgv_BusquedaMEd
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgv_BusquedaMEd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgv_BusquedaMEd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgv_BusquedaMEd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_BusquedaMEd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 73);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(644, 144);
-            this.dataGridView2.TabIndex = 3;
+            this.dtgv_BusquedaMEd.EnableHeadersVisualStyles = false;
+            this.dtgv_BusquedaMEd.Location = new System.Drawing.Point(3, 73);
+            this.dtgv_BusquedaMEd.Name = "dtgv_BusquedaMEd";
+            this.dtgv_BusquedaMEd.RowHeadersVisible = false;
+            this.dtgv_BusquedaMEd.RowHeadersWidth = 51;
+            this.dtgv_BusquedaMEd.Size = new System.Drawing.Size(644, 144);
+            this.dtgv_BusquedaMEd.TabIndex = 3;
             // 
             // Column1
             // 
@@ -489,13 +493,27 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // btnMostMedicamento
+            // 
+            this.btnMostMedicamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMostMedicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
+            this.btnMostMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostMedicamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btnMostMedicamento.Location = new System.Drawing.Point(306, 164);
+            this.btnMostMedicamento.Name = "btnMostMedicamento";
+            this.btnMostMedicamento.Size = new System.Drawing.Size(187, 29);
+            this.btnMostMedicamento.TabIndex = 16;
+            this.btnMostMedicamento.Text = "Mostrar Medicamento";
+            this.btnMostMedicamento.UseVisualStyleBackColor = false;
+            this.btnMostMedicamento.Click += new System.EventHandler(this.btnMostMedicamento_Click);
+            // 
             // btningresarusuario
             // 
             this.btningresarusuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btningresarusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.btningresarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btningresarusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btningresarusuario.Location = new System.Drawing.Point(182, 164);
+            this.btningresarusuario.Location = new System.Drawing.Point(178, 164);
             this.btningresarusuario.Name = "btningresarusuario";
             this.btningresarusuario.Size = new System.Drawing.Size(75, 29);
             this.btningresarusuario.TabIndex = 15;
@@ -646,74 +664,20 @@
             this.tabPage3.Text = "Despacho Medicina";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btnMostMedicamento
-            // 
-            this.btnMostMedicamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMostMedicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
-            this.btnMostMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostMedicamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btnMostMedicamento.Location = new System.Drawing.Point(334, 164);
-            this.btnMostMedicamento.Name = "btnMostMedicamento";
-            this.btnMostMedicamento.Size = new System.Drawing.Size(187, 29);
-            this.btnMostMedicamento.TabIndex = 16;
-            this.btnMostMedicamento.Text = "Mostrar Medicamento";
-            this.btnMostMedicamento.UseVisualStyleBackColor = false;
-            this.btnMostMedicamento.Click += new System.EventHandler(this.btnMostMedicamento_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnActualizarMed);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtCantMed);
+            this.groupBox2.Controls.Add(this.txtCodMedicamento);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.dataGridView3);
+            this.groupBox2.Controls.Add(this.dtgv_Despacho);
             this.groupBox2.Location = new System.Drawing.Point(6, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(637, 375);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Despacho";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 96);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(631, 273);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 44);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 15);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Codigo Medicamento";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(292, 47);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 15);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Cantidad";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(155, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(373, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 4;
             // 
             // btnActualizarMed
             // 
@@ -727,6 +691,60 @@
             this.btnActualizarMed.TabIndex = 16;
             this.btnActualizarMed.Text = "Actualizar";
             this.btnActualizarMed.UseVisualStyleBackColor = false;
+            this.btnActualizarMed.Click += new System.EventHandler(this.btnActualizarMed_Click);
+            // 
+            // txtCantMed
+            // 
+            this.txtCantMed.Location = new System.Drawing.Point(373, 44);
+            this.txtCantMed.Name = "txtCantMed";
+            this.txtCantMed.Size = new System.Drawing.Size(100, 23);
+            this.txtCantMed.TabIndex = 4;
+            // 
+            // txtCodMedicamento
+            // 
+            this.txtCodMedicamento.Location = new System.Drawing.Point(155, 41);
+            this.txtCodMedicamento.Name = "txtCodMedicamento";
+            this.txtCodMedicamento.Size = new System.Drawing.Size(100, 23);
+            this.txtCodMedicamento.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(292, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 15);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Cantidad";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 44);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(133, 15);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Codigo Medicamento";
+            // 
+            // dtgv_Despacho
+            // 
+            this.dtgv_Despacho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_Despacho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column10,
+            this.Column11});
+            this.dtgv_Despacho.Location = new System.Drawing.Point(19, 96);
+            this.dtgv_Despacho.Name = "dtgv_Despacho";
+            this.dtgv_Despacho.Size = new System.Drawing.Size(547, 273);
+            this.dtgv_Despacho.TabIndex = 0;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Codigo Medicamento";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Cantidad";
+            this.Column11.Name = "Column11";
             // 
             // Farmaceuticos
             // 
@@ -755,10 +773,10 @@
             this.tabFarmaceutico.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_buscaRecta)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_BusquedaMEd)).EndInit();
             this.addMedicamentos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgVAnadirMedicamento)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -766,7 +784,7 @@
             this.tabPage3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Despacho)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -785,7 +803,7 @@
         private System.Windows.Forms.TabControl tabFarmaceutico;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgv_buscaRecta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
@@ -793,7 +811,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtgv_BusquedaMEd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -829,10 +847,12 @@
         private System.Windows.Forms.Button btnMostMedicamento;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnActualizarMed;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCantMed;
+        private System.Windows.Forms.TextBox txtCodMedicamento;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dtgv_Despacho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

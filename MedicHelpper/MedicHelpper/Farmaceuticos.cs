@@ -188,16 +188,40 @@ private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
         }
         bool cant;
         //Farmaceuticos obDatos = new Farmaceuticos();
+        ClassFarmaceutico obDatos = new ClassFarmaceutico();
         private void btningresarusuario_Click(object sender, EventArgs e)
         {
-           
+            ClassFarmaceutico obDatos = new ClassFarmaceutico();
+            string sql= "insert into Farmaceutico(CodigoMedicamento,Nombre,Cantidad,Descripcion,Ubicacion,Fecha de Expiracion)values('"+this.txtCodigo+"','"+this.txtNOmbreMEdicamento+"','"+this.txtCantidadMed+"','"+this.txtDescripcionmed+"','"+this.txtUbicacionMed+"','"+this.datmMedicamento+"')";
+            if (obDatos.AñadirMedicamentos(sql)) { MessageBox.Show("Registro Insertado"); } else { MessageBox.Show("Error al insertar"); }
+            Application.Restart();
 
-           
         }
 
         private void btnMostMedicamento_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            obDatos.BusquedaReceta("select*from Receta", "Receta");
+            this.dtgv_buscaRecta.DataSource = obDatos.ds.Tables["Receta"];
+            this.dtgv_buscaRecta.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            obDatos.BusquedaDeMedicamentos("select*from Medicamento", "Medicanento");
+            this.dtgv_BusquedaMEd.DataSource = obDatos.ds.Tables["Medicamento"];
+            this.dtgv_BusquedaMEd.Refresh();
+        }
+
+        private void btnActualizarMed_Click(object sender, EventArgs e)
+        {
+            string campos = "CodMedicamento='" + this.txtCodMedicamento.Text + "',Cantidad='" + this.txtCantidadMed.Text + "'";
+            this.dtgv_Despacho.DataSource = obDatos.ds.Tables["Medicamento"];
+            this.dtgv_Despacho.Refresh();
         }
     }
 }

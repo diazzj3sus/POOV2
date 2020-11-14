@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 
+
 namespace MedicHelpper
 {
     class ClassFarmaceutico : ClassUsuarios
@@ -29,43 +30,32 @@ namespace MedicHelpper
 
         public void BusquedaReceta(string sql, string tabla)
         {
-            sql = "select * from where(IdMedicamentoReceta=txtIdReceta)" + tabla;
             da = new SqlDataAdapter(sql, far);
-            DataSet dts = new DataSet();
-            da.Fill(dts);
+            cmb = new SqlCommandBuilder(da);
+            da.Fill(ds, tabla);
+         
         }
         public void BusquedaDeMedicamentos(string sql,string tabla)
         {
-            sql = "select * from where(IdMedicamentos=txtCOdBuscaMEdicamneto)" + tabla;
             da = new SqlDataAdapter(sql, far);
-            DataSet dts = new DataSet();
-            da.Fill(dts);
+            cmb = new SqlCommandBuilder(da);
+            da.Fill(ds, tabla);
 
         }
-        public bool  AñadirMedicamentos(string tabla,string campos,string condicion)
+        public bool  AñadirMedicamentos(string sql)
         {
-            far.Open();
-            string sql = "update" + tabla + " set " + " where " + condicion;
+           
             comando = new SqlCommand(sql, far);
             int i = comando.ExecuteNonQuery();
             far.Close();
             if (i > 0) { return true; }else { return false; }
             
         }
-        public DataTable AñadirMedicamentos_Tabla(String tabla)
-        {
-            string sql = "select * from " + tabla;
-            da = new SqlDataAdapter(sql, far);
-            DataSet dts = new DataSet();
-            da.Fill(dts, tabla);
-            DataTable dt = new DataTable();
-            dt = dts.Tables[tabla];
-            return dt;
-        }
+      
         public bool DespachoMedicamento(string tabla,string condicion)
         {
             far.Open();
-            string Sql = " delete from " + tabla + " where " + condicion;
+            string Sql = " update " + tabla + " set " + "where"+condicion;
             comando = new SqlCommand(Sql, far);
             int i = comando.ExecuteNonQuery();
             far.Close();
