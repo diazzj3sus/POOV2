@@ -93,6 +93,8 @@
             this.dtgv_Despacho = new System.Windows.Forms.DataGridView();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -730,7 +732,9 @@
             this.dtgv_Despacho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_Despacho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
-            this.Column11});
+            this.Column11,
+            this.Column12,
+            this.Column13});
             this.dtgv_Despacho.Location = new System.Drawing.Point(19, 96);
             this.dtgv_Despacho.Name = "dtgv_Despacho";
             this.dtgv_Despacho.Size = new System.Drawing.Size(547, 273);
@@ -743,8 +747,18 @@
             // 
             // Column11
             // 
-            this.Column11.HeaderText = "Cantidad";
+            this.Column11.HeaderText = "Nombre";
             this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Descripcion";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Cantidad";
+            this.Column13.Name = "Column13";
             // 
             // Farmaceuticos
             // 
@@ -854,5 +868,7 @@
         private System.Windows.Forms.DataGridView dtgv_Despacho;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
     }
 }
