@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MedicHelpper"
+    "\\MedicHelpper",
+    "\\MedicHelpper\\MedicHelpper"
   ],
-  "SelectedNode": "\\MedicHelpper\\MedicHelpper.sln",
+  "SelectedNode": "\\MedicHelpper\\MedicHelpper\\ClassFarmaceutico.cs",
   "PreviewInSolutionExplorer": false
 }

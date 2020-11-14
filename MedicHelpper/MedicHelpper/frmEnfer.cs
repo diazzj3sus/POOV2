@@ -18,7 +18,7 @@ namespace MedicHelpper
         public frmEnfer()
         {
             InitializeComponent();
-            tipAgregar.SetToolTip(txtnum, "Ingrese el numero de tarjeta del paciente con el sigiente formato: P00001");
+            tipAgregar.SetToolTip(txtnum, "Ingrese el numero de tarjeta del paciente con el sigiente formato: P00001");            
         }
         //Procedimiento para minimizar la pantalla
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -81,18 +81,12 @@ namespace MedicHelpper
             errorNombreAgg.SetError(txtnom, "");
             NombreAdd = validar.ValidarCampoLetras(txtnom, e, errorNombreAgg);
         }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void txtape_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorApellidoAgg.SetError(txtape, "");
             ApellidoAdd = validar.ValidarCampoLetras(txtape, e, errorApellidoAgg);
-        }
-
+        }     
         private void dtpCita_ValueChanged(object sender, EventArgs e)
         {
             errorFecha.SetError(dtpCita, "");
@@ -110,6 +104,10 @@ namespace MedicHelpper
         }
 
         //Validaciones y procesos necesarios en los botones agregar citas y pacientes
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {            
+            enfermer.BuscarPaciente(NTarjeta,txtNombre,txtApellido,txtFechaBirth, btnEdit, lblName, lblLastName, lblBirth, pictureBox2);
+        }
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             dgvPacientes.DataSource = enfermer.MostrarPaciente();
@@ -119,9 +117,8 @@ namespace MedicHelpper
             BorrarValidar();            
             if (validar.ValidarCamposVacios(txtTarjeta,errorCodigoTarjeta)
                    && FechaCita)
-            {
-                enfermer.AgregarCita(dtpCita, txtTarjeta.Text,label8,txtCita);//
-                
+            {                
+                enfermer.AgregarCita(dtpCita, txtTarjeta.Text, label8, txtCita);                
                 errorFecha.SetError(dtpCita, "");
             }
             else
@@ -139,6 +136,28 @@ namespace MedicHelpper
                     errorCodigoTarjeta.SetError(txtTarjeta, "Campos con datos vacios");
                 }
             }
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            BorrarValidar();
+            if (validar.ValidarCamposVacios(NTarjeta, errorCodigoTarjeta)
+                   && FechaCita)
+            {
+                enfermer.EditarPaciente(txtNombre, txtApellido, txtFechaBirth, NTarjeta);
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtFechaBirth.Clear();
+                NTarjeta.Clear();                
+                lblName.Visible = false;
+                lblLastName.Visible = false;
+                lblBirth.Visible = false;
+                txtNombre.Visible = false;
+                txtApellido.Visible = false;
+                txtFechaBirth.Visible = false;
+                btnEdit.Visible = false;
+                pictureBox2.Visible = false;
+            }          
+          
         }
         private void btnAddPatient_Click(object sender, EventArgs e)
         {

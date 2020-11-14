@@ -61,12 +61,9 @@ namespace MedicHelpper
                 SqlDataReader dr = comando.ExecuteReader();
                 if (dr.Read() == true)
                 {
-
                     txt_codPaci.Text = dr["IdPacienteCita"].ToString();
                     txt_fecha.Text = dr["FechaCita"].ToString();
                     txt_cita.Text = dr["Estado"].ToString();
-
-
                 }
                 else
                 {

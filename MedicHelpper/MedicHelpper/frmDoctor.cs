@@ -12,6 +12,7 @@ namespace MedicHelpper
     public partial class frmDoctor : MedicHelpper.frmPadre
     {
         Validaciones validar = new Validaciones();
+        ClassEnfermero enfer = new ClassEnfermero();
         bool CampoCodCita, CampoTarjCita, NombreAdd, ApellidoAdd,CodUsuario, CodUsuarioDoc, FechaCita= true, Descripcion;
 
         public frmDoctor()
@@ -287,8 +288,8 @@ namespace MedicHelpper
             if (validar.ValidarCamposVacios(txtTarjeta, errorCodigoTarjeta) && validar.ValidarCamposVacios(txtCita, errorCodigoCita)
                   && CampoCodCita && CampoTarjCita && FechaCita)
             {
-                //Falta codigo para  la fase 3 funcionamiento debido
-                MessageBox.Show("Campos completados correctamente");
+                enfer.AgregarCita(dtpCita, txtTarjeta.Text, label8, txtCita);
+                errorFecha.SetError(dtpCita, "");
             }
             else
             {

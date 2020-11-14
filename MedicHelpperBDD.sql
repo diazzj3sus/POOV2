@@ -1,6 +1,8 @@
+USE MASTER
 CREATE DATABASE MedicHelpperBDD
 GO
 USE MedicHelpperBDD
+GO
 CREATE TABLE TipoUsuario(
 IdTipoUsuario INT IDENTITY(0,1) PRIMARY KEY,
 TipoUsuario VARCHAR(25) NOT NULL,
@@ -69,13 +71,16 @@ GO
 ALTER TABLE Pacientes add constraint CK_CodigoPaciente
 CHECK (IdPaciente LIKE 'P[0-9][0-9][0-9][0-9][0-9]')
 GO
+
+INSERT INTO Pacientes (IdPaciente, Nombre, Apellido, FechaDeNacimiento) VALUES ('P00001','Juan Miguel','Lopez Melendez','11-01-2004')
+INSERT INTO Pacientes (IdPaciente, Nombre, Apellido, FechaDeNacimiento) VALUES ('P00002','Luis Miguel','Lopez Juarez','13-02-2008')
+INSERT INTO Pacientes (IdPaciente, Nombre, Apellido, FechaDeNacimiento) VALUES ('P00003','Samuel Ernesto','Echeverria Martinez','13-02-2000')
+GO
 --PROCEDIMIENTOS ALMACENADOS
 CREATE PROCEDURE SP_MostrarPacientes
 AS
-SELECT IdPacienteCita
-FROM Cita
-INNER JOIN Pacientes pacien ON pacien.IdPaciente = Cita.IdPacienteCita
-
+SELECT pacien.IdPaciente ,pacien.Nombre, pacien.Apellido, pacien.FechaDeNacimiento
+FROM Pacientes pacien 
 GO
 --Procedimiento para saber si un paciente ya tiene una cita pra el mismo momento
 CREATE TRIGGER TriggerCita ON dbo.Cita

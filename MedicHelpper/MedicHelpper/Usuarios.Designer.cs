@@ -602,9 +602,9 @@
             this.btnmodificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(68)))));
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btnmodificar.Location = new System.Drawing.Point(91, 282);
+            this.btnmodificar.Location = new System.Drawing.Point(84, 282);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(75, 29);
+            this.btnmodificar.Size = new System.Drawing.Size(82, 29);
             this.btnmodificar.TabIndex = 29;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;

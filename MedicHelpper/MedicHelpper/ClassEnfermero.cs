@@ -14,21 +14,20 @@ namespace MedicHelpper
     {
 
 
-        private string cadena = "server=LAPTOP-B09UIF2D\\MSSQLSERVERDEV;database=MedicHelpperBDD;integrated security = True";
+        private string cadena = "server=localhost;database=MedicHelpperBDD;integrated security = True";
         public SqlConnection conexion;
-
         public DataSet ds = new DataSet();
         public SqlDataAdapter da;
         public SqlCommand comando;
         
         public void conectar()
         {
-            conexion = new SqlConnection(cadena);
+            conexion = new SqlConnection(cadena);            
         }
         public ClassEnfermero()
         {
             conexion = new SqlConnection(cadena);
-            conectar();
+            conectar();            
         }
         public void VerificarCodigoCita(DateTimePicker fechaCita, string nTarjeta,Label lbl, TextBox txt)
         {
@@ -45,7 +44,7 @@ namespace MedicHelpper
                 comando = new SqlCommand(seleccion, conexion);
                 comando.Parameters.Add(new SqlParameter("@fecha", SqlDbType.DateTime));
                 comando.Parameters["@fecha"].Value = fecha;
-                comando.Parameters.Add(new SqlParameter("@idPacien", SqlDbType.Char,6));
+                comando.Parameters.Add(new SqlParameter("@idPacien", SqlDbType.Char, 6));
                 comando.Parameters["@idPacien"].Value = nTarjeta;
                 comando.Parameters.Add(new SqlParameter("@estado", SqlDbType.Int));
                 comando.Parameters["@estado"].Value = 1;
@@ -53,7 +52,6 @@ namespace MedicHelpper
                 txt.Visible = true;
                 lbl.Visible = true;
                 SqlDataReader registro = comando.ExecuteReader();
-                
                 while (registro.Read())
                 {
                     txt.Text = registro["idCita"].ToString();
@@ -152,13 +150,64 @@ namespace MedicHelpper
                 conexion.Close();
             }
         }
-        public void BuscarPaciente()
+        public void EditarPaciente( TextBox txtNombre, TextBox txtApellido, TextBox txtFechaBirth, TextBox NTarjeta)
+        {            
+            string Consulta = "UPDATE Pacientes SET Nombre = @nombre, Apellido = @apellido, FechaDeNacimiento = @fecha WHERE IdPaciente = @idPaciente";
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(Consulta, conexion);
+            comando.Parameters.AddWithValue("@nombre", txtNombre.Text);
+            comando.Parameters.AddWithValue("@apellido", txtApellido.Text);
+            comando.Parameters.AddWithValue("@fecha", txtFechaBirth.Text);
+            comando.Parameters.AddWithValue("@idPaciente", NTarjeta.Text);
+            comando.ExecuteNonQuery();
+            conexion.Close();
+            MessageBox.Show("Paciente actualizado exitosamente", "UPDATE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public void BuscarPaciente(TextBox NTarjeta, TextBox txtNombre, TextBox txtApellido, TextBox txtFechaBirth, Button btnEdit, Label lblName, Label lblLastName, Label lblBirth, PictureBox pictureBox2)
         {
 
+            try
+            {
+                string selec = "SELECT * FROM Pacientes WHERE IdPaciente =@idPaciente";
+                comando = new SqlCommand(selec, conexion);
+                comando.Parameters.AddWithValue("@idPaciente", NTarjeta.Text);
+                conexion.Open();
+                SqlDataReader Buscar = comando.ExecuteReader();
+                if (Buscar.Read())
+                {
+                    txtNombre.Text = Buscar["Nombre"].ToString();
+                    txtApellido.Text = Buscar["Apellido"].ToString();
+                    txtFechaBirth.Text = Buscar["FechaDeNacimiento"].ToString();
+                    lblName.Visible = true;
+                    lblLastName.Visible = true;
+                    lblBirth.Visible = true;
+                    txtNombre.Visible = true;
+                    txtApellido.Visible = true;
+                    txtFechaBirth.Visible = true;
+                    btnEdit.Visible = true;
+                    pictureBox2.Visible = true;
+                    conexion.Close();
+                }
+                else
+                {
+                    DialogResult mensaje;
+                    mensaje = MessageBox.Show("No se encontro el paciente en la Base de Datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                conexion.Close();
+
+            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Paciente no encontrando o no ha sido ingresado, error en la busqueda.", "Reintentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            finally
+            {
+                conexion.Close();
+            }
         }
         public DataTable MostrarPaciente()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SP_MostrarPacientes", cadena);
+            SqlDataAdapter da = new SqlDataAdapter("SP_MostrarPacientes", conexion);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
             da.Fill(dt);
