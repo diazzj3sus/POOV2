@@ -48,12 +48,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_guardar_diagnostico = new System.Windows.Forms.Button();
             this.txt_DescripcionDoc = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_ConsultaDoc = new System.Windows.Forms.TextBox();
+            this.txt_RecetDoc = new System.Windows.Forms.TextBox();
             this.txt_fecha_doc = new System.Windows.Forms.TextBox();
             this.txt_codusuario = new System.Windows.Forms.TextBox();
             this.txt_codigocita = new System.Windows.Forms.TextBox();
@@ -167,6 +167,7 @@
             // txtCita
             // 
             this.txtCita.Location = new System.Drawing.Point(213, 172);
+            this.txtCita.ReadOnly = true;
             this.txtCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // tabPage1
@@ -194,7 +195,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::MedicHelpper.Properties.Resources.calendariza;
-            this.pictureBox1.Location = new System.Drawing.Point(389, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(361, 69);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(119, 132);
@@ -207,7 +208,7 @@
             this.Lbl_text.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Lbl_text.AutoSize = true;
             this.Lbl_text.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_text.Location = new System.Drawing.Point(101, 11);
+            this.Lbl_text.Location = new System.Drawing.Point(73, 15);
             this.Lbl_text.Name = "Lbl_text";
             this.Lbl_text.Size = new System.Drawing.Size(360, 26);
             this.Lbl_text.TabIndex = 32;
@@ -221,7 +222,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::MedicHelpper.Properties.Resources.headhunter;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(393, 212);
+            this.btnBuscar.Location = new System.Drawing.Point(365, 216);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(108, 27);
             this.btnBuscar.TabIndex = 31;
@@ -235,7 +236,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 202);
+            this.label4.Location = new System.Drawing.Point(7, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 17);
             this.label4.TabIndex = 30;
@@ -244,7 +245,7 @@
             // txt_cita
             // 
             this.txt_cita.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_cita.Location = new System.Drawing.Point(233, 202);
+            this.txt_cita.Location = new System.Drawing.Point(205, 206);
             this.txt_cita.Name = "txt_cita";
             this.txt_cita.ReadOnly = true;
             this.txt_cita.Size = new System.Drawing.Size(100, 20);
@@ -256,7 +257,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 51);
+            this.label1.Location = new System.Drawing.Point(7, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 17);
             this.label1.TabIndex = 26;
@@ -267,7 +268,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 152);
+            this.label3.Location = new System.Drawing.Point(7, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 28;
@@ -276,7 +277,7 @@
             // txt_codPaci
             // 
             this.txt_codPaci.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_codPaci.Location = new System.Drawing.Point(233, 101);
+            this.txt_codPaci.Location = new System.Drawing.Point(205, 105);
             this.txt_codPaci.Name = "txt_codPaci";
             this.txt_codPaci.ReadOnly = true;
             this.txt_codPaci.Size = new System.Drawing.Size(100, 20);
@@ -286,7 +287,7 @@
             // txt_CODCITa
             // 
             this.txt_CODCITa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_CODCITa.Location = new System.Drawing.Point(233, 51);
+            this.txt_CODCITa.Location = new System.Drawing.Point(205, 55);
             this.txt_CODCITa.Name = "txt_CODCITa";
             this.txt_CODCITa.Size = new System.Drawing.Size(100, 20);
             this.txt_CODCITa.TabIndex = 23;
@@ -295,7 +296,7 @@
             // txt_fecha
             // 
             this.txt_fecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_fecha.Location = new System.Drawing.Point(233, 152);
+            this.txt_fecha.Location = new System.Drawing.Point(205, 156);
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.ReadOnly = true;
             this.txt_fecha.Size = new System.Drawing.Size(100, 20);
@@ -307,7 +308,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 101);
+            this.label2.Location = new System.Drawing.Point(7, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 17);
             this.label2.TabIndex = 27;
@@ -334,7 +335,7 @@
             this.btn_MostrarData.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_MostrarData.Image = global::MedicHelpper.Properties.Resources.mostrar;
             this.btn_MostrarData.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_MostrarData.Location = new System.Drawing.Point(437, 254);
+            this.btn_MostrarData.Location = new System.Drawing.Point(410, 253);
             this.btn_MostrarData.Name = "btn_MostrarData";
             this.btn_MostrarData.Size = new System.Drawing.Size(103, 24);
             this.btn_MostrarData.TabIndex = 4;
@@ -346,11 +347,14 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(46, 8);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(477, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(455, 226);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -373,19 +377,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btn_guardar_diagnostico);
             this.groupBox1.Controls.Add(this.txt_DescripcionDoc);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.txt_ConsultaDoc);
+            this.groupBox1.Controls.Add(this.txt_RecetDoc);
             this.groupBox1.Controls.Add(this.txt_fecha_doc);
             this.groupBox1.Controls.Add(this.txt_codusuario);
             this.groupBox1.Controls.Add(this.txt_codigocita);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(46, 29);
+            this.groupBox1.Location = new System.Drawing.Point(39, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 288);
+            this.groupBox1.Size = new System.Drawing.Size(442, 278);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Ingrese datos de diagnostico";
@@ -397,7 +401,7 @@
             this.btn_guardar_diagnostico.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar_diagnostico.Image = global::MedicHelpper.Properties.Resources.comprobar;
             this.btn_guardar_diagnostico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_diagnostico.Location = new System.Drawing.Point(361, 225);
+            this.btn_guardar_diagnostico.Location = new System.Drawing.Point(326, 192);
             this.btn_guardar_diagnostico.Name = "btn_guardar_diagnostico";
             this.btn_guardar_diagnostico.Size = new System.Drawing.Size(99, 35);
             this.btn_guardar_diagnostico.TabIndex = 22;
@@ -409,19 +413,30 @@
             // txt_DescripcionDoc
             // 
             this.txt_DescripcionDoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_DescripcionDoc.Location = new System.Drawing.Point(9, 169);
+            this.txt_DescripcionDoc.Location = new System.Drawing.Point(1, 165);
             this.txt_DescripcionDoc.Multiline = true;
             this.txt_DescripcionDoc.Name = "txt_DescripcionDoc";
             this.txt_DescripcionDoc.Size = new System.Drawing.Size(330, 93);
             this.txt_DescripcionDoc.TabIndex = 10;
             this.txt_DescripcionDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_DescripcionDoc_KeyPress);
             // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(-4, 100);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(144, 17);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Codigo de Receta:";
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 152);
+            this.label11.Location = new System.Drawing.Point(17, 145);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(200, 17);
             this.label11.TabIndex = 9;
@@ -432,7 +447,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(27, 120);
+            this.label10.Location = new System.Drawing.Point(275, 103);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 17);
             this.label10.TabIndex = 8;
@@ -443,47 +458,36 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 89);
+            this.label9.Location = new System.Drawing.Point(1, 63);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 17);
             this.label9.TabIndex = 7;
-            this.label9.Text = "Codigo de cita:";
+            this.label9.Text = "Codigo de Cita:";
             // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(27, 58);
+            this.label12.Location = new System.Drawing.Point(1, 32);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(152, 17);
+            this.label12.Size = new System.Drawing.Size(144, 17);
             this.label12.TabIndex = 6;
-            this.label12.Text = "Codigo de usuario:";
+            this.label12.Text = "Codigo de Doctor:";
             // 
-            // label13
+            // txt_RecetDoc
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(27, 27);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(160, 17);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Codigo de consulta:";
-            // 
-            // txt_ConsultaDoc
-            // 
-            this.txt_ConsultaDoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_ConsultaDoc.Location = new System.Drawing.Point(200, 24);
-            this.txt_ConsultaDoc.Name = "txt_ConsultaDoc";
-            this.txt_ConsultaDoc.Size = new System.Drawing.Size(100, 23);
-            this.txt_ConsultaDoc.TabIndex = 1;
-            this.txt_ConsultaDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ConsultaDoc_KeyPress);
+            this.txt_RecetDoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_RecetDoc.Location = new System.Drawing.Point(162, 97);
+            this.txt_RecetDoc.Name = "txt_RecetDoc";
+            this.txt_RecetDoc.Size = new System.Drawing.Size(100, 23);
+            this.txt_RecetDoc.TabIndex = 1;
+            this.txt_RecetDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ConsultaDoc_KeyPress);
             // 
             // txt_fecha_doc
             // 
             this.txt_fecha_doc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_fecha_doc.Location = new System.Drawing.Point(200, 117);
+            this.txt_fecha_doc.Location = new System.Drawing.Point(336, 100);
             this.txt_fecha_doc.Name = "txt_fecha_doc";
             this.txt_fecha_doc.Size = new System.Drawing.Size(100, 23);
             this.txt_fecha_doc.TabIndex = 4;
@@ -492,7 +496,7 @@
             // txt_codusuario
             // 
             this.txt_codusuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_codusuario.Location = new System.Drawing.Point(200, 55);
+            this.txt_codusuario.Location = new System.Drawing.Point(162, 29);
             this.txt_codusuario.Name = "txt_codusuario";
             this.txt_codusuario.Size = new System.Drawing.Size(100, 23);
             this.txt_codusuario.TabIndex = 2;
@@ -502,7 +506,7 @@
             // txt_codigocita
             // 
             this.txt_codigocita.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_codigocita.Location = new System.Drawing.Point(200, 86);
+            this.txt_codigocita.Location = new System.Drawing.Point(162, 60);
             this.txt_codigocita.Name = "txt_codigocita";
             this.txt_codigocita.Size = new System.Drawing.Size(100, 23);
             this.txt_codigocita.TabIndex = 3;
@@ -513,7 +517,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(93, 0);
+            this.label14.Location = new System.Drawing.Point(38, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(372, 26);
             this.label14.TabIndex = 20;
@@ -658,7 +662,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_ConsultaDoc;
+        private System.Windows.Forms.TextBox txt_RecetDoc;
         private System.Windows.Forms.TextBox txt_fecha_doc;
         private System.Windows.Forms.TextBox txt_codusuario;
         private System.Windows.Forms.TextBox txt_codigocita;

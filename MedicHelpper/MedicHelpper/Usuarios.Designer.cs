@@ -434,9 +434,12 @@
             // dtgvbusquedaresultados
             // 
             this.dtgvbusquedaresultados.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtgvbusquedaresultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvbusquedaresultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvbusquedaresultados.Location = new System.Drawing.Point(426, 60);
             this.dtgvbusquedaresultados.Name = "dtgvbusquedaresultados";
+            this.dtgvbusquedaresultados.ReadOnly = true;
+            this.dtgvbusquedaresultados.RowHeadersVisible = false;
             this.dtgvbusquedaresultados.RowHeadersWidth = 51;
             this.dtgvbusquedaresultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvbusquedaresultados.Size = new System.Drawing.Size(358, 275);

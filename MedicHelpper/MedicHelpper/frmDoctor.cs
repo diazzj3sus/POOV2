@@ -145,7 +145,7 @@ namespace MedicHelpper
             ErrorPaciente.SetError(txt_codPaci, "");
             errorFech.SetError(txt_fecha, "");
             errorCita.SetError(txt_cita, "");
-            errorCodigoCons.SetError(txt_ConsultaDoc, "");
+            errorCodigoCons.SetError(txt_RecetDoc, "");
             errorCodUSuario.SetError(txt_codusuario, "");
             errorCodigoCita.SetError(txt_codigocita, "");
             errorFech.SetError(txt_fecha_doc, "");
@@ -249,7 +249,7 @@ namespace MedicHelpper
         }
         private void btn_guardar_diagnostico_Click(object sender, EventArgs e)
         {
-            string sql = "Insert into Consulta (IdUsuarioConsulta,idCita,Descripcion,Fecha) values ('" +txt_codusuario.Text+ "','" +txt_codigocita.Text+ "','" +txt_DescripcionDoc.Text+ "','" +txt_fecha_doc.Text+ "')";
+            string sql = "Insert into Consulta (IdUsuarioConsulta,idCita,Descripcion,CodReceta,Fecha) values ('" + txt_codusuario.Text+ "','" +txt_codigocita.Text+ "','" +txt_DescripcionDoc.Text+ "','"+ txt_RecetDoc.Text + "','" + txt_fecha_doc.Text+ "')";
             
             if (ObDatos.AgregarCita(sql)) { MessageBox.Show("Datos insertados correctamente"); }
             else { MessageBox.Show("Hubo un problema con la insersion de datos"); }
@@ -283,10 +283,9 @@ namespace MedicHelpper
 
         private void btnAddCita_Click(object sender, EventArgs e)
         {
-          
             BorrarValidar();
-            if (validar.ValidarCamposVacios(txtTarjeta, errorCodigoTarjeta) && validar.ValidarCamposVacios(txtCita, errorCodigoCita)
-                  && CampoCodCita && CampoTarjCita && FechaCita)
+            if (validar.ValidarCamposVacios(txtTarjeta, errorCodigoTarjeta)
+                   && FechaCita)
             {
                 enfer.AgregarCita(dtpCita, txtTarjeta.Text, label8, txtCita);
                 errorFecha.SetError(dtpCita, "");
@@ -297,17 +296,12 @@ namespace MedicHelpper
                 {
                     errorFecha.SetError(dtpCita, "Campo con datos no validos, ingrese fechas proximas");
                 }
-                else if (!CampoCodCita)
-                {
-                    errorCodigoCita.SetError(txtCita, "Campo con datos no validos,s\n Vuelva a intentar ingresar");
-                }
                 else if (!CampoTarjCita)
                 {
                     errorCodigoTarjeta.SetError(txtTarjeta, "Campo con datos no validos,\n Vuelva a intentar ingresar");
                 }
                 else
                 {
-                    errorCodigoCita.SetError(txtCita, "Campos con datos  vacios");
                     errorCodigoTarjeta.SetError(txtTarjeta, "Campos con datos vacios");
                 }
             }

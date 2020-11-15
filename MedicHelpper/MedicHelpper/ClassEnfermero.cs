@@ -198,7 +198,7 @@ namespace MedicHelpper
             }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Paciente no encontrando o no ha sido ingresado, error en la busqueda.", "Reintentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Paciente no encontrado o no ha sido ingresado, error en la busqueda.", "Reintentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             finally
             {

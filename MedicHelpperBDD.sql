@@ -2,6 +2,8 @@ USE MASTER
 CREATE DATABASE MedicHelpperBDD
 GO
 USE MedicHelpperBDD
+--USE MASTER
+--DROP DATABASE MedicHelpperBDD
 GO
 CREATE TABLE TipoUsuario(
 IdTipoUsuario INT IDENTITY(0,1) PRIMARY KEY,
@@ -55,15 +57,17 @@ Cantidad INT
 GO
 CREATE TABLE Consulta(
 IdConsulta INT IDENTITY(0,1) PRIMARY KEY,
+CodReceta INT UNIQUE,
+IdMedicamento INT CONSTRAINT FK_Medicamento FOREIGN KEY REFERENCES Medicamentos(IdMedicamento) ON DELETE CASCADE ON UPDATE CASCADE,
 IdUsuarioConsulta CHAR(6) FOREIGN KEY REFERENCES Usuarios(IdUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
 idCita INT FOREIGN KEY REFERENCES Cita(idCita) ON DELETE CASCADE ON UPDATE CASCADE,
 Descripcion VARCHAR(255) NOT NULL,
 Fecha DATETIME NOT NULL
 )
 GO
+---RECETA MEDICA
 CREATE TABLE Receta(
-IdConsultaReceta INT FOREIGN KEY REFERENCES Consulta(IdConsulta) ON DELETE CASCADE ON UPDATE CASCADE,
-IdMedicamentoReceta INT FOREIGN KEY REFERENCES Medicamentos(IdMedicamento) ON DELETE CASCADE ON UPDATE CASCADE,
+IdConsultaReceta INT FOREIGN KEY REFERENCES Consulta(IdConsulta),
 DescripcionReceta VARCHAR(255) NOT NULL,
 Estado INT NOT NULL CONSTRAINT CK_EstadoReceta CHECK ((Estado = 1) OR (Estado = 0))
 )
@@ -81,6 +85,17 @@ CREATE PROCEDURE SP_MostrarPacientes
 AS
 SELECT pacien.IdPaciente ,pacien.Nombre, pacien.Apellido, pacien.FechaDeNacimiento
 FROM Pacientes pacien 
+GO
+--Procedimiento para Mostrar Consulta de Receta 
+CREATE PROCEDURE RM_MostrarMedicamento
+AS
+SELECT consult.CodReceta, consult.Descripcion
+FROM Consulta consult
+GO
+--Procedimiento BusquedaDeMedicamentos
+CREATE PROCEDURE BMD_Medicamento
+AS
+SELECT * FROM Medicamentos 
 GO
 --Procedimiento para saber si un paciente ya tiene una cita pra el mismo momento
 CREATE TRIGGER TriggerCita ON dbo.Cita

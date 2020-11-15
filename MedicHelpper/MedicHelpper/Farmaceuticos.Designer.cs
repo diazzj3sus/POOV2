@@ -43,30 +43,15 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dtgv_buscaRecta = new System.Windows.Forms.DataGridView();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtIdReceta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.dtgv_BusquedaMEd = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCOdBuscaMEdicamneto = new System.Windows.Forms.TextBox();
+            this.txtBuscaMed = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.addMedicamentos = new System.Windows.Forms.TabPage();
             this.dtgVAnadirMedicamento = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnMostMedicamento = new System.Windows.Forms.Button();
             this.btningresarusuario = new System.Windows.Forms.Button();
@@ -221,7 +206,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(649, 381);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Busqueda Receta";
+            this.tabPage1.Text = "Consulta de Receta";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
@@ -246,10 +231,6 @@
             this.dtgv_buscaRecta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgv_buscaRecta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_buscaRecta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_buscaRecta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column8,
-            this.Column9});
             this.dtgv_buscaRecta.GridColor = System.Drawing.Color.Silver;
             this.dtgv_buscaRecta.Location = new System.Drawing.Point(11, 69);
             this.dtgv_buscaRecta.MultiSelect = false;
@@ -258,24 +239,6 @@
             this.dtgv_buscaRecta.RowHeadersWidth = 51;
             this.dtgv_buscaRecta.Size = new System.Drawing.Size(627, 220);
             this.dtgv_buscaRecta.TabIndex = 3;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Codigo Receta";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Codigo Medicamento";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Descripcion Receta";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
             // 
             // txtIdReceta
             // 
@@ -300,7 +263,7 @@
             // 
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.dtgv_BusquedaMEd);
-            this.tabPage2.Controls.Add(this.txtCOdBuscaMEdicamneto);
+            this.tabPage2.Controls.Add(this.txtBuscaMed);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
@@ -332,13 +295,6 @@
             this.dtgv_BusquedaMEd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgv_BusquedaMEd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_BusquedaMEd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_BusquedaMEd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
             this.dtgv_BusquedaMEd.EnableHeadersVisualStyles = false;
             this.dtgv_BusquedaMEd.Location = new System.Drawing.Point(3, 73);
             this.dtgv_BusquedaMEd.Name = "dtgv_BusquedaMEd";
@@ -347,49 +303,13 @@
             this.dtgv_BusquedaMEd.Size = new System.Drawing.Size(644, 144);
             this.dtgv_BusquedaMEd.TabIndex = 3;
             // 
-            // Column1
+            // txtBuscaMed
             // 
-            this.Column1.HeaderText = "Codigo Medicamento";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Descripcion";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha de Expiracion";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ubicacion";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Cantidad";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // txtCOdBuscaMEdicamneto
-            // 
-            this.txtCOdBuscaMEdicamneto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCOdBuscaMEdicamneto.Location = new System.Drawing.Point(210, 34);
-            this.txtCOdBuscaMEdicamneto.Name = "txtCOdBuscaMEdicamneto";
-            this.txtCOdBuscaMEdicamneto.Size = new System.Drawing.Size(100, 23);
-            this.txtCOdBuscaMEdicamneto.TabIndex = 1;
+            this.txtBuscaMed.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBuscaMed.Location = new System.Drawing.Point(210, 34);
+            this.txtBuscaMed.Name = "txtBuscaMed";
+            this.txtBuscaMed.Size = new System.Drawing.Size(100, 23);
+            this.txtBuscaMed.TabIndex = 1;
             // 
             // label1
             // 
@@ -420,13 +340,6 @@
             this.dtgVAnadirMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgVAnadirMedicamento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgVAnadirMedicamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVAnadirMedicamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
             this.dtgVAnadirMedicamento.EnableHeadersVisualStyles = false;
             this.dtgVAnadirMedicamento.Location = new System.Drawing.Point(5, 217);
             this.dtgVAnadirMedicamento.Name = "dtgVAnadirMedicamento";
@@ -434,42 +347,6 @@
             this.dtgVAnadirMedicamento.RowHeadersWidth = 51;
             this.dtgVAnadirMedicamento.Size = new System.Drawing.Size(644, 144);
             this.dtgVAnadirMedicamento.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo Medicamento";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Fecha de Expiracion";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ubicacion";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // groupBox1
             // 
@@ -554,7 +431,7 @@
             // txtCantidadMed
             // 
             this.txtCantidadMed.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCantidadMed.Location = new System.Drawing.Point(422, 58);
+            this.txtCantidadMed.Location = new System.Drawing.Point(360, 58);
             this.txtCantidadMed.Name = "txtCantidadMed";
             this.txtCantidadMed.Size = new System.Drawing.Size(115, 23);
             this.txtCantidadMed.TabIndex = 9;
@@ -563,7 +440,7 @@
             // txtNOmbreMEdicamento
             // 
             this.txtNOmbreMEdicamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNOmbreMEdicamento.Location = new System.Drawing.Point(232, 58);
+            this.txtNOmbreMEdicamento.Location = new System.Drawing.Point(178, 58);
             this.txtNOmbreMEdicamento.Name = "txtNOmbreMEdicamento";
             this.txtNOmbreMEdicamento.Size = new System.Drawing.Size(117, 23);
             this.txtNOmbreMEdicamento.TabIndex = 8;
@@ -576,6 +453,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(119, 23);
             this.txtCodigo.TabIndex = 7;
+            this.txtCodigo.Visible = false;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label9
@@ -616,7 +494,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(451, 40);
+            this.label6.Location = new System.Drawing.Point(393, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 15);
             this.label6.TabIndex = 3;
@@ -632,13 +510,14 @@
             this.label5.Size = new System.Drawing.Size(125, 15);
             this.label5.TabIndex = 2;
             this.label5.Text = "Codigo Medicamento";
+            this.label5.Visible = false;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(267, 40);
+            this.label4.Location = new System.Drawing.Point(210, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 15);
             this.label4.TabIndex = 1;
@@ -649,7 +528,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(210, 19);
+            this.label3.Location = new System.Drawing.Point(229, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 16);
             this.label3.TabIndex = 0;
@@ -818,30 +697,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dtgv_buscaRecta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.TextBox txtIdReceta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dtgv_BusquedaMEd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.TextBox txtCOdBuscaMEdicamneto;
+        private System.Windows.Forms.TextBox txtBuscaMed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage addMedicamentos;
         private System.Windows.Forms.DataGridView dtgVAnadirMedicamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btningresarusuario;
         private System.Windows.Forms.DateTimePicker datmMedicamento;

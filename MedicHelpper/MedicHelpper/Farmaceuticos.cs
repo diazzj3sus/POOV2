@@ -187,41 +187,39 @@ private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
             cant = ValidarCamposNumericos(txtCantidadMed, e, errorCantidad);
         }
         bool cant;
-        //Farmaceuticos obDatos = new Farmaceuticos();
+        //
         ClassFarmaceutico obDatos = new ClassFarmaceutico();
         private void btningresarusuario_Click(object sender, EventArgs e)
         {
             ClassFarmaceutico obDatos = new ClassFarmaceutico();
-            string sql= "insert into Farmaceutico(CodigoMedicamento,Nombre,Cantidad,Descripcion,Ubicacion,Fecha de Expiracion)values('"+this.txtCodigo+"','"+this.txtNOmbreMEdicamento+"','"+this.txtCantidadMed+"','"+this.txtDescripcionmed+"','"+this.txtUbicacionMed+"','"+this.datmMedicamento+"')";
+            int año = datmMedicamento.Value.Year;
+            int mes = datmMedicamento.Value.Month;
+            int dia = datmMedicamento.Value.Day;
+            string fecha = dia.ToString() + "-" + mes.ToString() + "-" + año.ToString();
+            string sql= "insert into Medicamentos(Nombre,Cantidad,Descripcion,Hubicacion,FechaExpiracion)values('"+this.txtNOmbreMEdicamento.Text+"','"+this.txtCantidadMed.Text+"','"+this.txtDescripcionmed.Text+"','"+this.txtUbicacionMed.Text+"','"+fecha+"')";
             if (obDatos.AñadirMedicamentos(sql)) { MessageBox.Show("Registro Insertado"); } else { MessageBox.Show("Error al insertar"); }
-            Application.Restart();
 
         }
 
         private void btnMostMedicamento_Click(object sender, EventArgs e)
         {
-
+            dtgVAnadirMedicamento.DataSource = obDatos.MostrarMedicamento();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            obDatos.BusquedaReceta("select*from Receta", "Receta");
-            this.dtgv_buscaRecta.DataSource = obDatos.ds.Tables["Receta"];
-            this.dtgv_buscaRecta.Refresh();
+            dtgv_buscaRecta.DataSource = obDatos.BusquedaReceta();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            obDatos.BusquedaDeMedicamentos("select*from Medicamento", "Medicanento");
-            this.dtgv_BusquedaMEd.DataSource = obDatos.ds.Tables["Medicamento"];
-            this.dtgv_BusquedaMEd.Refresh();
+            obDatos.BusquedaMedicamentos(txtBuscaMed);
         }
 
         private void btnActualizarMed_Click(object sender, EventArgs e)
         {
             string campos = "CodMedicamento='" + this.txtCodMedicamento.Text + "',Cantidad='" + this.txtCantidadMed.Text + "'";
             this.dtgv_Despacho.DataSource = obDatos.ds.Tables["Medicamento"];
-            this.dtgv_Despacho.Refresh();
         }
     }
 }
