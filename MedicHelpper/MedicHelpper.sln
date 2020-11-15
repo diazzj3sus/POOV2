@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicHelpper", "MedicHelppe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9DE8DDC4-4079-4BAB-AE44-97903575369B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MedicHelper", "MedicHelper\MedicHelper.vdproj", "{EA88D43E-6FF5-4783-9DF1-CC57D06AA21F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,8 @@ Global
 		{E7FE0333-DD8C-4916-8D1B-3B6F11FED67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7FE0333-DD8C-4916-8D1B-3B6F11FED67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7FE0333-DD8C-4916-8D1B-3B6F11FED67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA88D43E-6FF5-4783-9DF1-CC57D06AA21F}.Debug|Any CPU.ActiveCfg = Debug
+		{EA88D43E-6FF5-4783-9DF1-CC57D06AA21F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

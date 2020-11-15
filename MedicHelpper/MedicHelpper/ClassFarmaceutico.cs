@@ -112,9 +112,9 @@ namespace MedicHelpper
                 dtg.DataSource = dt;
                 far.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Retiro de medicina no realizado"+ex, "Retiro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Retiro de medicina no realizado", "Retiro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 far.Close();
             }
             finally

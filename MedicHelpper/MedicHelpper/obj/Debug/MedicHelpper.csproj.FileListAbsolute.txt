@@ -182,7 +182,6 @@ D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicH
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.pdb
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csprojAssemblyReference.cache
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Bienvenida.resources
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.Creditos.resources
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.frmDoctor.resources
@@ -203,7 +202,4 @@ D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicH
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe.manifest
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.application
-C:\Users\tinta print\Desktop\PROGRAS\MDB\MedicHelpperPOOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe.manifest
-C:\Users\tinta print\Desktop\PROGRAS\MDB\MedicHelpperPOOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.application
-C:\Users\tinta print\Desktop\PROGRAS\MDB\MedicHelpperPOOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe.manifest
-C:\Users\tinta print\Desktop\PROGRAS\MDB\MedicHelpperPOOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.application
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csprojAssemblyReference.cache
