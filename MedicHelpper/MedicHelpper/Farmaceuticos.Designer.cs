@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Farmaceuticos));
             this.pctAtras = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
@@ -405,8 +406,6 @@
             this.datmMedicamento.Name = "datmMedicamento";
             this.datmMedicamento.Size = new System.Drawing.Size(200, 23);
             this.datmMedicamento.TabIndex = 14;
-            this.datmMedicamento.ValueChanged += new System.EventHandler(this.datmMedicamento_ValueChanged);
-            this.datmMedicamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datmMedicamento_KeyPress);
             // 
             // txtUbicacionMed
             // 
@@ -627,6 +626,7 @@
             this.Controls.Add(this.tabFarmaceutico);
             this.Controls.Add(this.btnCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Farmaceuticos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Farmaceuticos";

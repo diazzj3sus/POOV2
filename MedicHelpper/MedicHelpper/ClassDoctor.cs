@@ -70,6 +70,10 @@ namespace MedicHelpper
         
         public void BusquedaDeCita(TextBox txt_CODCITa, TextBox txt_codPaci, TextBox txt_fecha, TextBox txt_cita)
         {
+            txt_CODCITa.Visible = true;
+            txt_codPaci.Visible = true;
+            txt_fecha.Visible = true;
+            txt_cita.Visible = true;
             try
             {
                 string selec = "select * from Cita where IdCita='" + txt_CODCITa.Text + "'";

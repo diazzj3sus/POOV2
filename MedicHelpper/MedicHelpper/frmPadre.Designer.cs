@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPadre));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.AddCita = new System.Windows.Forms.TabPage();
@@ -155,7 +156,6 @@
             // 
             this.dtpCita.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpCita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-
             this.dtpCita.Location = new System.Drawing.Point(185, 38);
             this.dtpCita.Name = "dtpCita";
             this.dtpCita.Size = new System.Drawing.Size(172, 20);
@@ -191,6 +191,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPadre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

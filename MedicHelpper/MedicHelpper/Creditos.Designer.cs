@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Creditos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pctAtras = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@
             // 
             this.pctAtras.Image = global::MedicHelpper.Properties.Resources.Atras;
             this.pctAtras.Location = new System.Drawing.Point(761, 274);
-            this.pctAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pctAtras.Margin = new System.Windows.Forms.Padding(2);
             this.pctAtras.Name = "pctAtras";
             this.pctAtras.Size = new System.Drawing.Size(50, 43);
             this.pctAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,6 +208,7 @@
             this.ClientSize = new System.Drawing.Size(841, 339);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Creditos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creditos";

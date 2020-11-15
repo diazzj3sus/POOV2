@@ -198,3 +198,8 @@ D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicH
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.csproj.CopyComplete
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe
 D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.pdb
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.exe.manifest
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\MedicHelpper.application
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.exe.manifest
+D:\Tareas II ciclo\POO teoria\Segunda fase de proyecto\POOV2\MedicHelpper\MedicHelpper\obj\Debug\MedicHelpper.application

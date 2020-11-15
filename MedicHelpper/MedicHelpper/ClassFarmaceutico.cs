@@ -13,7 +13,7 @@ namespace MedicHelpper
 {
     class ClassFarmaceutico : ClassUsuarios
     {
-        private string cadena = "server=locahost;database=MedicHelpperBDD;integrated security = True";
+        private string cadena = "server=localhost;database=MedicHelpperBDD;integrated security = True";
         //LAPTOP-B09UIF2D\\MSSQLSERVERDEV
         public SqlConnection far;
         private SqlCommandBuilder cmb;
@@ -61,7 +61,7 @@ namespace MedicHelpper
         {
             try
             {
-                string selec = "SELECT * FROM Medicamentos WHERE IdMedicamento = @idMedi";
+                string selec = "SELECT * FROM Medicamentos WHERE [Codigo de Medicamento] = @idMedi";
                 cmd2 = new SqlCommand(selec, far);                
                 cmd2.Parameters.Add(new SqlParameter("@idMedi", SqlDbType.Int));
                 cmd2.Parameters["@idMedi"].Value = Convert.ToInt32(txtBuscarMed.Text);
@@ -74,7 +74,7 @@ namespace MedicHelpper
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Medicamento no encontrado o no ha sido ingresado, error en la busqueda."+ex, "Reintentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Medicamento no encontrado o no ha sido ingresado, error en la busqueda."   , "Reintentar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 far.Close();
             }
             finally

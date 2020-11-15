@@ -85,26 +85,14 @@ namespace MedicHelpper
             }
             return ok;
         }
-        
-        private void datmMedicamento_ValueChanged(object sender, EventArgs e)
-        {
-          // errorFechaMedicamento.SetError(datmMedicamento, "");
-           // FechaExpir =ValidarCamposVacios(datmMedicamento, errorFechaMedicamento);
-        }
-
-        private void datmMedicamento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-
-        }
-        bool FechaExpir;
+        bool nomr,ubi,des,cod,cant;
 
         private void txtNOmbreMEdicamento_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorNombre.SetError(txtNOmbreMEdicamento, "");
             nomr = ValidarCamposVacios(txtNOmbreMEdicamento, errorNombre);
         }
-        bool nomr;
+     
 
         private void txtUbicacionMed_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -112,27 +100,26 @@ namespace MedicHelpper
             ubi = ValidarCamposVacios(txtUbicacionMed,  errorUbicacion);
 
         }
-        bool ubi;
+ 
         private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorDescripcion.SetError(txtDescripcionmed, "");
             des = ValidarCamposVacios(txtDescripcionmed, errorDescripcion);
         }
-        bool des;
+ 
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorCodigoMed.SetError(txtCodigo, "");
             cod = ValidarCamposNumericos(txtCodigo, e,errorCodigoMed);
         }
-        bool cod;
 
         private void txtCantidadMed_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorCantidad.SetError(txtCantidadMed, "");
             cant = ValidarCamposNumericos(txtCantidadMed, e, errorCantidad);
         }
-        bool cant;
+
         //
         ClassFarmaceutico obDatos = new ClassFarmaceutico();
         private void btningresarusuario_Click(object sender, EventArgs e)
@@ -142,7 +129,7 @@ namespace MedicHelpper
             int mes = datmMedicamento.Value.Month;
             int dia = datmMedicamento.Value.Day;
             string fecha = dia.ToString() + "-" + mes.ToString() + "-" + año.ToString();
-            string sql= "insert into Medicamentos(Nombre,Cantidad,Descripcion,Hubicacion,FechaExpiracion)values('"+this.txtNOmbreMEdicamento.Text+"','"+this.txtCantidadMed.Text+"','"+this.txtDescripcionmed.Text+"','"+this.txtUbicacionMed.Text+"','"+fecha+"')";
+            string sql= "insert into Medicamentos(Nombre,Cantidad,Descripcion,Ubicacion,FechaExpiracion)values('"+this.txtNOmbreMEdicamento.Text+"','"+this.txtCantidadMed.Text+"','"+this.txtDescripcionmed.Text+"','"+this.txtUbicacionMed.Text+"','"+fecha+"')";
             if (obDatos.AñadirMedicamentos(sql)) { MessageBox.Show("Registro Insertado"); } else { MessageBox.Show("Error al insertar"); }
 
         }

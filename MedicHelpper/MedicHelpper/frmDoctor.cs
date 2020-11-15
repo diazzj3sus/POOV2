@@ -188,57 +188,31 @@ namespace MedicHelpper
             FechaCita = ValidarCamposVacios(txt_fecha_doc, errorFech);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txt_DescripcionDoc_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorDescripcion.SetError(txt_DescripcionDoc, "");
             Descripcion = ValidarCamposVacios(txt_DescripcionDoc, errorDescripcion);
         }
-
-       
-
         private void txt_codPaci_KeyPress(object sender, KeyPressEventArgs e)
         {
             ErrorPaciente.SetError(txt_codPaci, "");
             ApellidoAdd = ValidarCampoLetras(txt_codPaci, e, ErrorPaciente);
         }
-
-        private void txt_codusuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
         private void txt_fecha_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorFech.SetError(txt_fecha, "");
             ApellidoAdd = ValidarCampoLetras(txt_fecha, e, errorFech);
         }
-
-       
-
         private void txt_cita_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorCita.SetError(txt_cita, "");
             ApellidoAdd = ValidarCampoLetras(txt_cita, e, errorCita);
         }
-
-       
         private void txt_ConsultaDoc_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorCodUSuario.SetError(txt_codusuario, "");
             CodUsuario = ValidarCamposNumericos(txt_codusuario, e, errorCodUSuario);
             
-        }
-
-        private void AddCita_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
@@ -259,28 +233,17 @@ namespace MedicHelpper
        
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-          
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
             ObDatos.BusquedaDeCita(txt_CODCITa, txt_codPaci, txt_fecha, txt_cita);
-
-
         }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-
         private void btn_MostrarData_Click(object sender, EventArgs e)
         {
             ObDatos.BuscarCita("Select * from Consulta", "Consulta");
             this.dataGridView1.DataSource = ObDatos.ds.Tables["Consulta"];
             
         }
-
-
-
         private void btnAddCita_Click(object sender, EventArgs e)
         {
             BorrarValidar();
@@ -306,7 +269,5 @@ namespace MedicHelpper
                 }
             }
         }
-
-
     }
 }

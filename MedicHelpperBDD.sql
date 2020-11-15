@@ -1,5 +1,5 @@
 USE MASTER
-CREATE DATABASE MedicHelpperBDD
+create DATABASE MedicHelpperBDD
 GO
 USE MedicHelpperBDD
 GO
@@ -45,11 +45,11 @@ Estado INT NOT NULL CONSTRAINT CK_EstadoCita CHECK ((Estado = 1) OR (Estado = 0)
 )
 GO
 CREATE TABLE Medicamentos(
-IdMedicamento INT IDENTITY(0,1) PRIMARY KEY,
+[Codigo de Medicamento] INT IDENTITY(0,1) PRIMARY KEY,
 Nombre VARCHAR(75) NOT NULL,
 Descripcion VARCHAR(255) NOT NULL,
 FechaExpiracion DATE NOT NULL,
-Hubicacion VARCHAR(100) NOT NULL,
+Ubicacion VARCHAR(100) NOT NULL,
 Cantidad INT
 )
 GO
