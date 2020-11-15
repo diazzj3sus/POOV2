@@ -80,12 +80,7 @@ AS
 SELECT pacien.IdPaciente ,pacien.Nombre, pacien.Apellido, pacien.FechaDeNacimiento
 FROM Pacientes pacien 
 GO
---Procedimiento para Mostrar Consulta de Receta 
-CREATE PROCEDURE RM_MostrarMedicamento
-AS
-SELECT consult.CodReceta, consult.Descripcion
-FROM Consulta consult
-GO
+
 --Procedimiento BusquedaDeMedicamentos
 CREATE PROCEDURE BMD_Medicamento
 AS
