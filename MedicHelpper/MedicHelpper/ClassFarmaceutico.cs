@@ -98,7 +98,7 @@ namespace MedicHelpper
             far.Open();
             try
             {
-                string Sql = "UPDATE Medicamentos SET  Cantidad = Cantidad - " + Cantidad + " WHERE IdMedicamento = " + CodigoMedicamento;
+                string Sql = "UPDATE Medicamentos SET  Cantidad = Cantidad - " + Cantidad + " WHERE [Codigo de Medicamento] = " + CodigoMedicamento;
                 comando = new SqlCommand(Sql, far);
                 comando.ExecuteNonQuery();
                 far.Close();
@@ -112,9 +112,9 @@ namespace MedicHelpper
                 dtg.DataSource = dt;
                 far.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Retiro de medicina no realzado", "Retiro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Retiro de medicina no realizado"+ex, "Retiro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 far.Close();
             }
             finally
