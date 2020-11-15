@@ -15,6 +15,7 @@ namespace MedicHelpper
 
 
         private string cadena = "server=localhost;database=MedicHelpperBDD;integrated security = True";
+        //LAPTOP-B09UIF2D\\MSSQLSERVERDEV
         public SqlConnection conexion;
         public DataSet ds = new DataSet();
         public SqlDataAdapter da;
@@ -109,7 +110,7 @@ namespace MedicHelpper
                 }
                 else
                 {
-                    MessageBox.Show("Cita no ingresada,Vuelva a intentar ingresar con los formatos correctos" , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cita no ingresada,Vuelva a intentar ingresar con los formatos correctos"+ex , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 
             }

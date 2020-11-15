@@ -59,8 +59,6 @@
     <Compile Include="ClassDoctor.cs" />
     <Compile Include="ClassEnfermero.cs" />
     <Compile Include="ClassFarmaceutico.cs" />
-    <Compile Include="ClassMedicina.cs" />
-    <Compile Include="ClassPaciente.cs" />
     <Compile Include="ClassUsuarios.cs" />
     <Compile Include="Creditos.cs">
       <SubType>Form</SubType>

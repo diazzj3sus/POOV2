@@ -13,12 +13,15 @@ namespace MedicHelpper
 {
     class ClassFarmaceutico : ClassUsuarios
     {
-        private string cadena = "server=localhost;database=MedicHelpperBDD;integrated security = True";
+        private string cadena = "server=locahost;database=MedicHelpperBDD;integrated security = True";
+        //LAPTOP-B09UIF2D\\MSSQLSERVERDEV
         public SqlConnection far;
         private SqlCommandBuilder cmb;
         public DataSet ds = new DataSet();
         public SqlDataAdapter da;
         public SqlCommand comando;
+        private SqlCommand cmd2;
+
         private void Conectar()
         {
             far = new SqlConnection(cadena);
@@ -36,39 +39,38 @@ namespace MedicHelpper
             da.Fill(dt);
             return dt;
         }
-        public DataTable BusquedaReceta()
+        public DataTable BusquedaReceta(string idReceta)
         {
-            SqlDataAdapter da = new SqlDataAdapter("RM_MostrarMedicamento", far);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+            if ( idReceta.Equals(""))
+            {
+                MessageBox.Show("Ingrese datos en el campo","Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return dt;
+            }
+            else
+            {
+                SqlDataAdapter da = new SqlDataAdapter("SELECT CodReceta, Descripcion " +
+                "FROM Consulta  WHERE CodReceta =" + idReceta, far);
+                da.SelectCommand.CommandType = CommandType.Text;
+                da.Fill(dt);
+                return dt;
+            }
+            
         }
-        public void BusquedaMedicamentos(TextBox txtBuscarMed)
+        public void BusquedaMedicamentos(TextBox txtBuscarMed,DataGridView dtg)
         {
             try
             {
                 string selec = "SELECT * FROM Medicamentos WHERE IdMedicamento = @idMedi";
-                comando = new SqlCommand(selec, far);                
-                comando.Parameters.Add(new SqlParameter("@idMedi", SqlDbType.Int));
-                comando.Parameters["@idMedi"].Value = Convert.ToInt32(txtBuscarMed.Text);
+                cmd2 = new SqlCommand(selec, far);                
+                cmd2.Parameters.Add(new SqlParameter("@idMedi", SqlDbType.Int));
+                cmd2.Parameters["@idMedi"].Value = Convert.ToInt32(txtBuscarMed.Text);
                 far.Open();
-                SqlDataReader Buscar = comando.ExecuteReader();
-                if (Buscar.Read())
-                {
-                    SqlDataAdapter da = new SqlDataAdapter(comando.ToString(), far);                    
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    far.Close();
-                }
-                else
-                {
-                    DialogResult mensaje;
-                    mensaje = MessageBox.Show("No se encontro el Medicamento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    far.Close();
-                }
+                SqlDataReader dr = cmd2.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                dtg.DataSource = dt;
                 far.Close();
-
             }
             catch (Exception ex)
             {
@@ -90,21 +92,36 @@ namespace MedicHelpper
             
         }
       
-        public bool DespachoMedicamento(string tabla,string condicion)
+        public void DespachoMedicamento(string CodigoMedicamento,string Cantidad,DataGridView dtg)
         {
+            
             far.Open();
-            string Sql = " update " + tabla + " set " + "where"+condicion;
-            comando = new SqlCommand(Sql, far);
-            int i = comando.ExecuteNonQuery();
-            far.Close();
-            if (i > 0)
+            try
             {
-                return true;
+                string Sql = "UPDATE Medicamentos SET  Cantidad = Cantidad - " + Cantidad + " WHERE IdMedicamento = " + CodigoMedicamento;
+                comando = new SqlCommand(Sql, far);
+                comando.ExecuteNonQuery();
+                far.Close();
+                MessageBox.Show("Retiro de medicina completado","Retiro",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                string selec = "SELECT * FROM Medicamentos ";
+                cmd2 = new SqlCommand(selec, far);
+                far.Open();
+                SqlDataReader dr = cmd2.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                dtg.DataSource = dt;
+                far.Close();
             }
-            else
+            catch (Exception)
             {
-                return false;
+                MessageBox.Show("Retiro de medicina no realzado", "Retiro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                far.Close();
             }
+            finally
+            {
+                far.Close();
+            }
+            
         }
     }
 }

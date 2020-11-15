@@ -76,10 +76,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dtgv_Despacho = new System.Windows.Forms.DataGridView();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pctAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -298,6 +294,7 @@
             this.dtgv_BusquedaMEd.EnableHeadersVisualStyles = false;
             this.dtgv_BusquedaMEd.Location = new System.Drawing.Point(3, 73);
             this.dtgv_BusquedaMEd.Name = "dtgv_BusquedaMEd";
+            this.dtgv_BusquedaMEd.ReadOnly = true;
             this.dtgv_BusquedaMEd.RowHeadersVisible = false;
             this.dtgv_BusquedaMEd.RowHeadersWidth = 51;
             this.dtgv_BusquedaMEd.Size = new System.Drawing.Size(644, 144);
@@ -343,9 +340,10 @@
             this.dtgVAnadirMedicamento.EnableHeadersVisualStyles = false;
             this.dtgVAnadirMedicamento.Location = new System.Drawing.Point(5, 217);
             this.dtgVAnadirMedicamento.Name = "dtgVAnadirMedicamento";
+            this.dtgVAnadirMedicamento.ReadOnly = true;
             this.dtgVAnadirMedicamento.RowHeadersVisible = false;
             this.dtgVAnadirMedicamento.RowHeadersWidth = 51;
-            this.dtgVAnadirMedicamento.Size = new System.Drawing.Size(644, 144);
+            this.dtgVAnadirMedicamento.Size = new System.Drawing.Size(639, 144);
             this.dtgVAnadirMedicamento.TabIndex = 4;
             // 
             // groupBox1
@@ -608,36 +606,14 @@
             // 
             // dtgv_Despacho
             // 
+            this.dtgv_Despacho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_Despacho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Despacho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13});
             this.dtgv_Despacho.Location = new System.Drawing.Point(19, 96);
             this.dtgv_Despacho.Name = "dtgv_Despacho";
-            this.dtgv_Despacho.Size = new System.Drawing.Size(547, 273);
+            this.dtgv_Despacho.ReadOnly = true;
+            this.dtgv_Despacho.RowHeadersVisible = false;
+            this.dtgv_Despacho.Size = new System.Drawing.Size(597, 273);
             this.dtgv_Despacho.TabIndex = 0;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Codigo Medicamento";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Nombre";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Descripcion";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Cantidad";
-            this.Column13.Name = "Column13";
             // 
             // Farmaceuticos
             // 
@@ -730,9 +706,5 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dtgv_Despacho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
     }
 }

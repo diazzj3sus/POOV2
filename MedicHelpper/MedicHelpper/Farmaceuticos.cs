@@ -85,61 +85,7 @@ namespace MedicHelpper
             }
             return ok;
         }
-        private bool ValidarCampoLetras(TextBox txt, KeyPressEventArgs e, ErrorProvider error)
-        {
-            bool ok = true;
-            //condicion solo para letras
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-                ok = true;
-            }
-            //tecla backspac
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-                ok = true;
-            }
-            //Verifica que admite tecla espacio
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-                ok = true;
-            }
-            //si no cumple nada lo deja pasar
-            else
-            {
-                e.Handled = true;
-                ok = false;
-                error.SetError(txt, "Ingrese unicamente Numeros");
-                txt.Text = "";
-            }
-            return ok;
-        }
-        private bool ValidarFechaCita(DateTimePicker dtp)
-        {
-            DateTime fechaSeleccionada = datmMedicamento.Value;
-            DateTime fechaActual = System.DateTime.Now;
-            bool ok = true;
-            if (fechaSeleccionada < fechaActual)
-            {
-                errorFechaMedicamento.SetError(datmMedicamento, "Error la fecha seleccionada es menor a la fecha actual");
-                ok = false;
-            }
-            return ok;
-        }
-        private void BorrarValidar ()
-        {
-            errorFechaMedicamento.SetError(datmMedicamento, "");
-            errorNombre.SetError(txtNOmbreMEdicamento, "");
-            errorUbicacion.SetError(txtUbicacionMed, "");
-            errorDescripcion.SetError(txtDescripcionmed, "");
-            errorCodigoMed.SetError(txtCodigo, "");
-            errorCantidad.SetError(txtCantidadMed, "");
-            
-
-        }
-
+        
         private void datmMedicamento_ValueChanged(object sender, EventArgs e)
         {
           // errorFechaMedicamento.SetError(datmMedicamento, "");
@@ -167,7 +113,7 @@ namespace MedicHelpper
 
         }
         bool ubi;
-private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorDescripcion.SetError(txtDescripcionmed, "");
             des = ValidarCamposVacios(txtDescripcionmed, errorDescripcion);
@@ -208,18 +154,22 @@ private void txtDescripcionmed_KeyPress(object sender, KeyPressEventArgs e)
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dtgv_buscaRecta.DataSource = obDatos.BusquedaReceta();
+            string id = txtIdReceta.Text;
+            dtgv_buscaRecta.DataSource = obDatos.BusquedaReceta(id);
+            txtIdReceta.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            obDatos.BusquedaMedicamentos(txtBuscaMed);
+            obDatos.BusquedaMedicamentos(txtBuscaMed, dtgv_BusquedaMEd);
         }
 
         private void btnActualizarMed_Click(object sender, EventArgs e)
         {
-            string campos = "CodMedicamento='" + this.txtCodMedicamento.Text + "',Cantidad='" + this.txtCantidadMed.Text + "'";
-            this.dtgv_Despacho.DataSource = obDatos.ds.Tables["Medicamento"];
+            string Medicamento = txtCodMedicamento.Text;
+            string Cantidad = txtCantMed.Text;
+            obDatos.DespachoMedicamento(Medicamento,Cantidad,dtgv_Despacho);
+            
         }
     }
 }

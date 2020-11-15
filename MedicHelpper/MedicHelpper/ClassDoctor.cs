@@ -13,6 +13,7 @@ namespace MedicHelpper
     {
 
         private string cadena = "server=localhost;database=MedicHelpperBDD;integrated security = True;";
+        //LAPTOP-B09UIF2D\\MSSQLSERVERDEV
         public SqlConnection AgDoc;
         private SqlCommandBuilder cmb;
         public DataSet ds = new DataSet();
@@ -30,15 +31,31 @@ namespace MedicHelpper
 
         public bool AgregarCita(string sql)
         {
-            AgDoc.Open();
-            comando = new SqlCommand(sql, AgDoc);
-             int i = comando.ExecuteNonQuery();
-            AgDoc.Close();
-            if (i>0)
+            try
             {
-                return true;
+                AgDoc.Open();
+                comando = new SqlCommand(sql, AgDoc);
+                int i = comando.ExecuteNonQuery();
+                AgDoc.Close();
+                if (i > 0)
+                {
+                    return true;
 
-            }else { return false; }
+                }
+                else { return false; }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error en la conexion a la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                AgDoc.Close();
+                return false;
+            }
+            finally
+            {
+                AgDoc.Close();
+                
+            }
+            
 
         }
         public void BuscarCita(string sql, string tabla)
